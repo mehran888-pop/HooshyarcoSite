@@ -67,35 +67,53 @@ npm run preview    # پیش‌نمایش build
 
 ## 🔌 اتصال به وردپرس (Headless)
 
-1. افزونه‌های زیر را روی وردپرس نصب کنید:
-   - **JWT Authentication for WP REST API** (ورود با توکن)
-   - **WooCommerce** + فعال‌سازی REST API
-   - **Gravity Forms** + افزونه **Gravity Forms REST API**
-   - افزونه سفارشی `hooshyar/v1` (اندپوینت‌های OTP، خدمات، تیم، پروژه، فاکتور و…) — یا از داده‌ی دمو استفاده کنید.
+شما `hooshyar/v1` **نداشتید** — ما نسخه‌ی کامل آن را به‌عنوان **افزونه‌ی آماده وردپرس** در این ریپو ساختیم: پوشه `wordpress/hooshyar-api/`. شامل ورود با موبایل (OTP)، تیکت، فاکتور، پرداخت ایرانی، پیامک و ربات بله.
 
-2. فایل `.env` را با آدرس وردپرس پر کنید:
+### گام ۱ — نصب افزونه `hooshyar-api` روی وردپرس
+
+1. پوشه `wordpress/hooshyar-api/` را روی هاست وردپرس در `wp-content/plugins/` آپلود کنید.
+2. از پیشخوان → **افزونه‌ها** آن را **فعال** کنید (جدول‌ها خودکار ساخته می‌شوند).
+3. تنظیمات را ست کنید:
+   - محتویات `wordpress/hooshyar-api/config.sample.php` را در `wp-config.php` قرار دهید و مقادیر (پیامک، بله، درگاه) را پر کنید، **یا**
+   - فایل را با نام دلخواه در `wp-content/mu-plugins/` بگذارید.
+4. یک بار «تنظیمات → پیوندهای یکتا» را ذخیره کنید تا REST فلاش شود.
+5. تست: `https://SITE.com/wp-json/hooshyar/v1/services` را باز کنید.
+
+> 📘 راهنمای کامل اندپوینت‌ها و امنیت در `wordpress/hooshyar-api/README.md` است.
+
+### گام ۲ — افزونه‌های مکمل
+
+| افزونه | برای |
+|---|---|
+| **JWT Authentication for WP REST API** | صدور توکن ورود از `hooshyar/v1/auth/verify` |
+| **WooCommerce** | فروشگاه |
+| **Gravity Forms** + **Gravity Forms REST API** | فرم تماس/مشاوره/استخدام |
+| **CMB2** (اختیاری) | ورود راحت خدمات/تیم/پروژه از صفحه تنظیمات |
+
+> برای JWT در `wp-config.php`: `define( 'JWT_AUTH_SECRET_KEY', 'کلید-مخفی-خودتان' );` و `define( 'JWT_AUTH_CORS_ENABLE', true );`
+
+### گام ۳ — اتصال فرانت‌اند
 
 ```env
 VITE_WP_URL=https://your-site.com
-VITE_DEMO_MODE=false
+VITE_DEMO_MODE=false   # حالت دمو را خاموش کنید تا از وردپرس بخواند
 ```
 
-3. شناسه فرم‌های گراویتی‌فرم را ست کنید:
-```env
-VITE_GF_EMPLOYMENT=1
-VITE_GF_CONSULTATION=2
-VITE_GF_CONTACT=3
-```
-
-### مسیرهای API که قالب می‌خواند
+### مسیرهای API
 | سرویس | مسیر |
 |---|---|
-| توکن JWT | `POST /wp-json/jwt-auth/v1/token` |
+| ارسال کد OTP | `POST /wp-json/hooshyar/v1/auth/otp` |
+| تأیید کد + توکن | `POST /wp-json/hooshyar/v1/auth/verify` |
+| ثبت‌نام | `POST /wp-json/hooshyar/v1/auth/register` |
+| تیکت | `GET/POST /wp-json/hooshyar/v1/support/tickets[/{id}/reply]` |
+| فاکتور | `GET /wp-json/hooshyar/v1/invoices[/{id}]` |
+| پرداخت فاکتور | `POST /wp-json/hooshyar/v1/invoices/{id}/pay` |
+| رویداد/اعلان بله | `GET/POST /wp-json/hooshyar/v1/events` |
+| محتوای سفارشی | `GET /wp-json/hooshyar/v1/{services,team,projects,faqs,testimonials}` |
 | ووکامرس | `GET /wp-json/wc/v3/products` و `/orders` |
 | گراویتی‌فرم | `POST /wp-json/gf/v2/forms/{id}/submissions` |
-| محتوای سفارشی | `GET /wp-json/hooshyar/v1/{services,team,projects,faqs,testimonials}` |
 
-> 🔒 **نکته امنیتی:** کلیدهای ووکامرس (consumer_key/secret)، توکن بله و پیامک باید **فقط سمت سرور** (پراکسی/اندپوینت وردپرس) بمانند. در نسخه دمو این فراخوانی‌ها شبیه‌سازی شده‌اند.
+> 🔒 **نکته امنیتی:** کلیدهای ووکامرس، پیامک، بله و درگاه در `wp-config.php` نگهداری می‌شوند و پرداخت/پیامک **سمت سرور (وردپرس)** اجرا می‌شود. در حالت دمو این فراخوانی‌ها شبیه‌سازی می‌شوند.
 
 ---
 
@@ -112,15 +130,18 @@ npx cap open android    # ساخت APK در Android Studio
 ## 🗂 ساختار پروژه
 
 ```
-src/
-├── components/        # کامپوننت‌های UI، هدر/فوتر، چت، پنل
-├── pages/             # صفحات سایت، پنل کاربری و مدیریت
-├── services/          # وردپرس، ووکامرس، پرداخت، پیامک، بله، گراویتی‌فرم
-├── store/             # Zustand (auth, cart, tickets, invoices, chat, notifications)
-├── mock/              # داده‌های دمو
-├── lib/               # ابزارها (اعداد/تاریخ فارسی، قیمت و…)
-├── config/            # تنظیمات برند و سرویس‌ها
-└── styles/            # استایل سراسری (پوسته تیره پریمیوم)
+src/                     # فرانت‌اند React
+├── components/          # کامپوننت‌های UI، هدر/فوتر، چت، پنل
+├── pages/               # صفحات سایت، پنل کاربری و مدیریت
+├── services/            # وردپرس، ووکامرس، پرداخت، پیامک، بله، گراویتی‌فرم
+├── store/               # Zustand (auth, cart, tickets, invoices, chat, notifications)
+├── mock/                # داده‌های دمو
+├── lib/                 # ابزارها (اعداد/تاریخ فارسی، قیمت و…)
+├── config/              # تنظیمات برند و سرویس‌ها
+└── styles/              # استایل سراسری (پوسته تیره پریمیوم)
+
+wordpress/               # بک‌اند وردپرس
+└── hooshyar-api/        # افزونه اختصاصی (اندپوینت‌های hooshyar/v1)
 ```
 
 ---

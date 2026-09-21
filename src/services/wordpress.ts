@@ -8,7 +8,7 @@ import type { BlogPost } from '../mock/blog';
 
 // ===== لاگین با موبایل + OTP (JWT) =====
 export const authService = {
-  /** ارسال کد OTP — در حالت واقعی از مسیر سفارشی وردپرس یا افزونه JWT+OTP */
+  /** ارسال کد OTP — POST /wp-json/hooshyar/v1/auth/otp */
   async sendOtp(mobile: string): Promise<{ success: boolean; message: string }> {
     if (!isLive()) {
       await new Promise((r) => setTimeout(r, 900));
@@ -18,7 +18,7 @@ export const authService = {
     return { success: true, message: data.message || 'کد تأیید ارسال شد' };
   },
 
-  /** تأیید OTP → دریافت توکن JWT */
+  /** تأیید OTP → دریافت توکن JWT — POST /wp-json/hooshyar/v1/auth/verify */
   async verifyOtp(mobile: string, code: string, isStaff = false): Promise<AuthSession> {
     if (!isLive()) {
       await new Promise((r) => setTimeout(r, 900));
@@ -27,11 +27,27 @@ export const authService = {
       const user: User = { id: 1, name: base.name, mobile, role: base.role, verified: true, company: base.company };
       return { token: 'demo-jwt-token', user, isStaff: isStaff || base.role !== 'customer' };
     }
-    const { data } = await wpHttp.post('/wp-json/jwt-auth/v1/token', { username: mobile, password: code });
-    return { token: data.token, user: { id: data.user?.id ?? mobile, name: data.user?.nicename ?? mobile, mobile, role: 'customer' }, isStaff };
+    const { data } = await wpHttp.post('/wp-json/hooshyar/v1/auth/verify', { mobile, code });
+    if (!data || !data.success) throw new Error(data?.message || 'کد تأیید نادرست است.');
+    // افزونه JWT توکن را برمی‌گرداند؛ در نبود آن از مسیر مستقیم افزونه JWT استفاده می‌کنیم
+    const wpUser: any = data.user || {};
+    const role: User['role'] = roleFromWp(wpUser.role);
+    const session: AuthSession = {
+      token: data.token,
+      user: {
+        id: wpUser.id ?? mobile,
+        name: wpUser.name || mobile,
+        mobile: wpUser.mobile || mobile,
+        role,
+        verified: !!wpUser.verified,
+        avatar: wpUser.avatar,
+      },
+      isStaff: isStaff || role === 'admin' || role === 'support',
+    };
+    return session;
   },
 
-  /** ثبت‌نام با موبایل */
+  /** ثبت‌نام با موبایل — POST /wp-json/hooshyar/v1/auth/register */
   async register(mobile: string, name: string, email: string): Promise<{ success: boolean; message: string }> {
     if (!isLive()) {
       await new Promise((r) => setTimeout(r, 900));
@@ -41,6 +57,14 @@ export const authService = {
     return { success: true, message: data.message || 'ثبت‌نام انجام شد' };
   },
 };
+
+/** تبدیل نقش وردپرس به نقش قالب */
+function roleFromWp(role?: string): User['role'] {
+  if (!role) return 'customer';
+  if (role === 'administrator') return 'admin';
+  if (/support|editor|shop_manager|manager|admin/i.test(role)) return 'support';
+  return 'customer';
+}
 
 // ===== محتوا =====
 export const contentService = {
@@ -64,4 +88,53 @@ export const contentService = {
   async getProjects(): Promise<Project[]> { return isLive() ? (await wpHttp.get('/wp-json/hooshyar/v1/projects')).data : demoProjects; },
   async getTestimonials(): Promise<Testimonial[]> { return isLive() ? (await wpHttp.get('/wp-json/hooshyar/v1/testimonials')).data : demoTestimonials; },
   async getFaqs(): Promise<Faq[]> { return isLive() ? (await wpHttp.get('/wp-json/hooshyar/v1/faqs')).data : demoFaqs; },
+};
+
+// ===== تیکت پشتیبانی =====
+export const supportService = {
+  async listTickets(): Promise<any[]> {
+    if (!isLive()) return [];
+    return (await wpHttp.get('/wp-json/hooshyar/v1/support/tickets')).data;
+  },
+  async createTicket(payload: { subject: string; department: string; priority: string; message: string }): Promise<any> {
+    if (!isLive()) return null;
+    return (await wpHttp.post('/wp-json/hooshyar/v1/support/tickets', payload)).data;
+  },
+  async reply(ticketId: string | number, message: string): Promise<any> {
+    if (!isLive()) return null;
+    return (await wpHttp.post(`/wp-json/hooshyar/v1/support/tickets/${ticketId}/reply`, { message })).data;
+  },
+};
+
+// ===== فاکتورها =====
+export const invoiceService = {
+  async list(): Promise<any[]> {
+    if (!isLive()) return [];
+    return (await wpHttp.get('/wp-json/hooshyar/v1/invoices')).data;
+  },
+  async get(id: string | number): Promise<any> {
+    if (!isLive()) return null;
+    return (await wpHttp.get(`/wp-json/hooshyar/v1/invoices/${id}`)).data;
+  },
+  /** شروع پرداخت → { link } برای هدایت به درگاه */
+  async pay(id: string | number, gateway: string): Promise<any> {
+    if (!isLive()) return null;
+    return (await wpHttp.post(`/wp-json/hooshyar/v1/invoices/${id}/pay`, { gateway })).data;
+  },
+  /** دانلود فاکتور (لینک PDF/HTML) */
+  pdfUrl(id: string | number): string {
+    return `${wpHttp.defaults.baseURL}/wp-json/hooshyar/v1/invoices/${id}/pdf`;
+  },
+};
+
+// ===== رویدادها (اعلان فوری مدیر) =====
+export const eventService = {
+  async list(): Promise<any[]> {
+    if (!isLive()) return [];
+    return (await wpHttp.get('/wp-json/hooshyar/v1/events')).data;
+  },
+  async create(type: string, title: string, body: string): Promise<any> {
+    if (!isLive()) return null;
+    return (await wpHttp.post('/wp-json/hooshyar/v1/events', { type, title, body })).data;
+  },
 };
