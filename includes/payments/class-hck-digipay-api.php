@@ -112,7 +112,7 @@ class HCK_Digipay_Api {
 		$code = wp_remote_retrieve_response_code( $response );
 		$body = json_decode( wp_remote_retrieve_body( $response ), true );
 
-		$this->log( sprintf( '%s → HTTP %d: %s', $path, $code, mb_substr( wp_remote_retrieve_body( $response ), 0, 500 ) ) );
+		$this->log( sprintf( '%s → HTTP %d: %s', $path, $code, HCK_Helpers::str_limit( wp_remote_retrieve_body( $response ), 500 ) ) );
 
 		if ( ! is_array( $body ) ) {
 			return new WP_Error( 'hck_digipay', sprintf( 'Invalid response (HTTP %d).', $code ) );

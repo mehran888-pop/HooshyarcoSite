@@ -472,6 +472,23 @@ class HCK_Helpers {
 	}
 
 	/**
+	 * Multibyte-safe substring with fallback when mbstring is unavailable.
+	 *
+	 * @param string $text   Input text.
+	 * @param int    $length Max length.
+	 * @return string
+	 */
+	public static function str_limit( $text, $length ) {
+		$text = (string) $text;
+
+		if ( function_exists( 'mb_substr' ) ) {
+			return mb_substr( $text, 0, $length );
+		}
+
+		return substr( $text, 0, $length );
+	}
+
+	/**
 	 * Sanitize a hex colour.
 	 *
 	 * @param string $color Colour.

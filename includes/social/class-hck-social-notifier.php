@@ -165,7 +165,7 @@ class HCK_Social_Notifier {
 				'channel'    => $channel,
 				'product_id' => (int) $product_id,
 				'status'     => $status,
-				'response'   => mb_substr( (string) $response, 0, 2000 ),
+				'response'   => HCK_Helpers::str_limit( (string) $response, 2000 ),
 				'created_at' => current_time( 'mysql' ),
 			),
 			array( '%s', '%d', '%s', '%s', '%s' )

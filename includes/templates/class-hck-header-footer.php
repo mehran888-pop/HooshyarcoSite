@@ -199,14 +199,22 @@ class HCK_Header_Footer {
 		if ( isset( $locations['primary'] ) ) {
 			$menu_id = (int) $locations['primary'];
 		} else {
-			$menus = wp_get_menus( array( 'number' => 1 ) );
+			// wp_get_nav_menus() is available on every WordPress 3.0+ install.
+			if ( function_exists( 'wp_get_nav_menus' ) ) {
+				$menus = wp_get_nav_menus( array( 'number' => 1 ) );
+			} else {
+				$menus = array();
+			}
 			if ( ! empty( $menus ) ) {
 				$menu_id = (int) $menus[0]->term_id;
 			}
 		}
 
-		if ( $menu_id ) {
+		if ( $menu_id && function_exists( 'wp_get_nav_menu_items' ) ) {
 			$items = wp_get_nav_menu_items( $menu_id );
+			if ( is_wp_error( $items ) ) {
+				$items = array();
+			}
 		}
 
 		if ( empty( $items ) ) {

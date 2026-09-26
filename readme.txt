@@ -4,7 +4,7 @@ Tags: woocommerce, elementor, cart, checkout, digipay
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,11 @@ Card gateway (IPG), wallet, and credit/BNPL — the full UPG flow including
 purchase tickets, verification and manual reverse.
 
 == Changelog ==
+
+= 1.0.2 =
+* Fix: call to undefined function wp_get_menus() on WordPress < 6.5 (now uses wp_get_nav_menus)
+* Fix: safe substring helper when mbstring is unavailable
+* Hardened bootstrap against partial uploads
 
 = 1.0.0 =
 * Initial release.

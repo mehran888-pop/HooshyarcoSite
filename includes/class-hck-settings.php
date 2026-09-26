@@ -873,7 +873,7 @@ final class HCK_Settings {
 									?>
 								</td>
 								<td><?php echo esc_html( $row->status ); ?></td>
-								<td><code><?php echo esc_html( mb_substr( (string) $row->response, 0, 160 ) ); ?></code></td>
+								<td><code><?php echo esc_html( HCK_Helpers::str_limit( (string) $row->response, 160 ) ); ?></code></td>
 								<td><?php echo esc_html( $row->created_at ); ?></td>
 							</tr>
 						<?php endforeach; ?>
