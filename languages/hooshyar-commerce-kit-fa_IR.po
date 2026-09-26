@@ -326,6 +326,9 @@ msgstr "قالب صورتحساب"
 msgid "Choose which WordPress menu is the main navigation."
 msgstr "انتخاب کنید کدام منوی وردپرس به‌عنوان منوی اصلی باشد."
 
+msgid "Classic"
+msgstr "کلاسیک"
+
 msgid "Click here to log in"
 msgstr "برای ورود اینجا کلیک کنید"
 

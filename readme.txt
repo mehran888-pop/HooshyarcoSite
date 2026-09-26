@@ -4,7 +4,7 @@ Tags: woocommerce, elementor, cart, checkout, digipay
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,12 @@ Card gateway (IPG), wallet, and credit/BNPL — the full UPG flow including
 purchase tickets, verification and manual reverse.
 
 == Changelog ==
+
+= 1.0.5 =
+* Header/footer templates now apply on every theme: added block-theme support (header/footer template parts are replaced with the selected HCK template)
+* The four header/footer presets (Classic / Modern / Minimal / Creative) are now visually distinct and fully styled
+* Product-category menu is enabled by default in the header
+* Safer WooCommerce URL handling in header/footer (no fatals if helpers are missing)
 
 = 1.0.4 =
 * Improvement: category menu redesigned — categories stacked vertically with images, counts and accent hover; sub-categories open in a side panel (mega) or inline accordion

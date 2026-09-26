@@ -318,6 +318,9 @@ msgstr ""
 msgid "Choose which WordPress menu is the main navigation."
 msgstr ""
 
+msgid "Classic"
+msgstr ""
+
 msgid "Click here to log in"
 msgstr ""
 

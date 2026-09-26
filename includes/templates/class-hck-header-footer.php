@@ -65,6 +65,7 @@ class HCK_Header_Footer {
 		add_action( 'get_header', array( $this, 'replace_header' ), 5 );
 		add_action( 'get_footer', array( $this, 'replace_footer' ), 5 );
 		add_filter( 'body_class', array( $this, 'body_classes' ) );
+		add_filter( 'render_block', array( $this, 'filter_template_part_blocks' ), 10, 2 );
 		add_shortcode( 'hck_category_menu', array( __CLASS__, 'shortcode_category_menu' ) );
 	}
 
@@ -158,6 +159,62 @@ class HCK_Header_Footer {
 		ob_start();
 		locate_template( array( 'footer.php' ), true, true );
 		ob_end_clean();
+	}
+
+	/**
+	 * Block-theme support: replace the header/footer template-part blocks
+	 * with the selected HCK templates.
+	 *
+	 * Classic themes are handled by `get_header` / `get_footer`; block themes
+	 * never call those functions, they render `core/template-part` blocks.
+	 *
+	 * @param string $block_content Rendered block content.
+	 * @param array  $block         Block data.
+	 * @return string
+	 */
+	public function filter_template_part_blocks( $block_content, $block ) {
+		if ( is_admin() || wp_doing_ajax() || empty( $block['blockName'] ) || 'core/template-part' !== $block['blockName'] ) {
+			return $block_content;
+		}
+
+		$slug = isset( $block['attrs']['slug'] ) ? (string) $block['attrs']['slug'] : '';
+		$area = isset( $block['attrs']['area'] ) ? (string) $block['attrs']['area'] : '';
+
+		$is_header = ( 'header' === $slug || 'header' === $area );
+		$is_footer = ( 'footer' === $slug || 'footer' === $area );
+
+		if ( ! $is_header && ! $is_footer ) {
+			return $block_content;
+		}
+
+		if ( ! $this->should_use_custom() ) {
+			return $block_content;
+		}
+
+		if ( $is_header ) {
+			if ( $this->header_done ) {
+				return '';
+			}
+			$this->header_done = true;
+
+			$header_id = (int) HCK_Helpers::get( 'header_elementor_id', 0 );
+			if ( $header_id && HCK_Helpers::is_elementor_active() ) {
+				return self::render_elementor_template( $header_id );
+			}
+			return self::render_header( HCK_Helpers::get( 'header_template', 'modern' ) );
+		}
+
+		// Footer.
+		if ( $this->footer_done ) {
+			return '';
+		}
+		$this->footer_done = true;
+
+		$footer_id = (int) HCK_Helpers::get( 'footer_elementor_id', 0 );
+		if ( $footer_id && HCK_Helpers::is_elementor_active() ) {
+			return self::render_elementor_template( $footer_id );
+		}
+		return self::render_footer( HCK_Helpers::get( 'footer_template', 'modern' ) );
 	}
 
 	/**
@@ -478,10 +535,11 @@ class HCK_Header_Footer {
 				)
 			);
 		} elseif ( 'yes' === HCK_Helpers::get( 'header_cart_button', 'yes' ) ) {
-			$count = function_exists( 'WC' ) && WC()->cart ? WC()->cart->get_cart_contents_count() : 0;
-			$html .= '<a class="hck-user-area__cart" href="' . esc_url( wc_get_cart_url() ) . '" data-hck-open-cart aria-label="' . esc_attr__( 'Cart', 'hooshyar-commerce-kit' ) . '">';
-			$html .= HCK_Helpers::icon( 'cart', array( 'size' => 21 ) );
-			$html .= '<span class="hck-cart-count">' . esc_html( $count ) . '</span></a>';
+			$count    = function_exists( 'WC' ) && WC()->cart ? WC()->cart->get_cart_contents_count() : 0;
+			$cart_url = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/' );
+			$html    .= '<a class="hck-user-area__cart" href="' . esc_url( $cart_url ) . '" data-hck-open-cart aria-label="' . esc_attr__( 'Cart', 'hooshyar-commerce-kit' ) . '">';
+			$html    .= HCK_Helpers::icon( 'cart', array( 'size' => 21 ) );
+			$html    .= '<span class="hck-cart-count">' . esc_html( $count ) . '</span></a>';
 		}
 
 		$html .= '</div>';
@@ -595,13 +653,17 @@ class HCK_Header_Footer {
 
 		// Column 2: quick links.
 		if ( $columns >= 2 ) {
+			$shop_url  = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'shop' ) : home_url( '/' );
+			$cart_url  = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/' );
+			$account_url = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'myaccount' ) : home_url( '/' );
+
 			$html .= '<div class="hck-footer__col">';
 			$html .= '<h4 class="hck-footer__title">' . esc_html__( 'Quick links', 'hooshyar-commerce-kit' ) . '</h4>';
 			$html .= '<ul class="hck-footer__links">';
 			$html .= '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'hooshyar-commerce-kit' ) . '</a></li>';
-			$html .= '<li><a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '">' . esc_html__( 'Shop', 'hooshyar-commerce-kit' ) . '</a></li>';
-			$html .= '<li><a href="' . esc_url( wc_get_cart_url() ) . '">' . esc_html__( 'Cart', 'hooshyar-commerce-kit' ) . '</a></li>';
-			$html .= '<li><a href="' . esc_url( wc_get_page_permalink( 'myaccount' ) ) . '">' . esc_html__( 'My account', 'hooshyar-commerce-kit' ) . '</a></li>';
+			$html .= '<li><a href="' . esc_url( $shop_url ) . '">' . esc_html__( 'Shop', 'hooshyar-commerce-kit' ) . '</a></li>';
+			$html .= '<li><a href="' . esc_url( $cart_url ) . '">' . esc_html__( 'Cart', 'hooshyar-commerce-kit' ) . '</a></li>';
+			$html .= '<li><a href="' . esc_url( $account_url ) . '">' . esc_html__( 'My account', 'hooshyar-commerce-kit' ) . '</a></li>';
 			$html .= '</ul></div>';
 		}
 

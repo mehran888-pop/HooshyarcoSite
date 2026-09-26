@@ -172,7 +172,7 @@ final class HCK_Settings {
 			'header_layout'      => 'inline',
 			'header_menu'        => 'auto',
 			'header_menu_align'  => 'right',
-			'header_category_menu' => 'no',
+			'header_category_menu' => 'yes',
 			'header_category_menu_label' => '',
 			'header_category_menu_style' => 'mega',
 			'header_category_menu_columns' => '4',
@@ -607,7 +607,7 @@ final class HCK_Settings {
 	 */
 	public static function template_options() {
 		return array(
-			'default'  => __( 'Default', 'hooshyar-commerce-kit' ),
+			'default'  => __( 'Classic', 'hooshyar-commerce-kit' ),
 			'modern'   => __( 'Modern', 'hooshyar-commerce-kit' ),
 			'minimal'  => __( 'Minimal', 'hooshyar-commerce-kit' ),
 			'creative' => __( 'Creative', 'hooshyar-commerce-kit' ),
