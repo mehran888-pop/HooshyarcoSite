@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Hooshyar Commerce Kit — RTL refinements
+   Logical properties are used everywhere; this file only fixes
+   third-party / core markup that relies on physical directions.
+   ========================================================================== */
+
+.rtl .hck-carousel__arrow--prev {
+  right: -6px;
+  left: auto;
+}
+
+.rtl .hck-carousel__arrow--next {
+  left: -6px;
+  right: auto;
+}
+
+.rtl .hck-cart-drawer__panel {
+  right: auto;
+  left: 0;
+  transform: translateX(-110%);
+}
+
+.rtl .hck-cart-drawer.is-open .hck-cart-drawer__panel {
+  transform: translateX(0);
+}
+
+.rtl .hck-user-area__menu {
+  right: auto;
+  left: 0;
+}
+
+.rtl .hck-qty__input {
+  text-align: center;
+}
+
+.rtl .woocommerce-ordering select {
+  direction: rtl;
+}
+
+.rtl .hck-toast {
+  left: auto;
+  right: 24px;
+}
+
+.rtl .hck-badges {
+  left: auto;
+  right: 12px;
+}

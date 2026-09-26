@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Hooshyar Commerce Kit — Admin settings
+   ========================================================================== */
+
+.hck-settings-wrap {
+  max-width: 1060px;
+  margin-inline: 20px 20px;
+}
+
+.hck-settings-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-block: 22px 20px;
+  font-family: -apple-system, "Segoe UI", Tahoma, sans-serif;
+  font-size: 24px;
+  color: #1e1b32;
+}
+
+.hck-logo-mark {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6c5ce7, #00cec9);
+  box-shadow: 0 10px 24px rgba(108, 92, 231, 0.35);
+}
+
+.hck-tabs {
+  margin-block-end: 0 !important;
+}
+
+.hck-tabs .nav-tab {
+  margin-inline-end: 4px !important;
+  border-radius: 8px 8px 0 0;
+  font-size: 13px;
+}
+
+.hck-tabs .nav-tab-active {
+  background: #fff;
+  border-bottom-color: #fff;
+  color: #6c5ce7;
+  font-weight: 700;
+}
+
+.hck-settings-form {
+  background: #fff;
+  border: 1px solid #e2e0ee;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 8px 24px 20px;
+  box-shadow: 0 10px 30px rgba(30, 27, 50, 0.05);
+}
+
+.hck-settings-form .form-table th {
+  width: 260px;
+  padding-block: 18px;
+  color: #2d2a45;
+  font-weight: 600;
+}
+
+.hck-settings-form .form-table td {
+  padding-block: 18px;
+}
+
+.hck-settings-form input.regular-text,
+.hck-settings-form textarea.large-text,
+.hck-settings-form select {
+  border-radius: 8px;
+  border-color: #d9d6ea;
+}
+
+.hck-settings-form input.regular-text:focus,
+.hck-settings-form textarea.large-text:focus,
+.hck-settings-form select:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.18);
+}
+
+.hck-field .description {
+  margin-top: 8px;
+  color: #7c7a92;
+  font-size: 12.5px;
+}
+
+.hck-color-picker {
+  max-width: 110px;
+}
+
+.hck-test-panel {
+  background: #fff;
+  border: 1px solid #e2e0ee;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 22px;
+}
+
+.hck-test-panel h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.hck-test-result {
+  display: none;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #f6f5fb;
+  color: #2d2a45;
+  font-size: 12.5px;
+  white-space: pre-wrap;
+  direction: ltr;
+  text-align: left;
+}
+
+.hck-test-result.is-visible { display: block; }
+.hck-test-result.is-success { background: #e9f9ef; color: #157347; }
+.hck-test-result.is-error { background: #fdecec; color: #b02a37; }

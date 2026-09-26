@@ -1,0 +1,1510 @@
+# Translation template for Hooshyar Commerce Kit.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hooshyar Commerce Kit 1.0.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: hooshyar-commerce-kit\n"
+
+msgid "24/7 support"
+msgstr ""
+
+msgid "3D tilt on hover"
+msgstr ""
+
+msgid "A phone number is required to pay with DigiPay."
+msgstr ""
+
+msgid "AJAX add to cart"
+msgstr ""
+
+msgid "About text (footer)"
+msgstr ""
+
+msgid "Accent color"
+msgstr ""
+
+msgid "Access your orders, downloads and account details."
+msgstr ""
+
+msgid "Accordion"
+msgstr ""
+
+msgid "Account"
+msgstr ""
+
+msgid "Account details"
+msgstr ""
+
+msgid "Account menu"
+msgstr ""
+
+msgid "Account settings"
+msgstr ""
+
+msgid "Active / accent color"
+msgstr ""
+
+msgid "Active menu color"
+msgstr ""
+
+msgid "Add %s more to get free shipping"
+msgstr ""
+
+msgid "Add to cart effect"
+msgstr ""
+
+msgid "Additional information"
+msgstr ""
+
+msgid "Addresses"
+msgstr ""
+
+msgid "Almost there — review your bag and proceed to payment."
+msgstr ""
+
+msgid "Almost there!"
+msgstr ""
+
+msgid "Animated gradient overlay"
+msgstr ""
+
+msgid "Any CSS font family, e.g. Tahoma, Vazirmatn, Roboto. Google fonts load automatically."
+msgstr ""
+
+msgid "Apply coupon"
+msgstr ""
+
+msgid "Arc to cart"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""
+
+msgid "Arrow background"
+msgstr ""
+
+msgid "Arrow color"
+msgstr ""
+
+msgid "Arrows & dots"
+msgstr ""
+
+msgid "Arrows only"
+msgstr ""
+
+msgid "Ascending"
+msgstr ""
+
+msgid "Autoplay"
+msgstr ""
+
+msgid "Autoplay speed (ms)"
+msgstr ""
+
+msgid "Available: home, shop, cart, account, search, categories, wishlist"
+msgstr ""
+
+msgid "Awaiting DigiPay payment."
+msgstr ""
+
+msgid "Background"
+msgstr ""
+
+msgid "Background color"
+msgstr ""
+
+msgid "Background image"
+msgstr ""
+
+msgid "Badge"
+msgstr ""
+
+msgid "Badge background"
+msgstr ""
+
+msgid "Badge color"
+msgstr ""
+
+msgid "Bale"
+msgstr ""
+
+msgid "Bale bot token"
+msgstr ""
+
+msgid "Bale bot token is not set."
+msgstr ""
+
+msgid "Banner"
+msgstr ""
+
+msgid "Banner height"
+msgstr ""
+
+msgid "Bar background"
+msgstr ""
+
+msgid "Best selling"
+msgstr ""
+
+msgid "Big summer sale"
+msgstr ""
+
+msgid "Billing details"
+msgstr ""
+
+msgid "Body font family"
+msgstr ""
+
+msgid "Border"
+msgstr ""
+
+msgid "Border color"
+msgstr ""
+
+msgid "Border radius"
+msgstr ""
+
+msgid "Border radius (px)"
+msgstr ""
+
+msgid "Bordered"
+msgstr ""
+
+msgid "Bot token"
+msgstr ""
+
+msgid "Boxed"
+msgstr ""
+
+msgid "Button"
+msgstr ""
+
+msgid "Button Style"
+msgstr ""
+
+msgid "Button link"
+msgstr ""
+
+msgid "Button radius"
+msgstr ""
+
+msgid "Button text"
+msgstr ""
+
+msgid "Buttons"
+msgstr ""
+
+msgid "Card Style"
+msgstr ""
+
+msgid "Card hover effect"
+msgstr ""
+
+msgid "Card lift"
+msgstr ""
+
+msgid "Card radius"
+msgstr ""
+
+msgid "Card template"
+msgstr ""
+
+msgid "Carousel"
+msgstr ""
+
+msgid "Carousel Navigation"
+msgstr ""
+
+msgid "Carousel Settings"
+msgstr ""
+
+msgid "Cart"
+msgstr ""
+
+msgid "Cart badge"
+msgstr ""
+
+msgid "Cart badge color"
+msgstr ""
+
+msgid "Cart button"
+msgstr ""
+
+msgid "Cart icon bump"
+msgstr ""
+
+msgid "Cart layout"
+msgstr ""
+
+msgid "Cart template"
+msgstr ""
+
+msgid "Cart totals"
+msgstr ""
+
+msgid "Catalog grid"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Category slugs (comma separated)"
+msgstr ""
+
+msgid "Center"
+msgstr ""
+
+msgid "Centered"
+msgstr ""
+
+msgid "Centered (logo on top)"
+msgstr ""
+
+msgid "Centered hero"
+msgstr ""
+
+msgid "Channel"
+msgstr ""
+
+msgid "Channel / chat ID"
+msgstr ""
+
+msgid "Checkout"
+msgstr ""
+
+msgid "Checkout layout"
+msgstr ""
+
+msgid "Checkout template"
+msgstr ""
+
+msgid "Click here to log in"
+msgstr ""
+
+msgid "Client ID"
+msgstr ""
+
+msgid "Client secret"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Color"
+msgstr ""
+
+msgid "Columns"
+msgstr ""
+
+msgid "Complete your order in a few simple steps"
+msgstr ""
+
+msgid "Confetti burst"
+msgstr ""
+
+msgid "Confirmation"
+msgstr ""
+
+msgid "Connected to DigiPay successfully."
+msgstr ""
+
+msgid "Connection test"
+msgstr ""
+
+msgid "Contact us"
+msgstr ""
+
+msgid "Container width (px)"
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Content alignment"
+msgstr ""
+
+msgid "Content left"
+msgstr ""
+
+msgid "Content right"
+msgstr ""
+
+msgid "Continue shopping"
+msgstr ""
+
+msgid "Copied!"
+msgstr ""
+
+msgid "Copyright text"
+msgstr ""
+
+msgid "Coupon code"
+msgstr ""
+
+msgid "Coupon form"
+msgstr ""
+
+msgid "Coupon: %s"
+msgstr ""
+
+msgid "Create a bot with @botfather in Bale."
+msgstr ""
+
+msgid "Creative"
+msgstr ""
+
+msgid "Creative effect"
+msgstr ""
+
+msgid "Creative hero"
+msgstr ""
+
+msgid "Creative masonry"
+msgstr ""
+
+msgid "Custom text"
+msgstr ""
+
+msgid "Custom title"
+msgstr ""
+
+msgid "Danger color"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Dashboard layout"
+msgstr ""
+
+msgid "Dashboard template"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Debug logging"
+msgstr ""
+
+msgid "Decrease quantity"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Default (from settings)"
+msgstr ""
+
+msgid "Descending"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Description color"
+msgstr ""
+
+msgid "Description typography"
+msgstr ""
+
+msgid "Design"
+msgstr ""
+
+msgid "DigiPay"
+msgstr ""
+
+msgid "DigiPay (UPG)"
+msgstr ""
+
+msgid "DigiPay Gateway"
+msgstr ""
+
+msgid "DigiPay amount mismatch."
+msgstr ""
+
+msgid "DigiPay credentials are not configured."
+msgstr ""
+
+msgid "DigiPay error: %s"
+msgstr ""
+
+msgid "DigiPay is not configured. Please contact the store administrator."
+msgstr ""
+
+msgid "DigiPay login failed."
+msgstr ""
+
+msgid "DigiPay payment completed. Tracking code: %1$s %2$s"
+msgstr ""
+
+msgid "DigiPay payment failed or was cancelled by the user."
+msgstr ""
+
+msgid "DigiPay purchase reversed (refunded)."
+msgstr ""
+
+msgid "DigiPay reverse failed."
+msgstr ""
+
+msgid "DigiPay selection screen"
+msgstr ""
+
+msgid "DigiPay ticket creation failed."
+msgstr ""
+
+msgid "DigiPay unified payment gateway: card gateway, wallet and BNPL credit. Docs: mydigipay.com/developers/docs/upg"
+msgstr ""
+
+msgid "DigiPay verification failed."
+msgstr ""
+
+msgid "DigiPay verification failed: %s"
+msgstr ""
+
+msgid "Direct: card gateway (IPG)"
+msgstr ""
+
+msgid "Direct: wallet"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Display mode"
+msgstr ""
+
+msgid "Display scope"
+msgstr ""
+
+msgid "Documentation"
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Dot color"
+msgstr ""
+
+msgid "Dots only"
+msgstr ""
+
+msgid "Downloads"
+msgstr ""
+
+msgid "Effect duration (ms)"
+msgstr ""
+
+msgid "Effects"
+msgstr ""
+
+msgid "Effects & Border"
+msgstr ""
+
+msgid "Elementor footer template ID"
+msgstr ""
+
+msgid "Elementor header template ID"
+msgstr ""
+
+msgid "Enable DigiPay gateway"
+msgstr ""
+
+msgid "Enable/Disable"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Entire site"
+msgstr ""
+
+msgid "Entrance animation"
+msgstr ""
+
+msgid "Environment"
+msgstr ""
+
+msgid "Everything about your orders and profile in one place."
+msgstr ""
+
+msgid "Extra confetti with any effect"
+msgstr ""
+
+msgid "Fade down"
+msgstr ""
+
+msgid "Fade up"
+msgstr ""
+
+msgid "Fast & insured delivery"
+msgstr ""
+
+msgid "Fast delivery"
+msgstr ""
+
+msgid "Featured"
+msgstr ""
+
+msgid "Fieldset background"
+msgstr ""
+
+msgid "Fill in your details and finish your order securely."
+msgstr ""
+
+msgid "Floating pill"
+msgstr ""
+
+msgid "Floating product"
+msgstr ""
+
+msgid "Fly to cart"
+msgstr ""
+
+msgid "Footer columns"
+msgstr ""
+
+msgid "Footer template"
+msgstr ""
+
+msgid "Fourth column of the built-in footer."
+msgstr ""
+
+msgid "Free shipping for orders over a certain amount"
+msgstr ""
+
+msgid "Free shipping progress bar"
+msgstr ""
+
+msgid "From here you can manage your orders, addresses and account details."
+msgstr ""
+
+msgid "Front page only"
+msgstr ""
+
+msgid "Gallery left"
+msgstr ""
+
+msgid "Gallery right"
+msgstr ""
+
+msgid "Gap between cards"
+msgstr ""
+
+msgid "Get Elementor"
+msgstr ""
+
+msgid "Get it from @BotFather."
+msgstr ""
+
+msgid "Gradient from"
+msgstr ""
+
+msgid "Gradient overlay"
+msgstr ""
+
+msgid "Grid"
+msgstr ""
+
+msgid "Grid columns"
+msgstr ""
+
+msgid "HCK Banner / Poster"
+msgstr ""
+
+msgid "HCK Banner — preview is rendered live."
+msgstr ""
+
+msgid "HCK Cart"
+msgstr ""
+
+msgid "HCK Checkout"
+msgstr ""
+
+msgid "HCK Footer Widgets"
+msgstr ""
+
+msgid "HCK Mobile Nav"
+msgstr ""
+
+msgid "HCK Product Banner"
+msgstr ""
+
+msgid "HCK Product Banner — preview is rendered live."
+msgstr ""
+
+msgid "HCK Products"
+msgstr ""
+
+msgid "HCK Products — preview is rendered live."
+msgstr ""
+
+msgid "HCK Shop Sidebar"
+msgstr ""
+
+msgid "HCK User Area Button"
+msgstr ""
+
+msgid "HCK User Dashboard"
+msgstr ""
+
+msgid "Header & Footer"
+msgstr ""
+
+msgid "Header layout"
+msgstr ""
+
+msgid "Header template"
+msgstr ""
+
+msgid "Heading color"
+msgstr ""
+
+msgid "Heading font family"
+msgstr ""
+
+msgid "Hello"
+msgstr ""
+
+msgid "Hides the footer navigation on mobile in favour of the mobile nav."
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Hooshyar Commerce Kit requires PHP %s or higher."
+msgstr ""
+
+msgid "Hooshyar Commerce Kit requires WooCommerce. Please install and activate WooCommerce first."
+msgstr ""
+
+msgid "Hooshyar Commerce Kit settings saved."
+msgstr ""
+
+msgid "Hooshyar Commerce Kit works best with Elementor. Install it to unlock the dedicated widgets."
+msgstr ""
+
+msgid "Hooshyar Commerce Kit — Settings"
+msgstr ""
+
+msgid "Hooshyar Kit"
+msgstr ""
+
+msgid "Horizontal tabs"
+msgstr ""
+
+msgid "Hover background"
+msgstr ""
+
+msgid "Hover color"
+msgstr ""
+
+msgid "Hover effect"
+msgstr ""
+
+msgid "Hover text color"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "Icon + label"
+msgstr ""
+
+msgid "Icon / text color"
+msgstr ""
+
+msgid "Icon color"
+msgstr ""
+
+msgid "Icon only"
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "Image aspect ratio"
+msgstr ""
+
+msgid "Image border radius"
+msgstr ""
+
+msgid "Image slide"
+msgstr ""
+
+msgid "Image zoom"
+msgstr ""
+
+msgid "Increase quantity"
+msgstr ""
+
+msgid "Infinite loop"
+msgstr ""
+
+msgid "Inline (logo | menu | actions)"
+msgstr ""
+
+msgid "Invalid DigiPay callback."
+msgstr ""
+
+msgid "Items (comma separated)"
+msgstr ""
+
+msgid "Ken Burns (slow zoom)"
+msgstr ""
+
+msgid "Label typography"
+msgstr ""
+
+msgid "Last 200 Telegram / Bale notifications."
+msgstr ""
+
+msgid "Latest products"
+msgstr ""
+
+msgid "Layout"
+msgstr ""
+
+msgid "Leave empty to use the current product on a single product page."
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Limit"
+msgstr ""
+
+msgid "List"
+msgstr ""
+
+msgid "Live"
+msgstr ""
+
+msgid "Loading…"
+msgstr ""
+
+msgid "Log gateway events to WooCommerce → Status → Logs"
+msgstr ""
+
+msgid "Log in / Register"
+msgstr ""
+
+msgid "Log in to your account"
+msgstr ""
+
+msgid "Log out"
+msgstr ""
+
+msgid "Login / Register"
+msgstr ""
+
+msgid "Logs go to WooCommerce → Status → Logs."
+msgstr ""
+
+msgid "Looks like you have not added anything to your cart yet."
+msgstr ""
+
+msgid "Main brand colour used across all templates and elements."
+msgstr ""
+
+msgid "Main navigation"
+msgstr ""
+
+msgid "Manage your orders, downloads and personal info"
+msgstr ""
+
+msgid "Mask reveal on scroll"
+msgstr ""
+
+msgid "Masonry"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+msgid "Menu link color"
+msgstr ""
+
+msgid "Menu order"
+msgstr ""
+
+msgid "Menu typography"
+msgstr ""
+
+msgid "Message template"
+msgstr ""
+
+msgid "Minimal"
+msgstr ""
+
+msgid "Mobile Nav"
+msgstr ""
+
+msgid "Mobile navigation"
+msgstr ""
+
+msgid "Modern"
+msgstr ""
+
+msgid "Modern grid with sidebar"
+msgstr ""
+
+msgid "Modern underline"
+msgstr ""
+
+msgid "Modern with center action"
+msgstr ""
+
+msgid "Muted text color"
+msgstr ""
+
+msgid "My account"
+msgstr ""
+
+msgid "My orders"
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "Neon glow"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "Newsletter"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "No DigiPay transaction found for this order."
+msgstr ""
+
+msgid "No notifications yet."
+msgstr ""
+
+msgid "No products found."
+msgstr ""
+
+msgid "No sidebar"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Notification Log"
+msgstr ""
+
+msgid "Offset"
+msgstr ""
+
+msgid "On sale"
+msgstr ""
+
+msgid "One column"
+msgstr ""
+
+msgid "Optional. Leave 0 to use the built-in template above."
+msgstr ""
+
+msgid "Optionally skip the DigiPay tool-selection screen."
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Order by"
+msgstr ""
+
+msgid "Order not found for this payment."
+msgstr ""
+
+msgid "Order not found."
+msgstr ""
+
+msgid "Order note (optional)"
+msgstr ""
+
+msgid "Order note field"
+msgstr ""
+
+msgid "Order summary background"
+msgstr ""
+
+msgid "Orders"
+msgstr ""
+
+msgid "Originality guarantee"
+msgstr ""
+
+msgid "Out of stock"
+msgstr ""
+
+msgid "Overlay"
+msgstr ""
+
+msgid "Overlay color"
+msgstr ""
+
+msgid "Overrides the product name."
+msgstr ""
+
+msgid "Padding"
+msgstr ""
+
+msgid "Page IDs (comma separated)"
+msgstr ""
+
+msgid "Parallax scroll"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Pay securely with DigiPay — card, wallet or credit."
+msgstr ""
+
+msgid "Payment"
+msgstr ""
+
+msgid "Payment method title shown on checkout."
+msgstr ""
+
+msgid "Permission denied."
+msgstr ""
+
+msgid "Phone (top bar)"
+msgstr ""
+
+msgid "Placeholders: {title} {price} {link} {sku} {categories} {excerpt}"
+msgstr ""
+
+msgid "Popularity"
+msgstr ""
+
+msgid "Poster"
+msgstr ""
+
+msgid "Poster (full-bleed image)"
+msgstr ""
+
+msgid "Powered by Hooshyar Commerce Kit"
+msgstr ""
+
+msgid "Preferred payment tool"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Price color"
+msgstr ""
+
+msgid "Price typography"
+msgstr ""
+
+msgid "Primary color"
+msgstr ""
+
+msgid "Proceed to checkout"
+msgstr ""
+
+msgid "Product"
+msgstr ""
+
+msgid "Product ID"
+msgstr ""
+
+msgid "Product IDs (comma separated)"
+msgstr ""
+
+msgid "Product added to cart"
+msgstr ""
+
+msgid "Product card style"
+msgstr ""
+
+msgid "Product image max width"
+msgstr ""
+
+msgid "Product images"
+msgstr ""
+
+msgid "Product images in summary"
+msgstr ""
+
+msgid "Product not found."
+msgstr ""
+
+msgid "Product page layout"
+msgstr ""
+
+msgid "Products"
+msgstr ""
+
+msgid "Progress bar"
+msgstr ""
+
+msgid "Provided by DigiPay merchant panel."
+msgstr ""
+
+msgid "Quick links"
+msgstr ""
+
+msgid "Random"
+msgstr ""
+
+msgid "Rating"
+msgstr ""
+
+msgid "Recent orders"
+msgstr ""
+
+msgid "Recent orders count"
+msgstr ""
+
+msgid "Redirecting you to DigiPay…"
+msgstr ""
+
+msgid "Related products"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Remove this item"
+msgstr ""
+
+msgid "Replace footer on mobile"
+msgstr ""
+
+msgid "Response"
+msgstr ""
+
+msgid "Result count & ordering bar"
+msgstr ""
+
+msgid "Returning customer notice"
+msgstr ""
+
+msgid "Returning customer?"
+msgstr ""
+
+msgid "Review your items and continue to checkout"
+msgstr ""
+
+msgid "Rial (send as-is)"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Rotate in"
+msgstr ""
+
+msgid "SKU:"
+msgstr ""
+
+msgid "Sale"
+msgstr ""
+
+msgid "Save settings"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search form"
+msgstr ""
+
+msgid "Search products…"
+msgstr ""
+
+msgid "Second button link"
+msgstr ""
+
+msgid "Second button text"
+msgstr ""
+
+msgid "Secondary color"
+msgstr ""
+
+msgid "Secure checkout"
+msgstr ""
+
+msgid "Select options"
+msgstr ""
+
+msgid "Send a test message"
+msgstr ""
+
+msgid "Send new products"
+msgstr ""
+
+msgid "Send test to %s"
+msgstr ""
+
+msgid "Sending failed. Check the log below."
+msgstr ""
+
+msgid "Sending test message…"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Shadow"
+msgstr ""
+
+msgid "Shipping"
+msgstr ""
+
+msgid "Shipping details"
+msgstr ""
+
+msgid "Shop"
+msgstr ""
+
+msgid "Shop & Product"
+msgstr ""
+
+msgid "Shop layout"
+msgstr ""
+
+msgid "Shop now"
+msgstr ""
+
+msgid "Shop pages only"
+msgstr ""
+
+msgid "Shop sidebar"
+msgstr ""
+
+msgid "Shopping cart"
+msgstr ""
+
+msgid "Show add-to-cart button"
+msgstr ""
+
+msgid "Show avatar"
+msgstr ""
+
+msgid "Show badges"
+msgstr ""
+
+msgid "Show cart button"
+msgstr ""
+
+msgid "Show image"
+msgstr ""
+
+msgid "Show label"
+msgstr ""
+
+msgid "Show price"
+msgstr ""
+
+msgid "Show rating"
+msgstr ""
+
+msgid "Show short description"
+msgstr ""
+
+msgid "Shows a synced WooCommerce account button in the header."
+msgstr ""
+
+msgid "Sidebar background"
+msgstr ""
+
+msgid "Sidebar left"
+msgstr ""
+
+msgid "Sidebar right"
+msgstr ""
+
+msgid "Skip to content"
+msgstr ""
+
+msgid "Slide from left"
+msgstr ""
+
+msgid "Slide from right"
+msgstr ""
+
+msgid "Slider (one at a time)"
+msgstr ""
+
+msgid "Soft glow hover"
+msgstr ""
+
+msgid "Solid bar"
+msgstr ""
+
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Specific IDs"
+msgstr ""
+
+msgid "Specific page IDs"
+msgstr ""
+
+msgid "Split card"
+msgstr ""
+
+msgid "Split menu"
+msgstr ""
+
+msgid "Spotlight (image + info)"
+msgstr ""
+
+msgid "Staging (UAT)"
+msgstr ""
+
+msgid "Statistics cards"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Step indicator"
+msgstr ""
+
+msgid "Sticky header"
+msgstr ""
+
+msgid "Sticky order summary"
+msgstr ""
+
+msgid "Sticky product summary"
+msgstr ""
+
+msgid "Sticky summary"
+msgstr ""
+
+msgid "Stock hints"
+msgstr ""
+
+msgid "Store currency unit"
+msgstr ""
+
+msgid "Style"
+msgstr ""
+
+msgid "Subscribe to get the latest offers."
+msgstr ""
+
+msgid "Subtitle"
+msgstr ""
+
+msgid "Subtitle color"
+msgstr ""
+
+msgid "Subtitle typography"
+msgstr ""
+
+msgid "Subtotal"
+msgstr ""
+
+msgid "Success color"
+msgstr ""
+
+msgid "Success toast"
+msgstr ""
+
+msgid "Summary card background"
+msgstr ""
+
+msgid "Summary left"
+msgstr ""
+
+msgid "Summary on the left"
+msgstr ""
+
+msgid "Support"
+msgstr ""
+
+msgid "Support: 24/7"
+msgstr ""
+
+msgid "Supporting text"
+msgstr ""
+
+msgid "Surface / card color"
+msgstr ""
+
+msgid "Tabs"
+msgstr ""
+
+msgid "Tabs style"
+msgstr ""
+
+msgid "Telegram"
+msgstr ""
+
+msgid "Telegram bot token is not set."
+msgstr ""
+
+msgid "Template"
+msgstr ""
+
+msgid "Test DigiPay connection"
+msgstr ""
+
+msgid "Test message sent successfully."
+msgstr ""
+
+msgid "Test message — the connection works fine."
+msgstr ""
+
+msgid "Tests the OAuth login against the DigiPay UPG API using the credentials above."
+msgstr ""
+
+msgid "Text color"
+msgstr ""
+
+msgid "The bar is displayed automatically on mobile (configurable in Hooshyar Kit → Settings → Mobile Nav). This widget lets you preview it and place it manually."
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Title color"
+msgstr ""
+
+msgid "Title typography"
+msgstr ""
+
+msgid "Toman (multiply by 10)"
+msgstr ""
+
+msgid "Top bar"
+msgstr ""
+
+msgid "Total"
+msgstr ""
+
+msgid "Total orders"
+msgstr ""
+
+msgid "Track your latest order"
+msgstr ""
+
+msgid "Transition speed (ms)"
+msgstr ""
+
+msgid "Trust badges"
+msgstr ""
+
+msgid "Two column"
+msgstr ""
+
+msgid "Two column (form + summary)"
+msgstr ""
+
+msgid "Two column (items + summary)"
+msgstr ""
+
+msgid "Typography"
+msgstr ""
+
+msgid "Update cart"
+msgstr ""
+
+msgid "Used with the \"Specific page IDs\" scope."
+msgstr ""
+
+msgid "User Area"
+msgstr ""
+
+msgid "User area button"
+msgstr ""
+
+msgid "User area button in header"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View all"
+msgstr ""
+
+msgid "View cart"
+msgstr ""
+
+msgid "View product"
+msgstr ""
+
+msgid "Warning color"
+msgstr ""
+
+msgid "Welcome back, %s 👋"
+msgstr ""
+
+msgid "Welcome card"
+msgstr ""
+
+msgid "Welcome card background"
+msgstr ""
+
+msgid "Widgets shown on shop / product archive pages."
+msgstr ""
+
+msgid "Wishlist"
+msgstr ""
+
+msgid "WooCommerce is not available."
+msgstr ""
+
+msgid "WooCommerce is required. Please install and activate WooCommerce 8.0 or newer."
+msgstr ""
+
+msgid "You have not placed any orders yet."
+msgstr ""
+
+msgid "Your cart is empty"
+msgstr ""
+
+msgid "Your headline"
+msgstr ""
+
+msgid "Your order"
+msgstr ""
+
+msgid "Your order qualifies for free shipping!"
+msgstr ""
+
+msgid "Your shopping bag"
+msgstr ""
+
+msgid "Zoom & fade"
+msgstr ""
+
+msgid "Zoom in"
+msgstr ""
+
+msgid "Zoom out"
+msgstr ""
+
+msgid "Zoom pulse"
+msgstr ""
+
+msgid "e.g. @your_channel or -100xxxxxxxxxx"
+msgstr ""
+
+msgid "e.g. Special offer"
+msgstr ""
+
+msgid "← Continue shopping"
+msgstr ""
