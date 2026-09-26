@@ -29,19 +29,12 @@ define( 'HCK_MIN_WC', '8.0.0' );
 define( 'HCK_MIN_PHP', '7.4' );
 
 /**
- * Autoloader for HCK classes.
+ * Map of HCK classes to their files (relative to /includes).
  *
- * Class files live in includes/ (flat or one level deep) with the
- * naming convention class-hck-something.php -> HCK_Something.
- *
- * @param string $class Class name.
+ * @return array
  */
-function hck_autoload( $class ) {
-	if ( 0 !== strpos( $class, 'HCK' ) ) {
-		return;
-	}
-
-	$map = array(
+function hck_class_map() {
+	return array(
 		'HCK'                        => 'class-hck.php',
 		'HCK_Activator'              => 'class-hck-activator.php',
 		'HCK_Deactivator'            => 'class-hck-deactivator.php',
@@ -74,15 +67,64 @@ function hck_autoload( $class ) {
 		'HCK_Telegram'               => 'social/class-hck-telegram.php',
 		'HCK_Bale'                   => 'social/class-hck-bale.php',
 	);
+}
 
-	if ( isset( $map[ $class ] ) ) {
-		$file = HCK_PLUGIN_DIR . 'includes/' . $map[ $class ];
+/**
+ * Classes that could not be loaded (used for diagnostics).
+ *
+ * @var array
+ */
+$GLOBALS['hck_missing_classes'] = array();
+
+/**
+ * Autoloader for HCK classes.
+ *
+ * @param string $class Class name.
+ */
+function hck_autoload( $class ) {
+	if ( 0 !== strpos( $class, 'HCK' ) ) {
+		return;
+	}
+
+	$map = hck_class_map();
+
+	if ( ! isset( $map[ $class ] ) ) {
+		return;
+	}
+
+	$candidates = array(
+		HCK_PLUGIN_DIR . 'includes/' . $map[ $class ],
+		// Legacy location (class files once lived in /templates).
+		HCK_PLUGIN_DIR . $map[ $class ],
+	);
+
+	foreach ( $candidates as $file ) {
 		if ( is_readable( $file ) ) {
 			require_once $file;
+			return;
 		}
 	}
+
+	$GLOBALS['hck_missing_classes'][] = $class . ' (' . $map[ $class ] . ')';
 }
 spl_autoload_register( 'hck_autoload' );
+
+/**
+ * Verify that all class files exist before booting the plugin.
+ *
+ * @return array List of missing files (empty when everything is present).
+ */
+function hck_verify_files() {
+	$missing = array();
+
+	foreach ( hck_class_map() as $class => $relative ) {
+		if ( ! is_readable( HCK_PLUGIN_DIR . 'includes/' . $relative ) && ! is_readable( HCK_PLUGIN_DIR . $relative ) ) {
+			$missing[] = 'includes/' . $relative;
+		}
+	}
+
+	return $missing;
+}
 
 /**
  * Show an admin error notice when requirements are missing.
@@ -111,9 +153,6 @@ if ( version_compare( PHP_VERSION, HCK_MIN_PHP, '<' ) ) {
  */
 function hck_bootstrap() {
 	if ( ! class_exists( 'WooCommerce' ) ) {
-		if ( class_exists( 'Plugins_Installer' ) ) {
-			/* no-op */
-		}
 		hck_requirement_error( __( 'WooCommerce is required. Please install and activate WooCommerce 8.0 or newer.', 'hooshyar-commerce-kit' ) );
 		return;
 	}
@@ -123,7 +162,30 @@ function hck_bootstrap() {
 		return;
 	}
 
-	HCK::instance();
+	// Preflight: never let a partial upload crash the site.
+	$missing_files = hck_verify_files();
+	if ( ! empty( $missing_files ) ) {
+		hck_requirement_error(
+			sprintf(
+				/* translators: %s: file list */
+				__( 'Plugin files are incomplete (%s). Please delete the "hooshyar-commerce-kit" folder and upload the plugin again — all files and folders must be uploaded.', 'hooshyar-commerce-kit' ),
+				implode( ', ', $missing_files )
+			)
+		);
+		return;
+	}
+
+	try {
+		HCK::instance();
+	} catch ( \Throwable $e ) {
+		hck_requirement_error(
+			sprintf(
+				/* translators: %s: error message */
+				__( 'Hooshyar Commerce Kit could not start: %s. Please re-upload the plugin files.', 'hooshyar-commerce-kit' ),
+				$e->getMessage()
+			)
+		);
+	}
 }
 add_action( 'plugins_loaded', 'hck_bootstrap', 20 );
 
