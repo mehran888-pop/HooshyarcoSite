@@ -29,6 +29,9 @@ msgstr "افزودن به سبد با ایجکس"
 msgid "About text (footer)"
 msgstr "متن درباره ما (فوتر)"
 
+msgid "Accent / hover color"
+msgstr "رنگ اکسنت / هاور"
+
 msgid "Accent color"
 msgstr "رنگ لهجه‌ای (اکسنت)"
 
@@ -58,6 +61,9 @@ msgstr "رنگ آیتم فعال منو"
 
 msgid "Add %s more to get free shipping"
 msgstr "برای ارسال رایگان %s دیگر اضافه کنید"
+
+msgid "Add font"
+msgstr "افزودن فونت"
 
 msgid "Add to cart effect"
 msgstr "افکت افزودن به سبد خرید"
@@ -103,6 +109,9 @@ msgstr "فقط فلش"
 
 msgid "Ascending"
 msgstr "صعودی"
+
+msgid "Auto (primary location / first menu)"
+msgstr "خودکار (لوکیشن اصلی / اولین منو)"
 
 msgid "Autoplay"
 msgstr "پخش خودکار"
@@ -191,6 +200,15 @@ msgstr "دکمه"
 msgid "Button Style"
 msgstr "استایل دکمه"
 
+msgid "Button background"
+msgstr "پس‌زمینه دکمه"
+
+msgid "Button color"
+msgstr "رنگ دکمه"
+
+msgid "Button label"
+msgstr "برچسب دکمه"
+
 msgid "Button link"
 msgstr "لینک دکمه"
 
@@ -260,6 +278,21 @@ msgstr "دسته‌بندی‌ها"
 msgid "Category"
 msgstr "دسته‌بندی"
 
+msgid "Category Menu"
+msgstr "منوی دسته‌بندی"
+
+msgid "Category images"
+msgstr "تصاویر دسته‌بندی"
+
+msgid "Category menu (mega menu)"
+msgstr "منوی دسته‌بندی (مگامنو)"
+
+msgid "Category menu label"
+msgstr "برچسب منوی دسته‌بندی"
+
+msgid "Category menu style"
+msgstr "استایل منوی دسته‌بندی"
+
 msgid "Category slugs (comma separated)"
 msgstr "اسلاگ دسته‌ها (جدا شده با کاما)"
 
@@ -289,6 +322,9 @@ msgstr "چیدمان صورتحساب"
 
 msgid "Checkout template"
 msgstr "قالب صورتحساب"
+
+msgid "Choose which WordPress menu is the main navigation."
+msgstr "انتخاب کنید کدام منوی وردپرس به‌عنوان منوی اصلی باشد."
 
 msgid "Click here to log in"
 msgstr "برای ورود اینجا کلیک کنید"
@@ -373,6 +409,9 @@ msgstr "هیرو خلاقانه"
 
 msgid "Creative masonry"
 msgstr "ماسونری خلاقانه"
+
+msgid "Custom Fonts"
+msgstr "فونت‌های سفارشی"
 
 msgid "Custom text"
 msgstr "متن سفارشی"
@@ -503,6 +542,9 @@ msgstr "فقط نقطه"
 msgid "Downloads"
 msgstr "دانلودها"
 
+msgid "Dropdown"
+msgstr "دراپ‌داون"
+
 msgid "Effect duration (ms)"
 msgstr "مدت افکت (میلی‌ثانیه)"
 
@@ -572,6 +614,12 @@ msgstr "محصول شناور"
 msgid "Fly to cart"
 msgstr "پرواز به سبد خرید"
 
+msgid "Font file (woff2/woff/ttf)"
+msgstr "فایل فونت (woff2/woff/ttf)"
+
+msgid "Font name"
+msgstr "نام فونت"
+
 msgid "Footer columns"
 msgstr "ستون‌های فوتر"
 
@@ -629,6 +677,9 @@ msgstr "بنر هوشیار — پیش‌نمایش زنده نمایش داده
 msgid "HCK Cart"
 msgstr "سبد خرید هوشیار"
 
+msgid "HCK Category Menu"
+msgstr "منوی دسته‌بندی HCK"
+
 msgid "HCK Checkout"
 msgstr "صورتحساب هوشیار"
 
@@ -682,6 +733,9 @@ msgstr "ناوبری فوتر در موبایل مخفی و از ناوبری م
 
 msgid "Home"
 msgstr "خانه"
+
+msgid "Hooshyar Commerce Kit could not start: %s. Please re-upload the plugin files."
+msgstr "افزونه هوشیار کامرس کیت نتوانست اجرا شود: %s. لطفاً فایل‌های افزونه را دوباره آپلود کنید."
 
 msgid "Hooshyar Commerce Kit requires PHP %s or higher."
 msgstr "افزونه کیت فروشگاهی هوشیار به PHP %s یا بالاتر نیاز دارد."
@@ -758,6 +812,15 @@ msgstr "خطی (لوگو | منو | اکشن‌ها)"
 msgid "Invalid DigiPay callback."
 msgstr "بازگشت دیجی‌پی نامعتبر است."
 
+msgid "Italic"
+msgstr "ایتالیک"
+
+msgid "Item color"
+msgstr "رنگ آیتم"
+
+msgid "Item typography"
+msgstr "تایپوگرافی آیتم"
+
 msgid "Items (comma separated)"
 msgstr "آیتم‌ها (جدا شده با کاما)"
 
@@ -818,6 +881,9 @@ msgstr "به نظر می‌رسد هنوز چیزی به سبد خود اضاف�
 msgid "Main brand colour used across all templates and elements."
 msgstr "رنگ اصلی برند در تمام قالب‌ها و المان‌ها."
 
+msgid "Main menu"
+msgstr "منوی اصلی"
+
 msgid "Main navigation"
 msgstr "ناوبری اصلی"
 
@@ -830,8 +896,26 @@ msgstr "ماسک ظاهر شدن با اسکرول"
 msgid "Masonry"
 msgstr "ماسونری"
 
+msgid "Max top categories"
+msgstr "حداکثر دسته‌های اصلی"
+
+msgid "Media library is not available."
+msgstr "کتابخانه رسانه در دسترس نیست."
+
+msgid "Mega menu columns"
+msgstr "ستون‌های مگامنو"
+
+msgid "Mega panel (columns)"
+msgstr "پنل مگا (ستونی)"
+
+msgid "Mega panel (grid)"
+msgstr "پنل مگا (شبکه‌ای)"
+
 msgid "Menu"
 msgstr "منو"
+
+msgid "Menu alignment"
+msgstr "تراز منو"
 
 msgid "Menu link color"
 msgstr "رنگ لینک منو"
@@ -905,6 +989,9 @@ msgstr "بدون سایدبار"
 msgid "None"
 msgstr "هیچ‌کدام"
 
+msgid "Normal"
+msgstr "معمولی"
+
 msgid "Notification Log"
 msgstr "گزارش اعلان‌ها"
 
@@ -968,6 +1055,15 @@ msgstr "فاصله داخلی"
 msgid "Page IDs (comma separated)"
 msgstr "شناسه صفحات (جدا شده با کاما)"
 
+msgid "Panel background"
+msgstr "پس‌زمینه پنل"
+
+msgid "Panel radius"
+msgstr "گردی گوشه‌های پنل"
+
+msgid "Panel style"
+msgstr "استایل پنل"
+
 msgid "Parallax scroll"
 msgstr "اسکرول پارالاکس"
 
@@ -991,6 +1087,9 @@ msgstr "تلفن (نوار بالا)"
 
 msgid "Placeholders: {title} {price} {link} {sku} {categories} {excerpt}"
 msgstr "جای‌نگارها: {title} {price} {link} {sku} {categories} {excerpt}"
+
+msgid "Plugin files are incomplete (%s). Please delete the \"hooshyar-commerce-kit\" folder and upload the plugin again — all files and folders must be uploaded."
+msgstr "فایل‌های افزونه ناقص است (%s). لطفاً پوشه «hooshyar-commerce-kit» را حذف و افزونه را دوباره آپلود کنید — همه فایل‌ها و پوشه‌ها باید آپلود شوند."
 
 msgid "Popularity"
 msgstr "محبوبیت"
@@ -1036,6 +1135,9 @@ msgstr "محصول به سبد خرید اضافه شد"
 
 msgid "Product card style"
 msgstr "استایل کارت محصول"
+
+msgid "Product counts"
+msgstr "تعداد محصولات"
 
 msgid "Product image max width"
 msgstr "حداکثر عرض تصویر محصول"
@@ -1208,6 +1310,9 @@ msgstr "نمایش نشان‌ها"
 msgid "Show cart button"
 msgstr "نمایش دکمه سبد"
 
+msgid "Show category images"
+msgstr "نمایش تصاویر دسته‌بندی"
+
 msgid "Show image"
 msgstr "نمایش تصویر"
 
@@ -1217,11 +1322,20 @@ msgstr "نمایش برچسب"
 msgid "Show price"
 msgstr "نمایش قیمت"
 
+msgid "Show product counts"
+msgstr "نمایش تعداد محصولات"
+
 msgid "Show rating"
 msgstr "نمایش امتیاز"
 
 msgid "Show short description"
 msgstr "نمایش توضیح کوتاه"
+
+msgid "Show sub-categories"
+msgstr "نمایش زیردسته‌ها"
+
+msgid "Show subcategories"
+msgstr "نمایش زیردسته‌ها"
 
 msgid "Shows a synced WooCommerce account button in the header."
 msgstr "دکمه همگام‌شده حساب ووکامرس را در هدر نمایش می‌دهد."
@@ -1234,6 +1348,9 @@ msgstr "سایدبار چپ"
 
 msgid "Sidebar right"
 msgstr "سایدبار راست"
+
+msgid "Simple dropdown"
+msgstr "دراپ‌داون ساده"
 
 msgid "Skip to content"
 msgstr "پرش به محتوا"
@@ -1397,6 +1514,9 @@ msgstr "تومان (ضربدر ۱۰)"
 msgid "Top bar"
 msgstr "نوار بالا"
 
+msgid "Top-level categories"
+msgstr "دسته‌های سطح اول"
+
 msgid "Total"
 msgstr "جمع کل"
 
@@ -1427,6 +1547,15 @@ msgstr "تایپوگرافی"
 msgid "Update cart"
 msgstr "به‌روزرسانی سبد"
 
+msgid "Upload"
+msgstr "آپلود"
+
+msgid "Upload your font files (woff2 recommended). Then enter the \"Font name\" here in the Design tab (Body / Heading font family) to use them. Add multiple rows with the same name for different weights."
+msgstr "فایل‌های فونت خود را آپلود کنید (woff2 توصیه می‌شود). سپس «نام فونت» را در تب طراحی (فونت متن / تیتر) وارد کنید. برای وزن‌های مختلف چند ردیف با همان نام اضافه کنید."
+
+msgid "Uploaded fonts"
+msgstr "فونت‌های آپلودشده"
+
 msgid "Used with the \"Specific page IDs\" scope."
 msgstr "همراه با محدوده «شناسه صفحات مشخص» استفاده می‌شود."
 
@@ -1448,6 +1577,9 @@ msgstr "مشاهده"
 msgid "View all"
 msgstr "مشاهده همه"
 
+msgid "View all products"
+msgstr "مشاهده همه محصولات"
+
 msgid "View cart"
 msgstr "مشاهده سبد"
 
@@ -1456,6 +1588,9 @@ msgstr "مشاهده محصول"
 
 msgid "Warning color"
 msgstr "رنگ هشدار"
+
+msgid "Weight"
+msgstr "وزن"
 
 msgid "Welcome back, %s 👋"
 msgstr "خوش آمدید، %s عزیز 👋"
@@ -1510,6 +1645,9 @@ msgstr "ضربان زوم"
 
 msgid "e.g. @your_channel or -100xxxxxxxxxx"
 msgstr "مثلاً @your_channel یا -100xxxxxxxxxx"
+
+msgid "e.g. Product categories"
+msgstr "مثلاً دسته‌بندی محصولات"
 
 msgid "e.g. Special offer"
 msgstr "مثلاً پیشنهاد ویژه"

@@ -409,6 +409,51 @@
   }
 
   /* ------------------------------------------------------------------
+   * Category menu (mega / dropdown panel)
+   * ---------------------------------------------------------------- */
+  function bindCategoryMenus() {
+    function closeAll(except) {
+      $$('.hck-cats.is-open').forEach(function (wrap) {
+        if (wrap !== except) {
+          wrap.classList.remove('is-open');
+          var btn = wrap.querySelector('[data-hck-cats-toggle]');
+          if (btn) {
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    }
+
+    document.addEventListener('click', function (e) {
+      var toggle = e.target.closest ? e.target.closest('[data-hck-cats-toggle]') : null;
+
+      if (toggle) {
+        e.preventDefault();
+        var wrap = toggle.closest('.hck-cats');
+        if (!wrap) {
+          return;
+        }
+        var open = wrap.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) {
+          closeAll(wrap);
+        }
+        return;
+      }
+
+      if (!e.target.closest || !e.target.closest('.hck-cats')) {
+        closeAll(null);
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' || e.keyCode === 27) {
+        closeAll(null);
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------
    * Init
    * ---------------------------------------------------------------- */
   function init() {
@@ -420,6 +465,7 @@
     bindUserArea();
     bindAnimations();
     bindBurger();
+    bindCategoryMenus();
   }
 
   if (document.readyState === 'loading') {

@@ -21,6 +21,9 @@ msgstr ""
 msgid "About text (footer)"
 msgstr ""
 
+msgid "Accent / hover color"
+msgstr ""
+
 msgid "Accent color"
 msgstr ""
 
@@ -49,6 +52,9 @@ msgid "Active menu color"
 msgstr ""
 
 msgid "Add %s more to get free shipping"
+msgstr ""
+
+msgid "Add font"
 msgstr ""
 
 msgid "Add to cart effect"
@@ -94,6 +100,9 @@ msgid "Arrows only"
 msgstr ""
 
 msgid "Ascending"
+msgstr ""
+
+msgid "Auto (primary location / first menu)"
 msgstr ""
 
 msgid "Autoplay"
@@ -183,6 +192,15 @@ msgstr ""
 msgid "Button Style"
 msgstr ""
 
+msgid "Button background"
+msgstr ""
+
+msgid "Button color"
+msgstr ""
+
+msgid "Button label"
+msgstr ""
+
 msgid "Button link"
 msgstr ""
 
@@ -252,6 +270,21 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
+msgid "Category Menu"
+msgstr ""
+
+msgid "Category images"
+msgstr ""
+
+msgid "Category menu (mega menu)"
+msgstr ""
+
+msgid "Category menu label"
+msgstr ""
+
+msgid "Category menu style"
+msgstr ""
+
 msgid "Category slugs (comma separated)"
 msgstr ""
 
@@ -280,6 +313,9 @@ msgid "Checkout layout"
 msgstr ""
 
 msgid "Checkout template"
+msgstr ""
+
+msgid "Choose which WordPress menu is the main navigation."
 msgstr ""
 
 msgid "Click here to log in"
@@ -364,6 +400,9 @@ msgid "Creative hero"
 msgstr ""
 
 msgid "Creative masonry"
+msgstr ""
+
+msgid "Custom Fonts"
 msgstr ""
 
 msgid "Custom text"
@@ -495,6 +534,9 @@ msgstr ""
 msgid "Downloads"
 msgstr ""
 
+msgid "Dropdown"
+msgstr ""
+
 msgid "Effect duration (ms)"
 msgstr ""
 
@@ -564,6 +606,12 @@ msgstr ""
 msgid "Fly to cart"
 msgstr ""
 
+msgid "Font file (woff2/woff/ttf)"
+msgstr ""
+
+msgid "Font name"
+msgstr ""
+
 msgid "Footer columns"
 msgstr ""
 
@@ -621,6 +669,9 @@ msgstr ""
 msgid "HCK Cart"
 msgstr ""
 
+msgid "HCK Category Menu"
+msgstr ""
+
 msgid "HCK Checkout"
 msgstr ""
 
@@ -673,6 +724,9 @@ msgid "Hides the footer navigation on mobile in favour of the mobile nav."
 msgstr ""
 
 msgid "Home"
+msgstr ""
+
+msgid "Hooshyar Commerce Kit could not start: %s. Please re-upload the plugin files."
 msgstr ""
 
 msgid "Hooshyar Commerce Kit requires PHP %s or higher."
@@ -750,6 +804,15 @@ msgstr ""
 msgid "Invalid DigiPay callback."
 msgstr ""
 
+msgid "Italic"
+msgstr ""
+
+msgid "Item color"
+msgstr ""
+
+msgid "Item typography"
+msgstr ""
+
 msgid "Items (comma separated)"
 msgstr ""
 
@@ -810,6 +873,9 @@ msgstr ""
 msgid "Main brand colour used across all templates and elements."
 msgstr ""
 
+msgid "Main menu"
+msgstr ""
+
 msgid "Main navigation"
 msgstr ""
 
@@ -822,7 +888,25 @@ msgstr ""
 msgid "Masonry"
 msgstr ""
 
+msgid "Max top categories"
+msgstr ""
+
+msgid "Media library is not available."
+msgstr ""
+
+msgid "Mega menu columns"
+msgstr ""
+
+msgid "Mega panel (columns)"
+msgstr ""
+
+msgid "Mega panel (grid)"
+msgstr ""
+
 msgid "Menu"
+msgstr ""
+
+msgid "Menu alignment"
 msgstr ""
 
 msgid "Menu link color"
@@ -897,6 +981,9 @@ msgstr ""
 msgid "None"
 msgstr ""
 
+msgid "Normal"
+msgstr ""
+
 msgid "Notification Log"
 msgstr ""
 
@@ -960,6 +1047,15 @@ msgstr ""
 msgid "Page IDs (comma separated)"
 msgstr ""
 
+msgid "Panel background"
+msgstr ""
+
+msgid "Panel radius"
+msgstr ""
+
+msgid "Panel style"
+msgstr ""
+
 msgid "Parallax scroll"
 msgstr ""
 
@@ -982,6 +1078,9 @@ msgid "Phone (top bar)"
 msgstr ""
 
 msgid "Placeholders: {title} {price} {link} {sku} {categories} {excerpt}"
+msgstr ""
+
+msgid "Plugin files are incomplete (%s). Please delete the \"hooshyar-commerce-kit\" folder and upload the plugin again — all files and folders must be uploaded."
 msgstr ""
 
 msgid "Popularity"
@@ -1027,6 +1126,9 @@ msgid "Product added to cart"
 msgstr ""
 
 msgid "Product card style"
+msgstr ""
+
+msgid "Product counts"
 msgstr ""
 
 msgid "Product image max width"
@@ -1200,6 +1302,9 @@ msgstr ""
 msgid "Show cart button"
 msgstr ""
 
+msgid "Show category images"
+msgstr ""
+
 msgid "Show image"
 msgstr ""
 
@@ -1209,10 +1314,19 @@ msgstr ""
 msgid "Show price"
 msgstr ""
 
+msgid "Show product counts"
+msgstr ""
+
 msgid "Show rating"
 msgstr ""
 
 msgid "Show short description"
+msgstr ""
+
+msgid "Show sub-categories"
+msgstr ""
+
+msgid "Show subcategories"
 msgstr ""
 
 msgid "Shows a synced WooCommerce account button in the header."
@@ -1225,6 +1339,9 @@ msgid "Sidebar left"
 msgstr ""
 
 msgid "Sidebar right"
+msgstr ""
+
+msgid "Simple dropdown"
 msgstr ""
 
 msgid "Skip to content"
@@ -1389,6 +1506,9 @@ msgstr ""
 msgid "Top bar"
 msgstr ""
 
+msgid "Top-level categories"
+msgstr ""
+
 msgid "Total"
 msgstr ""
 
@@ -1419,6 +1539,15 @@ msgstr ""
 msgid "Update cart"
 msgstr ""
 
+msgid "Upload"
+msgstr ""
+
+msgid "Upload your font files (woff2 recommended). Then enter the \"Font name\" here in the Design tab (Body / Heading font family) to use them. Add multiple rows with the same name for different weights."
+msgstr ""
+
+msgid "Uploaded fonts"
+msgstr ""
+
 msgid "Used with the \"Specific page IDs\" scope."
 msgstr ""
 
@@ -1440,6 +1569,9 @@ msgstr ""
 msgid "View all"
 msgstr ""
 
+msgid "View all products"
+msgstr ""
+
 msgid "View cart"
 msgstr ""
 
@@ -1447,6 +1579,9 @@ msgid "View product"
 msgstr ""
 
 msgid "Warning color"
+msgstr ""
+
+msgid "Weight"
 msgstr ""
 
 msgid "Welcome back, %s 👋"
@@ -1501,6 +1636,9 @@ msgid "Zoom pulse"
 msgstr ""
 
 msgid "e.g. @your_channel or -100xxxxxxxxxx"
+msgstr ""
+
+msgid "e.g. Product categories"
 msgstr ""
 
 msgid "e.g. Special offer"

@@ -116,3 +116,42 @@
 .hck-test-result.is-visible { display: block; }
 .hck-test-result.is-success { background: #e9f9ef; color: #157347; }
 .hck-test-result.is-error { background: #fdecec; color: #b02a37; }
+
+/* ==========================================================================
+   9. Custom fonts repeater
+   ========================================================================== */
+
+.hck-font-table {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hck-font-table th {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: #6b7280;
+}
+
+.hck-font-table td {
+  vertical-align: middle;
+}
+
+.hck-font-table input.regular-text {
+  width: 100%;
+  min-width: 120px;
+}
+
+.hck-font-table .hck-font-upload {
+  margin-top: 4px;
+}
+
+.hck-font-table .hck-remove-font-row {
+  color: #b32d2e;
+  border-color: transparent;
+}
+
+.hck-font-table .hck-remove-font-row:hover {
+  border-color: #b32d2e;
+}

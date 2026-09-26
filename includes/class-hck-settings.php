@@ -170,6 +170,16 @@ final class HCK_Settings {
 			'header_template'    => 'modern',
 			'header_elementor_id' => 0,
 			'header_layout'      => 'inline',
+			'header_menu'        => 'auto',
+			'header_menu_align'  => 'right',
+			'header_category_menu' => 'no',
+			'header_category_menu_label' => '',
+			'header_category_menu_style' => 'mega',
+			'header_category_menu_columns' => '4',
+			'header_category_menu_show_images' => 'yes',
+			'header_category_menu_show_counts' => 'yes',
+			'header_category_menu_show_children' => 'yes',
+			'header_category_menu_limit' => '12',
 			'header_sticky'      => 'yes',
 			'header_user_button' => 'yes',
 			'header_cart_button' => 'yes',
@@ -219,6 +229,9 @@ final class HCK_Settings {
 			'digipay_preferred'     => 'auto',
 			'digipay_amount_unit'   => 'rial',
 			'digipay_logging'       => 'no',
+
+			// Custom fonts.
+			'custom_fonts'          => array(),
 		);
 	}
 
@@ -263,6 +276,7 @@ final class HCK_Settings {
 	public function get_tabs() {
 		return array(
 			'design'    => __( 'Design', 'hooshyar-commerce-kit' ),
+			'fonts'     => __( 'Custom Fonts', 'hooshyar-commerce-kit' ),
 			'cart'      => __( 'Cart', 'hooshyar-commerce-kit' ),
 			'checkout'  => __( 'Checkout', 'hooshyar-commerce-kit' ),
 			'dashboard' => __( 'Dashboard', 'hooshyar-commerce-kit' ),
@@ -343,6 +357,17 @@ final class HCK_Settings {
 					array( 'id' => 'container_width', 'label' => __( 'Container width (px)', 'hooshyar-commerce-kit' ), 'type' => 'number', 'min' => 900, 'max' => 1800 ),
 					array( 'id' => 'font_body', 'label' => __( 'Body font family', 'hooshyar-commerce-kit' ), 'type' => 'text', 'desc' => __( 'Any CSS font family, e.g. Tahoma, Vazirmatn, Roboto. Google fonts load automatically.', 'hooshyar-commerce-kit' ) ),
 					array( 'id' => 'font_heading', 'label' => __( 'Heading font family', 'hooshyar-commerce-kit' ), 'type' => 'text' ),
+				);
+				break;
+
+			case 'fonts':
+				$fields = array(
+					array(
+						'id'   => 'custom_fonts',
+						'label' => __( 'Uploaded fonts', 'hooshyar-commerce-kit' ),
+						'type' => 'font_repeater',
+						'desc' => __( 'Upload your font files (woff2 recommended). Then enter the "Font name" here in the Design tab (Body / Heading font family) to use them. Add multiple rows with the same name for different weights.', 'hooshyar-commerce-kit' ),
+					),
 				);
 				break;
 
@@ -443,6 +468,23 @@ final class HCK_Settings {
 						'centered' => __( 'Centered (logo on top)', 'hooshyar-commerce-kit' ),
 						'split'    => __( 'Split menu', 'hooshyar-commerce-kit' ),
 					) ),
+					array( 'id' => 'header_menu', 'label' => __( 'Main menu', 'hooshyar-commerce-kit' ), 'type' => 'menu_select', 'desc' => __( 'Choose which WordPress menu is the main navigation.', 'hooshyar-commerce-kit' ) ),
+					array( 'id' => 'header_menu_align', 'label' => __( 'Menu alignment', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array(
+						'right'  => __( 'Right', 'hooshyar-commerce-kit' ),
+						'center' => __( 'Center', 'hooshyar-commerce-kit' ),
+						'left'   => __( 'Left', 'hooshyar-commerce-kit' ),
+					) ),
+					array( 'id' => 'header_category_menu', 'label' => __( 'Category menu (mega menu)', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
+					array( 'id' => 'header_category_menu_label', 'label' => __( 'Category menu label', 'hooshyar-commerce-kit' ), 'type' => 'text', 'desc' => __( 'e.g. Product categories', 'hooshyar-commerce-kit' ) ),
+					array( 'id' => 'header_category_menu_style', 'label' => __( 'Category menu style', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array(
+						'dropdown' => __( 'Dropdown', 'hooshyar-commerce-kit' ),
+						'mega'     => __( 'Mega panel (columns)', 'hooshyar-commerce-kit' ),
+					) ),
+					array( 'id' => 'header_category_menu_columns', 'label' => __( 'Mega menu columns', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array( '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6' ) ),
+					array( 'id' => 'header_category_menu_show_images', 'label' => __( 'Category images', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
+					array( 'id' => 'header_category_menu_show_counts', 'label' => __( 'Product counts', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
+					array( 'id' => 'header_category_menu_show_children', 'label' => __( 'Show subcategories', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
+					array( 'id' => 'header_category_menu_limit', 'label' => __( 'Max top categories', 'hooshyar-commerce-kit' ), 'type' => 'number', 'min' => 1, 'max' => 30 ),
 					array( 'id' => 'header_sticky', 'label' => __( 'Sticky header', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
 					array( 'id' => 'header_user_button', 'label' => __( 'User area button', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
 					array( 'id' => 'header_cart_button', 'label' => __( 'Cart button', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
@@ -540,6 +582,25 @@ final class HCK_Settings {
 	}
 
 	/**
+	 * Available WordPress menus for the main-menu select.
+	 *
+	 * @return array
+	 */
+	public static function menu_options() {
+		$options = array(
+			'auto' => __( 'Auto (primary location / first menu)', 'hooshyar-commerce-kit' ),
+		);
+
+		if ( function_exists( 'wp_get_nav_menus' ) ) {
+			foreach ( wp_get_nav_menus() as $menu ) {
+				$options[ (string) $menu->term_id ] = $menu->name;
+			}
+		}
+
+		return $options;
+	}
+
+	/**
 	 * Template select options.
 	 *
 	 * @return array
@@ -633,6 +694,48 @@ final class HCK_Settings {
 				);
 				break;
 
+			case 'menu_select':
+				printf( '<select id="%1$s" name="%2$s">', esc_attr( $id ), esc_attr( $name ) );
+				foreach ( self::menu_options() as $opt_value => $opt_label ) {
+					printf(
+						'<option value="%s" %s>%s</option>',
+						esc_attr( $opt_value ),
+						selected( (string) $value, (string) $opt_value, false ),
+						esc_html( $opt_label )
+					);
+				}
+				echo '</select>';
+				break;
+
+			case 'font_repeater':
+				$rows = is_array( $value ) ? array_values( $value ) : array();
+				echo '<div class="hck-font-repeater" data-name="' . esc_attr( $name ) . '">';
+				echo '<table class="widefat hck-font-table"><thead><tr>';
+				echo '<th>' . esc_html__( 'Font name', 'hooshyar-commerce-kit' ) . '</th>';
+				echo '<th>' . esc_html__( 'Font file (woff2/woff/ttf)', 'hooshyar-commerce-kit' ) . '</th>';
+				echo '<th>' . esc_html__( 'Weight', 'hooshyar-commerce-kit' ) . '</th>';
+				echo '<th>' . esc_html__( 'Style', 'hooshyar-commerce-kit' ) . '</th>';
+				echo '<th></th></tr></thead><tbody class="hck-font-rows">';
+
+				foreach ( $rows as $index => $row ) {
+					if ( ! is_array( $row ) ) {
+						continue;
+					}
+					$this->render_font_row( $name, $row, (int) $index );
+				}
+
+				echo '</tbody></table>';
+				echo '<p><button type="button" class="button hck-add-font-row">' . esc_html__( 'Add font', 'hooshyar-commerce-kit' ) . '</button></p>';
+				echo '</div>';
+
+				// Row template for JS cloning (__i__ is replaced with a new index).
+				echo '<template class="hck-font-row-tpl">';
+				ob_start();
+				$this->render_font_row( $name, array( 'name' => '', 'url' => '', 'weight' => '400', 'style' => 'normal' ), '__i__' );
+				echo ob_get_clean(); // phpcs:ignore WordPress.Security.EscapeOutput -- markup is escaped inside render_font_row().
+				echo '</template>';
+				break;
+
 			case 'text':
 			default:
 				printf(
@@ -649,6 +752,56 @@ final class HCK_Settings {
 		}
 
 		echo '</div>';
+	}
+
+	/**
+	 * Render one custom-font repeater row.
+	 *
+	 * @param string       $name  Field base name (contains two %s placeholders).
+	 * @param array        $row   Row values.
+	 * @param int|string   $index Row index (or __i__ for the JS template).
+	 */
+	public function render_font_row( $name, $row, $index = 0 ) {
+		$values = wp_parse_args(
+			is_array( $row ) ? $row : array(),
+			array(
+				'name'   => '',
+				'url'    => '',
+				'weight' => '400',
+				'style'  => 'normal',
+			)
+		);
+
+		$field = function ( $key ) use ( $name, $index ) {
+			return sprintf( '%s[%s][%s]', $name, $index, $key );
+		};
+		?>
+		<tr class="hck-font-row">
+			<td>
+				<input type="text" class="regular-text" name="<?php echo esc_attr( $field( 'name' ) ); ?>" value="<?php echo esc_attr( $values['name'] ); ?>" placeholder="IRANSans" />
+			</td>
+			<td>
+				<input type="text" class="regular-text hck-font-url" name="<?php echo esc_attr( $field( 'url' ) ); ?>" value="<?php echo esc_attr( $values['url'] ); ?>" placeholder="https://.../font.woff2" />
+				<button type="button" class="button hck-font-upload"><?php esc_html_e( 'Upload', 'hooshyar-commerce-kit' ); ?></button>
+			</td>
+			<td>
+				<select name="<?php echo esc_attr( $field( 'weight' ) ); ?>">
+					<?php foreach ( array( '300', '400', '500', '600', '700', '800', '900' ) as $weight ) : ?>
+						<option value="<?php echo esc_attr( $weight ); ?>" <?php selected( $values['weight'], $weight ); ?>><?php echo esc_html( $weight ); ?></option>
+					<?php endforeach; ?>
+				</select>
+			</td>
+			<td>
+				<select name="<?php echo esc_attr( $field( 'style' ) ); ?>">
+					<option value="normal" <?php selected( $values['style'], 'normal' ); ?>><?php esc_html_e( 'Normal', 'hooshyar-commerce-kit' ); ?></option>
+					<option value="italic" <?php selected( $values['style'], 'italic' ); ?>><?php esc_html_e( 'Italic', 'hooshyar-commerce-kit' ); ?></option>
+				</select>
+			</td>
+			<td>
+				<button type="button" class="button-link-delete hck-remove-font-row"><?php esc_html_e( 'Remove', 'hooshyar-commerce-kit' ); ?></button>
+			</td>
+		</tr>
+		<?php
 	}
 
 	/**
@@ -691,6 +844,39 @@ final class HCK_Settings {
 						$clean[ $id ] = array_key_exists( $value, $field['options'] ) ? $value : ( isset( $defaults[ $id ] ) ? $defaults[ $id ] : '' );
 						break;
 
+					case 'menu_select':
+						$menus = self::menu_options();
+						$value = (string) $value;
+						$clean[ $id ] = array_key_exists( $value, $menus ) ? $value : 'auto';
+						break;
+
+					case 'font_repeater':
+						$fonts = array();
+						if ( is_array( $value ) ) {
+							foreach ( $value as $row ) {
+								if ( ! is_array( $row ) ) {
+									continue;
+								}
+								$font_name = sanitize_text_field( isset( $row['name'] ) ? $row['name'] : '' );
+								$font_url  = esc_url_raw( isset( $row['url'] ) ? $row['url'] : '' );
+								if ( '' === $font_name || '' === $font_url ) {
+									continue;
+								}
+								$weight = isset( $row['weight'] ) ? (string) $row['weight'] : '400';
+								if ( ! in_array( $weight, array( '300', '400', '500', '600', '700', '800', '900' ), true ) ) {
+									$weight = '400';
+								}
+								$fonts[] = array(
+									'name'   => $font_name,
+									'url'    => $font_url,
+									'weight' => $weight,
+									'style'  => ( isset( $row['style'] ) && 'italic' === $row['style'] ) ? 'italic' : 'normal',
+								);
+							}
+						}
+						$clean[ $id ] = $fonts;
+						break;
+
 					case 'number':
 						$min = isset( $field['min'] ) ? (int) $field['min'] : 0;
 						$max = isset( $field['max'] ) ? (int) $field['max'] : PHP_INT_MAX;
@@ -725,6 +911,7 @@ final class HCK_Settings {
 
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_style( 'hck-admin', HCK_PLUGIN_URL . 'assets/css/admin.css', array( 'wp-color-picker' ), HCK_VERSION );
+		wp_enqueue_media();
 		wp_enqueue_script( 'hck-admin', HCK_PLUGIN_URL . 'assets/js/admin.js', array( 'jquery', 'wp-color-picker' ), HCK_VERSION, true );
 		wp_localize_script(
 			'hck-admin',
@@ -733,7 +920,8 @@ final class HCK_Settings {
 				'ajaxUrl' => admin_url( 'admin-ajax.php' ),
 				'nonce'   => wp_create_nonce( 'hck_admin' ),
 				'i18n'    => array(
-					'testSending'  => __( 'Sending test message…', 'hooshyar-commerce-kit' ),
+					'testSending'     => __( 'Sending test message…', 'hooshyar-commerce-kit' ),
+					'mediaUnavailable' => __( 'Media library is not available.', 'hooshyar-commerce-kit' ),
 					'testSuccess'  => __( 'Test message sent successfully.', 'hooshyar-commerce-kit' ),
 					'testFail'     => __( 'Sending failed. Check the log below.', 'hooshyar-commerce-kit' ),
 					'confirmReset' => __( 'Are you sure?', 'hooshyar-commerce-kit' ),

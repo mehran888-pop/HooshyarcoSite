@@ -97,6 +97,7 @@ class HCK_Elementor {
 		$widgets_manager->register( new HCK_Widget_Dashboard() );
 		$widgets_manager->register( new HCK_Widget_User_Area() );
 		$widgets_manager->register( new HCK_Widget_Mobile_Nav() );
+		$widgets_manager->register( new HCK_Widget_Category_Menu() );
 	}
 
 	/**

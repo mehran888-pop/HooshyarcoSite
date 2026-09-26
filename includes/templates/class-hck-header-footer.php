@@ -65,6 +65,7 @@ class HCK_Header_Footer {
 		add_action( 'get_header', array( $this, 'replace_header' ), 5 );
 		add_action( 'get_footer', array( $this, 'replace_footer' ), 5 );
 		add_filter( 'body_class', array( $this, 'body_classes' ) );
+		add_shortcode( 'hck_category_menu', array( __CLASS__, 'shortcode_category_menu' ) );
 	}
 
 	/**
@@ -189,6 +190,10 @@ class HCK_Header_Footer {
 	/**
 	 * Get primary menu items for built-in headers.
 	 *
+	 * Honours the "Main menu" setting (any registered WordPress menu);
+	 * falls back to the primary location, then the first menu, then a
+	 * hard-coded Home/Shop list.
+	 *
 	 * @return array
 	 */
 	public static function get_menu_items() {
@@ -196,9 +201,23 @@ class HCK_Header_Footer {
 		$items     = array();
 
 		$menu_id = 0;
-		if ( isset( $locations['primary'] ) ) {
+
+		// 1) Explicitly selected menu from the plugin settings.
+		$selected = trim( (string) HCK_Helpers::get( 'header_menu', 'auto' ) );
+		if ( '' !== $selected && 'auto' !== $selected ) {
+			$menu = wp_get_nav_menu_object( is_numeric( $selected ) ? (int) $selected : $selected );
+			if ( $menu ) {
+				$menu_id = (int) $menu->term_id;
+			}
+		}
+
+		// 2) Primary location.
+		if ( ! $menu_id && isset( $locations['primary'] ) ) {
 			$menu_id = (int) $locations['primary'];
-		} else {
+		}
+
+		// 3) First available menu.
+		if ( ! $menu_id ) {
 			// wp_get_nav_menus() is available on every WordPress 3.0+ install.
 			if ( function_exists( 'wp_get_nav_menus' ) ) {
 				$menus = wp_get_nav_menus( array( 'number' => 1 ) );
@@ -240,8 +259,9 @@ class HCK_Header_Footer {
 	 */
 	public static function render_nav() {
 		$items = self::get_menu_items();
+		$align = sanitize_html_class( HCK_Helpers::get( 'header_menu_align', 'right' ) );
 
-		$html = '<nav class="hck-nav" aria-label="' . esc_attr__( 'Main navigation', 'hooshyar-commerce-kit' ) . '"><ul class="hck-nav__list">';
+		$html = '<nav class="hck-nav hck-nav--align-' . esc_attr( $align ) . '" aria-label="' . esc_attr__( 'Main navigation', 'hooshyar-commerce-kit' ) . '"><ul class="hck-nav__list">';
 
 		foreach ( $items as $item ) {
 			$html .= sprintf(
@@ -254,6 +274,150 @@ class HCK_Header_Footer {
 		$html .= '</ul></nav>';
 
 		return $html;
+	}
+
+	/**
+	 * Render the professional product-category menu (dropdown / mega panel).
+	 *
+	 * @param array $overrides Optional overrides (used by the Elementor widget).
+	 * @return string
+	 */
+	public static function render_category_menu( $overrides = array() ) {
+		$defaults = array(
+			'enabled'      => HCK_Helpers::get( 'header_category_menu', 'no' ),
+			'label'        => HCK_Helpers::get( 'header_category_menu_label', '' ),
+			'style'        => HCK_Helpers::get( 'header_category_menu_style', 'mega' ),
+			'columns'      => (int) HCK_Helpers::get( 'header_category_menu_columns', 4 ),
+			'show_images'  => HCK_Helpers::get( 'header_category_menu_show_images', 'yes' ),
+			'show_counts'  => HCK_Helpers::get( 'header_category_menu_show_counts', 'yes' ),
+			'show_children' => HCK_Helpers::get( 'header_category_menu_show_children', 'yes' ),
+			'limit'        => (int) HCK_Helpers::get( 'header_category_menu_limit', 12 ),
+		);
+
+		$args = wp_parse_args( $overrides, $defaults );
+
+		if ( 'no' === $args['enabled'] || ! taxonomy_exists( 'product_cat' ) ) {
+			return '';
+		}
+
+		$label = $args['label'] ? $args['label'] : __( 'Categories', 'hooshyar-commerce-kit' );
+
+		$terms = get_terms(
+			array(
+				'taxonomy'   => 'product_cat',
+				'parent'     => 0,
+				'hide_empty' => false,
+				'orderby'    => 'menu_order',
+				'order'      => 'ASC',
+				'number'     => max( 1, (int) $args['limit'] ),
+			)
+		);
+
+		if ( is_wp_error( $terms ) || empty( $terms ) ) {
+			return '';
+		}
+
+		$style   = 'mega' === $args['style'] ? 'mega' : 'dropdown';
+		$columns = max( 2, min( 6, (int) $args['columns'] ) );
+
+		$html  = '<div class="hck-cats hck-cats--' . esc_attr( $style ) . '" data-hck-cats>';
+		$html .= '<button type="button" class="hck-cats__btn" data-hck-cats-toggle aria-expanded="false">';
+		$html .= HCK_Helpers::icon( 'grid', array( 'size' => 18 ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+		$html .= '<span class="hck-cats__label">' . esc_html( $label ) . '</span>';
+		$html .= HCK_Helpers::icon( 'arrow-l', array( 'size' => 14, 'class' => 'hck-cats__caret' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+		$html .= '</button>';
+
+		$html .= '<div class="hck-cats__panel">';
+		$html .= '<div class="hck-cats__grid hck-cats__grid--' . esc_attr( $columns ) . '">';
+
+		foreach ( $terms as $term ) {
+			$html .= '<div class="hck-cats__col">';
+
+			$html .= '<a class="hck-cats__link" href="' . esc_url( get_term_link( $term ) ) . '">';
+
+			if ( 'yes' === $args['show_images'] ) {
+				$thumb_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
+				if ( $thumb_id ) {
+					$html .= '<span class="hck-cats__thumb">' . wp_get_attachment_image( $thumb_id, 'woocommerce_thumbnail' ) . '</span>';
+				} else {
+					$html .= '<span class="hck-cats__thumb hck-cats__thumb--placeholder">' . HCK_Helpers::icon( 'shop', array( 'size' => 22 ) ) . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput
+				}
+			}
+
+			$html .= '<span class="hck-cats__name">' . esc_html( $term->name ) . '</span>';
+
+			if ( 'yes' === $args['show_counts'] ) {
+				$html .= '<span class="hck-cats__count">' . esc_html( $term->count ) . '</span>';
+			}
+
+			$html .= '</a>';
+
+			if ( 'yes' === $args['show_children'] ) {
+				$children = get_terms(
+					array(
+						'taxonomy'   => 'product_cat',
+						'parent'     => $term->term_id,
+						'hide_empty' => false,
+						'orderby'    => 'menu_order',
+						'order'      => 'ASC',
+					)
+				);
+
+				if ( ! is_wp_error( $children ) && ! empty( $children ) ) {
+					$html .= '<ul class="hck-cats__children">';
+					foreach ( $children as $child ) {
+						$html .= '<li><a href="' . esc_url( get_term_link( $child ) ) . '">' . esc_html( $child->name ) . '</a></li>';
+					}
+					$html .= '</ul>';
+				}
+			}
+
+			$html .= '</div>';
+		}
+
+		$html .= '</div>';
+
+		// "View all" footer of the panel.
+		$shop_url = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'shop' ) : home_url( '/' );
+		$html    .= '<a class="hck-cats__all" href="' . esc_url( $shop_url ) . '">' . esc_html__( 'View all products', 'hooshyar-commerce-kit' ) . '</a>';
+		$html    .= '</div></div>';
+
+		return $html;
+	}
+
+	/**
+	 * `[hck_category_menu]` shortcode — renders the category menu anywhere.
+	 *
+	 * Attributes mirror the header settings: label, style (dropdown|mega),
+	 * columns, show_images, show_counts, show_children, limit.
+	 *
+	 * @param array $atts Shortcode attributes.
+	 * @return string
+	 */
+	public static function shortcode_category_menu( $atts ) {
+		$atts = shortcode_atts(
+			array(
+				'label'         => '',
+				'style'         => '',
+				'columns'       => 0,
+				'show_images'   => '',
+				'show_counts'   => '',
+				'show_children' => '',
+				'limit'         => 0,
+			),
+			$atts,
+			'hck_category_menu'
+		);
+
+		$overrides = array( 'enabled' => 'yes' );
+
+		foreach ( $atts as $key => $value ) {
+			if ( '' !== $value && '0' !== $value ) {
+				$overrides[ $key ] = $value;
+			}
+		}
+
+		return self::render_category_menu( $overrides );
 	}
 
 	/**
@@ -327,18 +491,19 @@ class HCK_Header_Footer {
 		$logo .= '</a>';
 
 		$nav     = self::render_nav();
+		$cats    = self::render_category_menu();
 		$actions = self::render_actions();
 		$burger  = '<button type="button" class="hck-burger" data-hck-mobile-toggle aria-label="' . esc_attr__( 'Menu', 'hooshyar-commerce-kit' ) . '">' . HCK_Helpers::icon( 'menu' ) . '</button>';
 
 		switch ( $layout ) {
 			case 'centered':
 				$html .= '<div class="hck-header__row hck-header__row--top">' . $logo . $actions . '</div>';
-				$html .= '<div class="hck-header__row hck-header__row--bottom">' . $nav . $burger . '</div>';
+				$html .= '<div class="hck-header__row hck-header__row--bottom">' . $cats . $nav . $burger . '</div>';
 				break;
 
 			case 'split':
 				$html .= '<div class="hck-header__row">';
-				$html .= '<div class="hck-header__side hck-header__side--start">' . $nav . '</div>';
+				$html .= '<div class="hck-header__side hck-header__side--start">' . $cats . $nav . '</div>';
 				$html .= '<div class="hck-header__side hck-header__side--center">' . $logo . '</div>';
 				$html .= '<div class="hck-header__side hck-header__side--end">' . $actions . $burger . '</div>';
 				$html .= '</div>';
@@ -348,7 +513,7 @@ class HCK_Header_Footer {
 			default:
 				$html .= '<div class="hck-header__row">';
 				$html .= $logo;
-				$html .= '<div class="hck-header__nav-wrap">' . $nav . $burger . '</div>';
+				$html .= '<div class="hck-header__nav-wrap">' . $cats . $nav . $burger . '</div>';
 				$html .= $actions;
 				$html .= '</div>';
 				break;

@@ -4,7 +4,7 @@ Tags: woocommerce, elementor, cart, checkout, digipay
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,12 @@ Card gateway (IPG), wallet, and credit/BNPL — the full UPG flow including
 purchase tickets, verification and manual reverse.
 
 == Changelog ==
+
+= 1.0.3 =
+* New: professional product-category menu in the header (mega panel or dropdown) with images, counts and sub-categories
+* New: choose the main navigation menu (any WP menu) and its alignment (right / center / left) in the header settings
+* New: custom font upload (woff2/woff/ttf) — fonts are enqueued via @font-face and selectable everywhere
+* New: [hck_category_menu] shortcode and "HCK Category Menu" Elementor widget with full styling controls
 
 = 1.0.2 =
 * Fix: call to undefined function wp_get_menus() on WordPress < 6.5 (now uses wp_get_nav_menus)

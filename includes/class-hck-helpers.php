@@ -134,6 +134,81 @@ class HCK_Helpers {
 	}
 
 	/**
+	 * Names of uploaded custom fonts.
+	 *
+	 * @return array
+	 */
+	public static function get_custom_font_names() {
+		$fonts = HCK_Settings::get( 'custom_fonts', array() );
+		$names = array();
+
+		if ( is_array( $fonts ) ) {
+			foreach ( $fonts as $font ) {
+				if ( is_array( $font ) && ! empty( $font['name'] ) ) {
+					$names[] = $font['name'];
+				}
+			}
+		}
+
+		return $names;
+	}
+
+	/**
+	 * Build @font-face CSS for uploaded custom fonts.
+	 *
+	 * @return string
+	 */
+	public static function custom_fonts_css() {
+		$fonts = HCK_Settings::get( 'custom_fonts', array() );
+
+		if ( ! is_array( $fonts ) || empty( $fonts ) ) {
+			return '';
+		}
+
+		$formats = array(
+			'woff2' => 'woff2',
+			'woff'  => 'woff',
+			'ttf'   => 'truetype',
+			'otf'   => 'opentype',
+			'svg'   => 'svg',
+		);
+
+		$css = '';
+
+		foreach ( $fonts as $font ) {
+			if ( ! is_array( $font ) || empty( $font['name'] ) || empty( $font['url'] ) ) {
+				continue;
+			}
+
+			$extension = strtolower( pathinfo( wp_parse_url( $font['url'], PHP_URL_PATH ), PATHINFO_EXTENSION ) );
+			$format    = isset( $formats[ $extension ] ) ? $formats[ $extension ] : 'woff2';
+			$weight    = isset( $font['weight'] ) ? absint( $font['weight'] ) : 400;
+			$style     = ( isset( $font['style'] ) && 'italic' === $font['style'] ) ? 'italic' : 'normal';
+
+			$css .= sprintf(
+				"@font-face{font-family:'%s';src:url('%s') format('%s');font-weight:%d;font-style:%s;font-display:swap;}",
+				$font['name'], // Family names are sanitized on save.
+				esc_url( $font['url'] ),
+				$format,
+				$weight ? $weight : 400,
+				$style
+			);
+		}
+
+		return $css;
+	}
+
+	/**
+	 * Print the custom-font @font-face block.
+	 */
+	public static function print_custom_fonts_css() {
+		$css = self::custom_fonts_css();
+		if ( '' !== $css ) {
+			echo '<style id="hck-custom-fonts">' . $css . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput -- static CSS from sanitized URLs.
+		}
+	}
+
+	/**
 	 * Build a safe CSS font-family stack from a font name.
 	 *
 	 * @param string $font Font family name.
@@ -166,6 +241,11 @@ class HCK_Helpers {
 			return;
 		}
 		$loaded[ $font ] = true;
+
+		// Uploaded custom fonts never come from Google Fonts.
+		if ( in_array( $font, self::get_custom_font_names(), true ) ) {
+			return;
+		}
 
 		$local_fonts = array( 'tahoma', 'arial', 'verdana', 'sans-serif', 'serif', 'monospace', 'roboto', 'iranyekan', 'iransans', 'vazir', 'shabnam', 'estedad' );
 		if ( in_array( strtolower( $font ), $local_fonts, true ) ) {
