@@ -114,6 +114,17 @@ class HCK_Helpers {
 			'--hck-accent-rgb'     => self::hex_to_rgb( $t['accent'] ),
 			'--hck-heading-rgb'    => self::hex_to_rgb( $t['heading_color'] ),
 			'--hck-text-rgb'       => self::hex_to_rgb( $t['text_color'] ),
+
+			// Derived aliases used across the template styles.
+			'--hck-primary-soft'   => 'rgba(' . self::hex_to_rgb( $t['primary'] ) . ',0.12)',
+			'--hck-primary-dark'   => self::hex_darken( $t['primary'], 18 ),
+			'--hck-surface-alt'    => 'rgba(' . self::hex_to_rgb( $t['text_color'] ) . ',0.05)',
+			'--hck-text-muted'     => $t['muted_color'],
+			'--hck-transition-soft' => '0.2s cubic-bezier(0.22, 1, 0.36, 1)',
+			'--hck-ease'           => 'cubic-bezier(0.22, 1, 0.36, 1)',
+			'--hck-shadow-sm'      => '0 2px 10px rgba(30, 27, 50, 0.06)',
+			'--hck-shadow-md'      => '0 10px 30px rgba(30, 27, 50, 0.1)',
+			'--hck-shadow-lg'      => '0 24px 60px rgba(30, 27, 50, 0.16)',
 		);
 
 		if ( ! empty( $t['font_body'] ) ) {
@@ -276,6 +287,32 @@ class HCK_Helpers {
 			return '0,0,0';
 		}
 		return intval( substr( $hex, 0, 2 ), 16 ) . ',' . intval( substr( $hex, 2, 2 ), 16 ) . ',' . intval( substr( $hex, 4, 2 ), 16 );
+	}
+
+	/**
+	 * Darken a hex colour by a percentage.
+	 *
+	 * @param string $hex      Hex colour.
+	 * @param int    $percent  Percent to darken (0-100).
+	 * @return string Hex colour.
+	 */
+	public static function hex_darken( $hex, $percent ) {
+		$hex = ltrim( (string) $hex, '#' );
+		if ( 3 === strlen( $hex ) ) {
+			$hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
+		}
+		if ( 6 !== strlen( $hex ) ) {
+			return '#' . $hex;
+		}
+
+		$percent = max( 0, min( 100, (int) $percent ) );
+		$factor  = ( 100 - $percent ) / 100;
+
+		$r = str_pad( dechex( (int) round( hexdec( substr( $hex, 0, 2 ) ) * $factor ) ), 2, '0', STR_PAD_LEFT );
+		$g = str_pad( dechex( (int) round( hexdec( substr( $hex, 2, 2 ) ) * $factor ) ), 2, '0', STR_PAD_LEFT );
+		$b = str_pad( dechex( (int) round( hexdec( substr( $hex, 4, 2 ) ) * $factor ) ), 2, '0', STR_PAD_LEFT );
+
+		return '#' . $r . $g . $b;
 	}
 
 	/**

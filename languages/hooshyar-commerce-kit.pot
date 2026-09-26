@@ -534,9 +534,6 @@ msgstr ""
 msgid "Downloads"
 msgstr ""
 
-msgid "Dropdown"
-msgstr ""
-
 msgid "Effect duration (ms)"
 msgstr ""
 
@@ -894,13 +891,7 @@ msgstr ""
 msgid "Media library is not available."
 msgstr ""
 
-msgid "Mega menu columns"
-msgstr ""
-
-msgid "Mega panel (columns)"
-msgstr ""
-
-msgid "Mega panel (grid)"
+msgid "Mega menu (side panel for sub-categories)"
 msgstr ""
 
 msgid "Menu"
@@ -985,6 +976,9 @@ msgid "Normal"
 msgstr ""
 
 msgid "Notification Log"
+msgstr ""
+
+msgid "Number of columns in the sub-category panel."
 msgstr ""
 
 msgid "Offset"
@@ -1341,9 +1335,6 @@ msgstr ""
 msgid "Sidebar right"
 msgstr ""
 
-msgid "Simple dropdown"
-msgstr ""
-
 msgid "Skip to content"
 msgstr ""
 
@@ -1383,6 +1374,9 @@ msgstr ""
 msgid "Spotlight (image + info)"
 msgstr ""
 
+msgid "Stacked list (inline sub-categories)"
+msgstr ""
+
 msgid "Staging (UAT)"
 msgstr ""
 
@@ -1414,6 +1408,9 @@ msgid "Store currency unit"
 msgstr ""
 
 msgid "Style"
+msgstr ""
+
+msgid "Sub-category columns"
 msgstr ""
 
 msgid "Subscribe to get the latest offers."

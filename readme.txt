@@ -4,7 +4,7 @@ Tags: woocommerce, elementor, cart, checkout, digipay
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,12 @@ Card gateway (IPG), wallet, and credit/BNPL — the full UPG flow including
 purchase tickets, verification and manual reverse.
 
 == Changelog ==
+
+= 1.0.4 =
+* Improvement: category menu redesigned — categories stacked vertically with images, counts and accent hover; sub-categories open in a side panel (mega) or inline accordion
+* Improvement: richer button/panel styling (gradient trigger, shadows, animations)
+* Fix: dedicated Elementor widgets were not registered (plugin boot ran after `elementor/loaded` fired) — all HCK widgets now appear in the "Hooshyar Kit" category
+* Fix: derived CSS variables (primary-soft, surface-alt, transitions, shadows) now provided — hover styles across templates render correctly
 
 = 1.0.3 =
 * New: professional product-category menu in the header (mega panel or dropdown) with images, counts and sub-categories

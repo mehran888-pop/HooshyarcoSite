@@ -318,39 +318,25 @@ class HCK_Header_Footer {
 		}
 
 		$style   = 'mega' === $args['style'] ? 'mega' : 'dropdown';
-		$columns = max( 2, min( 6, (int) $args['columns'] ) );
+		$columns = max( 1, min( 6, (int) $args['columns'] ) );
 
 		$html  = '<div class="hck-cats hck-cats--' . esc_attr( $style ) . '" data-hck-cats>';
 		$html .= '<button type="button" class="hck-cats__btn" data-hck-cats-toggle aria-expanded="false">';
-		$html .= HCK_Helpers::icon( 'grid', array( 'size' => 18 ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+		$html .= HCK_Helpers::icon( 'grid', array( 'size' => 20 ) ); // phpcs:ignore WordPress.Security.EscapeOutput
 		$html .= '<span class="hck-cats__label">' . esc_html( $label ) . '</span>';
 		$html .= HCK_Helpers::icon( 'arrow-l', array( 'size' => 14, 'class' => 'hck-cats__caret' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
 		$html .= '</button>';
 
 		$html .= '<div class="hck-cats__panel">';
-		$html .= '<div class="hck-cats__grid hck-cats__grid--' . esc_attr( $columns ) . '">';
+		$html .= '<div class="hck-cats__head">';
+		$html .= HCK_Helpers::icon( 'grid', array( 'size' => 18, 'class' => 'hck-cats__head-icon' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+		$html .= '<span>' . esc_html( $label ) . '</span>';
+		$html .= '</div>';
+
+		$html .= '<ul class="hck-cats__list">';
 
 		foreach ( $terms as $term ) {
-			$html .= '<div class="hck-cats__col">';
-
-			$html .= '<a class="hck-cats__link" href="' . esc_url( get_term_link( $term ) ) . '">';
-
-			if ( 'yes' === $args['show_images'] ) {
-				$thumb_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
-				if ( $thumb_id ) {
-					$html .= '<span class="hck-cats__thumb">' . wp_get_attachment_image( $thumb_id, 'woocommerce_thumbnail' ) . '</span>';
-				} else {
-					$html .= '<span class="hck-cats__thumb hck-cats__thumb--placeholder">' . HCK_Helpers::icon( 'shop', array( 'size' => 22 ) ) . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput
-				}
-			}
-
-			$html .= '<span class="hck-cats__name">' . esc_html( $term->name ) . '</span>';
-
-			if ( 'yes' === $args['show_counts'] ) {
-				$html .= '<span class="hck-cats__count">' . esc_html( $term->count ) . '</span>';
-			}
-
-			$html .= '</a>';
+			$children = array();
 
 			if ( 'yes' === $args['show_children'] ) {
 				$children = get_terms(
@@ -363,23 +349,72 @@ class HCK_Header_Footer {
 					)
 				);
 
-				if ( ! is_wp_error( $children ) && ! empty( $children ) ) {
-					$html .= '<ul class="hck-cats__children">';
-					foreach ( $children as $child ) {
-						$html .= '<li><a href="' . esc_url( get_term_link( $child ) ) . '">' . esc_html( $child->name ) . '</a></li>';
-					}
-					$html .= '</ul>';
+				if ( is_wp_error( $children ) ) {
+					$children = array();
 				}
 			}
 
+			$has_children = ! empty( $children );
+			$term_url     = get_term_link( $term );
+
+			$html .= '<li class="hck-cats__item' . ( $has_children ? ' hck-cats__item--has-children' : '' ) . '">';
+
+			// Row: image + name + count (+ expand button when it has children).
+			$html .= '<div class="hck-cats__row">';
+			$html .= '<a class="hck-cats__link" href="' . esc_url( $term_url ) . '">';
+
+			if ( 'yes' === $args['show_images'] ) {
+				$thumb_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
+				if ( $thumb_id ) {
+					$html .= '<span class="hck-cats__thumb">' . wp_get_attachment_image( $thumb_id, 'woocommerce_thumbnail' ) . '</span>';
+				} else {
+					$html .= '<span class="hck-cats__thumb hck-cats__thumb--placeholder">' . HCK_Helpers::icon( 'shop', array( 'size' => 20, 'class' => 'hck-cats__thumb-icon' ) ) . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput
+				}
+			}
+
+			$html .= '<span class="hck-cats__name">' . esc_html( $term->name ) . '</span>';
+
+			if ( 'yes' === $args['show_counts'] ) {
+				$html .= '<span class="hck-cats__count">' . esc_html( $term->count ) . '</span>';
+			}
+
+			$html .= '</a>';
+
+			if ( $has_children ) {
+				$html .= '<button type="button" class="hck-cats__more" data-hck-cats-more aria-expanded="false">';
+				$html .= HCK_Helpers::icon( 'arrow-l', array( 'size' => 13, 'class' => 'hck-cats__more-icon' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+				$html .= '</button>';
+			}
+
 			$html .= '</div>';
+
+			// Children — side flyout (mega) or inline accordion (dropdown).
+			if ( $has_children ) {
+				$html .= '<div class="hck-cats__children">';
+				$html .= '<a class="hck-cats__children-title" href="' . esc_url( $term_url ) . '">';
+				$html .= '<span>' . esc_html( $term->name ) . '</span>';
+				$html .= '<em>' . esc_html__( 'View all', 'hooshyar-commerce-kit' ) . '</em>';
+				$html .= '</a>';
+				$html .= '<div class="hck-cats__children-grid hck-cats__children-grid--' . esc_attr( $columns ) . '">';
+
+				foreach ( $children as $child ) {
+					$html .= '<a class="hck-cats__child" href="' . esc_url( get_term_link( $child ) ) . '">' . esc_html( $child->name ) . '</a>';
+				}
+
+				$html .= '</div></div>';
+			}
+
+			$html .= '</li>';
 		}
 
-		$html .= '</div>';
+		$html .= '</ul>';
 
 		// "View all" footer of the panel.
 		$shop_url = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'shop' ) : home_url( '/' );
-		$html    .= '<a class="hck-cats__all" href="' . esc_url( $shop_url ) . '">' . esc_html__( 'View all products', 'hooshyar-commerce-kit' ) . '</a>';
+		$html    .= '<a class="hck-cats__all" href="' . esc_url( $shop_url ) . '">';
+		$html    .= '<span>' . esc_html__( 'View all products', 'hooshyar-commerce-kit' ) . '</span>';
+		$html    .= HCK_Helpers::icon( 'arrow-l', array( 'size' => 15, 'class' => 'hck-cats__all-icon' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+		$html    .= '</a>';
 		$html    .= '</div></div>';
 
 		return $html;

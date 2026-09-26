@@ -409,7 +409,7 @@
   }
 
   /* ------------------------------------------------------------------
-   * Category menu (mega / dropdown panel)
+   * Category menu (stacked list + side flyout / inline accordion)
    * ---------------------------------------------------------------- */
   function bindCategoryMenus() {
     function closeAll(except) {
@@ -419,6 +419,18 @@
           var btn = wrap.querySelector('[data-hck-cats-toggle]');
           if (btn) {
             btn.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    }
+
+    function closeItems(list, except) {
+      $$('.hck-cats__item.is-open', list).forEach(function (item) {
+        if (item !== except) {
+          item.classList.remove('is-open');
+          var more = item.querySelector('[data-hck-cats-more]');
+          if (more) {
+            more.setAttribute('aria-expanded', 'false');
           }
         }
       });
@@ -441,9 +453,46 @@
         return;
       }
 
+      // Expand / collapse sub-categories of a row (accordion / mobile flyout).
+      var more = e.target.closest ? e.target.closest('[data-hck-cats-more]') : null;
+
+      if (more) {
+        e.preventDefault();
+        e.stopPropagation();
+        var item = more.closest('.hck-cats__item');
+        if (!item) {
+          return;
+        }
+        var isOpen = item.classList.toggle('is-open');
+        more.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        var list = item.parentElement;
+        if (list && isOpen) {
+          closeItems(list, item);
+        }
+        return;
+      }
+
       if (!e.target.closest || !e.target.closest('.hck-cats')) {
         closeAll(null);
       }
+    });
+
+    // Desktop hover: highlight the row (and open the mega flyout via CSS).
+    document.addEventListener('mouseover', function (e) {
+      if (!e.target.closest) {
+        return;
+      }
+      var item = e.target.closest('.hck-cats__item');
+      if (!item || !item.parentElement) {
+        return;
+      }
+      var list = item.parentElement;
+      $$('.hck-cats__item', list).forEach(function (el) {
+        if (el !== item) {
+          el.classList.remove('is-hover');
+        }
+      });
+      item.classList.add('is-hover');
     });
 
     document.addEventListener('keydown', function (e) {

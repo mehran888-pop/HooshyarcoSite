@@ -542,9 +542,6 @@ msgstr "فقط نقطه"
 msgid "Downloads"
 msgstr "دانلودها"
 
-msgid "Dropdown"
-msgstr "دراپ‌داون"
-
 msgid "Effect duration (ms)"
 msgstr "مدت افکت (میلی‌ثانیه)"
 
@@ -902,14 +899,8 @@ msgstr "حداکثر دسته‌های اصلی"
 msgid "Media library is not available."
 msgstr "کتابخانه رسانه در دسترس نیست."
 
-msgid "Mega menu columns"
-msgstr "ستون‌های مگامنو"
-
-msgid "Mega panel (columns)"
-msgstr "پنل مگا (ستونی)"
-
-msgid "Mega panel (grid)"
-msgstr "پنل مگا (شبکه‌ای)"
+msgid "Mega menu (side panel for sub-categories)"
+msgstr "مگامنو (پنل کناری برای زیردسته‌ها)"
 
 msgid "Menu"
 msgstr "منو"
@@ -994,6 +985,9 @@ msgstr "معمولی"
 
 msgid "Notification Log"
 msgstr "گزارش اعلان‌ها"
+
+msgid "Number of columns in the sub-category panel."
+msgstr "تعداد ستون‌های پنل زیردسته‌ها."
 
 msgid "Offset"
 msgstr "شروع از"
@@ -1349,9 +1343,6 @@ msgstr "سایدبار چپ"
 msgid "Sidebar right"
 msgstr "سایدبار راست"
 
-msgid "Simple dropdown"
-msgstr "دراپ‌داون ساده"
-
 msgid "Skip to content"
 msgstr "پرش به محتوا"
 
@@ -1391,6 +1382,9 @@ msgstr "منوی دو طرفه"
 msgid "Spotlight (image + info)"
 msgstr "اسپات‌لایت (تصویر + اطلاعات)"
 
+msgid "Stacked list (inline sub-categories)"
+msgstr "لیست زیرهم (زیردسته‌ها در همان ردیف)"
+
 msgid "Staging (UAT)"
 msgstr "آزمایشی (UAT)"
 
@@ -1423,6 +1417,9 @@ msgstr "واحد پول فروشگاه"
 
 msgid "Style"
 msgstr "استایل"
+
+msgid "Sub-category columns"
+msgstr "ستون‌های زیردسته‌ها"
 
 msgid "Subscribe to get the latest offers."
 msgstr "برای دریافت آخرین پیشنهادها مشترک شوید."

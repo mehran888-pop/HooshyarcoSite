@@ -477,10 +477,10 @@ final class HCK_Settings {
 					array( 'id' => 'header_category_menu', 'label' => __( 'Category menu (mega menu)', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
 					array( 'id' => 'header_category_menu_label', 'label' => __( 'Category menu label', 'hooshyar-commerce-kit' ), 'type' => 'text', 'desc' => __( 'e.g. Product categories', 'hooshyar-commerce-kit' ) ),
 					array( 'id' => 'header_category_menu_style', 'label' => __( 'Category menu style', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array(
-						'dropdown' => __( 'Dropdown', 'hooshyar-commerce-kit' ),
-						'mega'     => __( 'Mega panel (columns)', 'hooshyar-commerce-kit' ),
+						'dropdown' => __( 'Stacked list (inline sub-categories)', 'hooshyar-commerce-kit' ),
+						'mega'     => __( 'Mega menu (side panel for sub-categories)', 'hooshyar-commerce-kit' ),
 					) ),
-					array( 'id' => 'header_category_menu_columns', 'label' => __( 'Mega menu columns', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array( '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6' ) ),
+					array( 'id' => 'header_category_menu_columns', 'label' => __( 'Sub-category columns', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array( '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6' ), 'desc' => __( 'Number of columns in the sub-category panel.', 'hooshyar-commerce-kit' ) ),
 					array( 'id' => 'header_category_menu_show_images', 'label' => __( 'Category images', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
 					array( 'id' => 'header_category_menu_show_counts', 'label' => __( 'Product counts', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),
 					array( 'id' => 'header_category_menu_show_children', 'label' => __( 'Show subcategories', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => $yesno ),

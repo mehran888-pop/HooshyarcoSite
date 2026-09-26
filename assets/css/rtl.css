@@ -46,3 +46,16 @@
   left: auto;
   right: 12px;
 }
+
+/* -------------------------------------------------------------------------
+   Category menu (mega / dropdown) — RTL adjustments
+   ---------------------------------------------------------------------- */
+.rtl .hck-cats__panel {
+  left: auto;
+  right: 0;
+  transform-origin: top right;
+}
+
+.rtl .hck-cats__all-icon {
+  transform: none;
+}

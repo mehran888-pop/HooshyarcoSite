@@ -77,8 +77,8 @@ class HCK_Widget_Category_Menu extends HCK_Widget_Base {
 				'type'    => \Elementor\Controls_Manager::SELECT,
 				'default' => 'mega',
 				'options' => array(
-					'mega'     => __( 'Mega panel (grid)', 'hooshyar-commerce-kit' ),
-					'dropdown' => __( 'Simple dropdown', 'hooshyar-commerce-kit' ),
+					'mega'     => __( 'Mega menu (side panel for sub-categories)', 'hooshyar-commerce-kit' ),
+					'dropdown' => __( 'Stacked list (inline sub-categories)', 'hooshyar-commerce-kit' ),
 				),
 			)
 		);

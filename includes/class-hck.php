@@ -67,8 +67,14 @@ final class HCK {
 		$this->modules['mobile_nav']     = HCK_Mobile_Nav::instance();
 		$this->modules['social']         = HCK_Social_Notifier::instance();
 
-		// Elementor.
-		add_action( 'elementor/loaded', array( $this, 'init_elementor' ) );
+		// Elementor — `elementor/loaded` may have already fired (Elementor hooks
+		// plugins_loaded earlier than our bootstrap), so init immediately in that
+		// case, otherwise wait for the event.
+		if ( did_action( 'elementor/loaded' ) ) {
+			$this->init_elementor();
+		} else {
+			add_action( 'elementor/loaded', array( $this, 'init_elementor' ) );
+		}
 
 		// Payment gateways.
 		add_filter( 'woocommerce_payment_gateways', array( $this, 'register_gateway' ) );

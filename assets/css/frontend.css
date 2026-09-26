@@ -28,6 +28,11 @@
   --hck-ease: cubic-bezier(0.22, 1, 0.36, 1);
   --hck-font-body: -apple-system, "Segoe UI", Tahoma, sans-serif;
   --hck-font-heading: var(--hck-font-body);
+  --hck-primary-soft: rgba(108, 92, 231, 0.12);
+  --hck-primary-dark: #5a4bd4;
+  --hck-surface-alt: rgba(75, 75, 98, 0.05);
+  --hck-text-muted: var(--hck-muted);
+  --hck-transition-soft: 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hck-container {

@@ -45,7 +45,10 @@ class HCK_Elementor {
 	 */
 	private function __construct() {
 		add_action( 'elementor/elements/categories_registered', array( $this, 'register_category' ) );
+		// Elementor 3.5+ registration hook.
 		add_action( 'elementor/widgets/register', array( $this, 'register_widgets' ) );
+		// Legacy hook for older Elementor versions (also serves as a safety net).
+		add_action( 'elementor/widgets/widgets_registered', array( $this, 'register_widgets' ) );
 		add_action( 'elementor/frontend/after_register_scripts', array( $this, 'register_assets' ) );
 		add_action( 'elementor/editor/after_enqueue_styles', array( $this, 'editor_assets' ) );
 		add_action( 'elementor/theme/register_locations', array( $this, 'register_locations' ) );
@@ -61,7 +64,7 @@ class HCK_Elementor {
 		if ( ! defined( 'ELEMENTOR_VERSION' ) ) {
 			return false;
 		}
-		return version_compare( ELEMENTOR_VERSION, self::MIN_VERSION, '>=' );
+		return version_compare( ELEMENTOR_VERSION, '3.0.0', '>=' );
 	}
 
 	/**
@@ -82,22 +85,41 @@ class HCK_Elementor {
 	/**
 	 * Register all widgets.
 	 *
+	 * Safe to run twice (Elementor 3.5+ `register` and the legacy
+	 * `widgets_registered` hook) — duplicates are skipped by Elementor.
+	 *
 	 * @param \Elementor\Widgets_Manager $widgets_manager Widgets manager.
 	 */
 	public function register_widgets( $widgets_manager ) {
-		if ( ! $this->check_requirements() ) {
+		if ( ! $this->check_requirements() || empty( $widgets_manager ) ) {
 			return;
 		}
 
-		$widgets_manager->register( new HCK_Widget_Products() );
-		$widgets_manager->register( new HCK_Widget_Banner() );
-		$widgets_manager->register( new HCK_Widget_Product_Banner() );
-		$widgets_manager->register( new HCK_Widget_Cart() );
-		$widgets_manager->register( new HCK_Widget_Checkout() );
-		$widgets_manager->register( new HCK_Widget_Dashboard() );
-		$widgets_manager->register( new HCK_Widget_User_Area() );
-		$widgets_manager->register( new HCK_Widget_Mobile_Nav() );
-		$widgets_manager->register( new HCK_Widget_Category_Menu() );
+		$widgets = array(
+			'HCK_Widget_Products',
+			'HCK_Widget_Banner',
+			'HCK_Widget_Product_Banner',
+			'HCK_Widget_Cart',
+			'HCK_Widget_Checkout',
+			'HCK_Widget_Dashboard',
+			'HCK_Widget_User_Area',
+			'HCK_Widget_Mobile_Nav',
+			'HCK_Widget_Category_Menu',
+		);
+
+		foreach ( $widgets as $class ) {
+			if ( ! class_exists( $class ) ) {
+				continue;
+			}
+
+			$instance = new $class();
+
+			if ( method_exists( $widgets_manager, 'register' ) ) {
+				$widgets_manager->register( $instance );
+			} elseif ( method_exists( $widgets_manager, 'register_widget_type' ) ) {
+				$widgets_manager->register_widget_type( $instance );
+			}
+		}
 	}
 
 	/**
