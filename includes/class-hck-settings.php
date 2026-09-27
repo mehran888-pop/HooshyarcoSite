@@ -191,6 +191,10 @@ final class HCK_Settings {
 			'footer_columns'     => '3',
 			'footer_about'       => '',
 			'footer_copyright'   => '',
+			'header_width'       => 'full',
+			'footer_width'       => 'full',
+			'content_width'      => 'container',
+			'custom_css'         => '',
 			'header_footer_scope' => 'entire_site',
 			'header_footer_ids'  => '',
 
@@ -357,6 +361,7 @@ final class HCK_Settings {
 					array( 'id' => 'container_width', 'label' => __( 'Container width (px)', 'hooshyar-commerce-kit' ), 'type' => 'number', 'min' => 900, 'max' => 1800 ),
 					array( 'id' => 'font_body', 'label' => __( 'Body font family', 'hooshyar-commerce-kit' ), 'type' => 'text', 'desc' => __( 'Any CSS font family, e.g. Tahoma, Vazirmatn, Roboto. Google fonts load automatically.', 'hooshyar-commerce-kit' ) ),
 					array( 'id' => 'font_heading', 'label' => __( 'Heading font family', 'hooshyar-commerce-kit' ), 'type' => 'text' ),
+					array( 'id' => 'custom_css', 'label' => __( 'Custom CSS', 'hooshyar-commerce-kit' ), 'type' => 'css', 'desc' => __( 'Custom CSS printed on the storefront.', 'hooshyar-commerce-kit' ) ),
 				);
 				break;
 
@@ -496,6 +501,18 @@ final class HCK_Settings {
 					array( 'id' => 'footer_columns', 'label' => __( 'Footer columns', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array( '1' => '1', '2' => '2', '3' => '3', '4' => '4' ) ),
 					array( 'id' => 'footer_about', 'label' => __( 'About text (footer)', 'hooshyar-commerce-kit' ), 'type' => 'textarea' ),
 					array( 'id' => 'footer_copyright', 'label' => __( 'Copyright text', 'hooshyar-commerce-kit' ), 'type' => 'text' ),
+					array( 'id' => 'header_width', 'label' => __( 'Header width', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array(
+						'full'  => __( 'Full width', 'hooshyar-commerce-kit' ),
+						'boxed' => __( 'Boxed (inside container)', 'hooshyar-commerce-kit' ),
+					), 'desc' => __( 'Header bar spans the browser width or floats inside the container.', 'hooshyar-commerce-kit' ) ),
+					array( 'id' => 'footer_width', 'label' => __( 'Footer width', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array(
+						'full'  => __( 'Full width', 'hooshyar-commerce-kit' ),
+						'boxed' => __( 'Boxed (inside container)', 'hooshyar-commerce-kit' ),
+					), 'desc' => __( 'Footer bar spans the browser width or sits inside the container.', 'hooshyar-commerce-kit' ) ),
+					array( 'id' => 'content_width', 'label' => __( 'Site content width', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array(
+						'container' => __( 'Boxed (inside container)', 'hooshyar-commerce-kit' ),
+						'full'      => __( 'Full width', 'hooshyar-commerce-kit' ),
+					), 'desc' => __( 'Content width: full (edge to edge) or boxed (container width).', 'hooshyar-commerce-kit' ) ),
 					array( 'id' => 'header_footer_scope', 'label' => __( 'Display scope', 'hooshyar-commerce-kit' ), 'type' => 'select', 'options' => array(
 						'entire_site'  => __( 'Entire site', 'hooshyar-commerce-kit' ),
 						'shop_only'    => __( 'Shop pages only', 'hooshyar-commerce-kit' ),
@@ -666,11 +683,14 @@ final class HCK_Settings {
 				break;
 
 			case 'textarea':
+			case 'css':
 				printf(
-					'<textarea id="%1$s" name="%2$s" rows="5" class="large-text">%3$s</textarea>',
+					'<textarea id="%1$s" name="%2$s" rows="%4$s" class="large-text%5$s">%3$s</textarea>',
 					esc_attr( $id ),
 					esc_attr( $name ),
-					esc_textarea( $value )
+					esc_textarea( $value ),
+					'css' === $field['type'] ? 8 : 5,
+					'css' === $field['type'] ? ' hck-css-editor' : ''
 				);
 				break;
 
@@ -887,6 +907,10 @@ final class HCK_Settings {
 						$clean[ $id ] = wp_kses_post( $value );
 						break;
 
+					case 'css':
+						$clean[ $id ] = wp_strip_all_tags( (string) $value );
+						break;
+
 					default:
 						$clean[ $id ] = sanitize_text_field( $value );
 						break;
@@ -933,84 +957,252 @@ final class HCK_Settings {
 	/**
 	 * Render the settings page.
 	 */
+	/**
+	 * Icon per settings tab.
+	 *
+	 * @return array
+	 */
+	public static function get_tab_icons() {
+		return array(
+			'design'    => 'dashicons-art',
+			'fonts'     => 'dashicons-editor-spellcheck',
+			'cart'      => 'dashicons-cart',
+			'checkout'  => 'dashicons-money-alt',
+			'dashboard' => 'dashicons-dashboard',
+			'shop'      => 'dashicons-store',
+			'header'    => 'dashicons-align-wide',
+			'mobile'    => 'dashicons-smartphone',
+			'effects'   => 'dashicons-star-filled',
+			'telegram'  => 'dashicons-format-chat',
+			'bale'      => 'dashicons-format-chat',
+			'digipay'   => 'dashicons-lock',
+		);
+	}
+
+	/**
+	 * Field groups per tab (ordered map of group label => field ids).
+	 *
+	 * @param string $tab Tab id.
+	 * @return array
+	 */
+	public function get_groups( $tab ) {
+		switch ( $tab ) {
+			case 'design':
+				return array(
+					__( 'Colors', 'hooshyar-commerce-kit' )        => array( 'primary_color', 'secondary_color', 'accent_color', 'heading_color', 'text_color', 'muted_color', 'bg_color', 'surface_color', 'border_color', 'success_color', 'danger_color', 'warning_color' ),
+					__( 'Shape & size', 'hooshyar-commerce-kit' )  => array( 'border_radius', 'container_width' ),
+					__( 'Typography', 'hooshyar-commerce-kit' )    => array( 'font_body', 'font_heading' ),
+					__( 'Custom code', 'hooshyar-commerce-kit' )   => array( 'custom_css' ),
+				);
+
+			case 'cart':
+				return array(
+					__( 'Template & layout', 'hooshyar-commerce-kit' ) => array( 'cart_template', 'cart_layout' ),
+					__( 'Elements', 'hooshyar-commerce-kit' )          => array( 'cart_show_image', 'cart_show_stock', 'cart_coupon', 'cart_note', 'cart_free_ship_bar', 'cart_summary_sticky' ),
+				);
+
+			case 'checkout':
+				return array(
+					__( 'Template & layout', 'hooshyar-commerce-kit' ) => array( 'checkout_template', 'checkout_layout' ),
+					__( 'Elements', 'hooshyar-commerce-kit' )          => array( 'checkout_show_image', 'checkout_order_summary_sticky', 'checkout_coupon', 'checkout_steps', 'checkout_login_note' ),
+				);
+
+			case 'dashboard':
+				return array(
+					__( 'Template & layout', 'hooshyar-commerce-kit' ) => array( 'dashboard_template', 'dashboard_layout' ),
+					__( 'Elements', 'hooshyar-commerce-kit' )          => array( 'dashboard_welcome', 'dashboard_stats', 'dashboard_recent_orders', 'dashboard_show_avatar', 'dashboard_header_button' ),
+				);
+
+			case 'shop':
+				return array(
+					__( 'Shop page', 'hooshyar-commerce-kit' )    => array( 'shop_layout', 'shop_card_style', 'shop_columns', 'shop_sidebar', 'shop_hover', 'shop_show_result_count', 'shop_ajax_add' ),
+					__( 'Product page', 'hooshyar-commerce-kit' ) => array( 'product_layout', 'product_sticky_info', 'product_tabs_style', 'product_related', 'product_trust_badges' ),
+				);
+
+			case 'header':
+				return array(
+					__( 'Header bar', 'hooshyar-commerce-kit' )          => array( 'header_template', 'header_elementor_id', 'header_layout', 'header_width', 'header_sticky', 'header_topbar', 'header_phone' ),
+					__( 'Menus & categories', 'hooshyar-commerce-kit' ) => array( 'header_menu', 'header_menu_align', 'header_category_menu', 'header_category_menu_label', 'header_category_menu_style', 'header_category_menu_columns', 'header_category_menu_show_images', 'header_category_menu_show_counts', 'header_category_menu_show_children', 'header_category_menu_limit' ),
+					__( 'User & search', 'hooshyar-commerce-kit' )      => array( 'header_user_button', 'header_cart_button', 'header_search' ),
+					__( 'Footer', 'hooshyar-commerce-kit' )             => array( 'footer_template', 'footer_elementor_id', 'footer_width', 'footer_columns', 'footer_about', 'footer_copyright' ),
+					__( 'Width & layout', 'hooshyar-commerce-kit' )     => array( 'content_width' ),
+					__( 'Display scope', 'hooshyar-commerce-kit' )      => array( 'header_footer_scope', 'header_footer_ids' ),
+				);
+
+			case 'telegram':
+			case 'bale':
+				return array(
+					__( 'Sending', 'hooshyar-commerce-kit' ) => array( $tab . '_enabled', $tab . '_token', $tab . '_chat_id' ),
+					__( 'Message', 'hooshyar-commerce-kit' ) => array( $tab . '_template' ),
+				);
+
+			case 'digipay':
+				return array(
+					__( 'Environment & credentials', 'hooshyar-commerce-kit' ) => array( 'digipay_environment', 'digipay_username', 'digipay_password', 'digipay_client_id', 'digipay_client_secret' ),
+					__( 'Payment options', 'hooshyar-commerce-kit' )           => array( 'digipay_preferred', 'digipay_amount_unit', 'digipay_logging' ),
+				);
+		}
+
+		return array();
+	}
+
+	/**
+	 * Render the settings page.
+	 */
 	public function render_settings_page() {
 		if ( ! current_user_can( 'manage_woocommerce' ) ) {
 			return;
 		}
 
-		$tabs = $this->get_tabs();
+		$tabs  = $this->get_tabs();
+		$icons = self::get_tab_icons();
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$active = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'design';
 		if ( ! isset( $tabs[ $active ] ) ) {
 			$active = 'design';
 		}
 		?>
-		<div class="wrap hck-settings-wrap">
-			<h1 class="hck-settings-title">
-				<span class="hck-logo-mark"></span>
-				<?php esc_html_e( 'Hooshyar Commerce Kit — Settings', 'hooshyar-commerce-kit' ); ?>
-			</h1>
+		<div class="wrap hck-settings-wrap" dir="rtl">
+			<div class="hck-settings-hero">
+				<div class="hck-settings-hero__text">
+					<h1><?php esc_html_e( 'Hooshyar Commerce Kit — Settings', 'hooshyar-commerce-kit' ); ?></h1>
+					<p><?php esc_html_e( 'Everything for your store design: templates, styles and integrations in one place.', 'hooshyar-commerce-kit' ); ?></p>
+				</div>
+				<span class="hck-version-chip"><?php echo esc_html__( 'Version', 'hooshyar-commerce-kit' ) . ' ' . esc_html( HCK_VERSION ); ?></span>
+			</div>
 
-			<nav class="nav-tab-wrapper hck-tabs">
-				<?php foreach ( $tabs as $tab => $label ) : ?>
-					<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'hck-settings', 'tab' => $tab ), admin_url( 'admin.php' ) ) ); ?>"
-						class="nav-tab <?php echo $active === $tab ? 'nav-tab-active' : ''; ?>">
-						<?php echo esc_html( $label ); ?>
-					</a>
-				<?php endforeach; ?>
-			</nav>
+			<div class="hck-settings-layout">
+				<nav class="hck-settings-nav">
+					<?php foreach ( $tabs as $tab => $label ) : ?>
+						<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'hck-settings', 'tab' => $tab ), admin_url( 'admin.php' ) ) ); ?>"
+							class="hck-settings-nav__item<?php echo $active === $tab ? ' is-active' : ''; ?>">
+							<span class="dashicons <?php echo esc_attr( isset( $icons[ $tab ] ) ? $icons[ $tab ] : 'dashicons-admin-generic' ); ?>"></span>
+							<span><?php echo esc_html( $label ); ?></span>
+						</a>
+					<?php endforeach; ?>
+				</nav>
 
-			<form method="post" action="options.php" class="hck-settings-form">
-				<?php
-				settings_fields( 'hck_settings_group' );
-				?>
-				<input type="hidden" name="hck_active_tab" value="<?php echo esc_attr( $active ); ?>" />
-				<table class="form-table" role="presentation">
-					<?php
-					foreach ( $this->get_fields( $active ) as $field ) {
-						printf(
-							'<tr class="hck-row-%1$s"><th scope="row"><label for="%1$s">%2$s</label></th><td>',
-							esc_attr( $field['id'] ),
-							esc_html( $field['label'] )
-						);
-						$this->render_field( $field );
-						echo '</td></tr>';
-					}
-					?>
-				</table>
+				<div class="hck-settings-main">
+					<?php settings_errors(); ?>
 
-				<?php submit_button( __( 'Save settings', 'hooshyar-commerce-kit' ) ); ?>
-			</form>
+					<form method="post" action="options.php" class="hck-settings-form">
+						<?php
+						settings_fields( 'hck_settings_group' );
+						$fields = $this->get_fields( $active );
+						$groups = $this->get_groups( $active );
+						?>
+						<input type="hidden" name="hck_active_tab" value="<?php echo esc_attr( $active ); ?>" />
 
-			<?php if ( 'telegram' === $active || 'bale' === $active ) : ?>
-				<div class="hck-test-panel">
-					<h2><?php esc_html_e( 'Send a test message', 'hooshyar-commerce-kit' ); ?></h2>
-					<p>
-						<button type="button" class="button button-secondary hck-test-message" data-channel="<?php echo esc_attr( $active ); ?>">
-							<?php
-							/* translators: %s: channel name */
-							printf( esc_html__( 'Send test to %s', 'hooshyar-commerce-kit' ), esc_html( ucfirst( $active ) ) );
+						<?php
+						$rendered_ids = array();
+
+						foreach ( $groups as $group_label => $ids ) {
+							$group_fields = array();
+							foreach ( $fields as $field ) {
+								if ( in_array( $field['id'], $ids, true ) ) {
+									$group_fields[]          = $field;
+									$rendered_ids[ $field['id'] ] = true;
+								}
+							}
+
+							if ( empty( $group_fields ) ) {
+								continue;
+							}
 							?>
-						</button>
-					</p>
-					<pre class="hck-test-result"></pre>
-				</div>
-			<?php endif; ?>
+							<section class="hck-settings-card">
+								<header class="hck-settings-card__head">
+									<h2><?php echo esc_html( $group_label ); ?></h2>
+								</header>
+								<div class="hck-settings-card__body">
+									<?php foreach ( $group_fields as $field ) : ?>
+										<div class="hck-field-row hck-field-row--<?php echo esc_attr( $field['type'] ); ?>">
+											<label class="hck-field-row__label" for="<?php echo esc_attr( $field['id'] ); ?>"><?php echo esc_html( $field['label'] ); ?></label>
+											<div class="hck-field-row__control">
+												<?php $this->render_field( $field ); ?>
+											</div>
+										</div>
+									<?php endforeach; ?>
+								</div>
+							</section>
+							<?php
+						}
 
-			<?php if ( 'digipay' === $active ) : ?>
-				<div class="hck-test-panel">
-					<h2><?php esc_html_e( 'Connection test', 'hooshyar-commerce-kit' ); ?></h2>
-					<p class="description">
-						<?php esc_html_e( 'Tests the OAuth login against the DigiPay UPG API using the credentials above.', 'hooshyar-commerce-kit' ); ?>
-					</p>
-					<p>
-						<button type="button" class="button button-secondary hck-test-digipay">
-							<?php esc_html_e( 'Test DigiPay connection', 'hooshyar-commerce-kit' ); ?>
-						</button>
-					</p>
-					<pre class="hck-test-result"></pre>
+						// Fields not covered by any group.
+						$rest = array();
+						foreach ( $fields as $field ) {
+							if ( ! isset( $rendered_ids[ $field['id'] ] ) ) {
+								$rest[] = $field;
+							}
+						}
+
+						if ( ! empty( $rest ) ) {
+							?>
+							<section class="hck-settings-card">
+								<header class="hck-settings-card__head">
+									<h2><?php echo esc_html( $tabs[ $active ] ); ?></h2>
+								</header>
+								<div class="hck-settings-card__body">
+									<?php foreach ( $rest as $field ) : ?>
+										<div class="hck-field-row hck-field-row--<?php echo esc_attr( $field['type'] ); ?>">
+											<label class="hck-field-row__label" for="<?php echo esc_attr( $field['id'] ); ?>"><?php echo esc_html( $field['label'] ); ?></label>
+											<div class="hck-field-row__control">
+												<?php $this->render_field( $field ); ?>
+											</div>
+										</div>
+									<?php endforeach; ?>
+								</div>
+							</section>
+							<?php
+						}
+						?>
+
+						<div class="hck-save-bar">
+							<button type="submit" class="button button-primary hck-save-btn">
+								<span class="dashicons dashicons-yes"></span>
+								<?php esc_html_e( 'Save settings', 'hooshyar-commerce-kit' ); ?>
+							</button>
+						</div>
+					</form>
+
+					<?php if ( 'telegram' === $active || 'bale' === $active ) : ?>
+						<section class="hck-settings-card hck-test-panel">
+							<header class="hck-settings-card__head">
+								<h2><?php esc_html_e( 'Send a test message', 'hooshyar-commerce-kit' ); ?></h2>
+							</header>
+							<div class="hck-settings-card__body">
+								<p>
+									<button type="button" class="button button-secondary hck-test-message" data-channel="<?php echo esc_attr( $active ); ?>">
+										<?php
+										/* translators: %s: channel name */
+										printf( esc_html__( 'Send test to %s', 'hooshyar-commerce-kit' ), esc_html( ucfirst( $active ) ) );
+										?>
+									</button>
+								</p>
+								<pre class="hck-test-result"></pre>
+							</div>
+						</section>
+					<?php endif; ?>
+
+					<?php if ( 'digipay' === $active ) : ?>
+						<section class="hck-settings-card hck-test-panel">
+							<header class="hck-settings-card__head">
+								<h2><?php esc_html_e( 'Connection test', 'hooshyar-commerce-kit' ); ?></h2>
+							</header>
+							<div class="hck-settings-card__body">
+								<p class="description">
+									<?php esc_html_e( 'Tests the OAuth login against the DigiPay UPG API using the credentials above.', 'hooshyar-commerce-kit' ); ?>
+								</p>
+								<p>
+									<button type="button" class="button button-secondary hck-test-digipay">
+										<?php esc_html_e( 'Test DigiPay connection', 'hooshyar-commerce-kit' ); ?>
+									</button>
+								</p>
+								<pre class="hck-test-result"></pre>
+							</div>
+						</section>
+					<?php endif; ?>
 				</div>
-			<?php endif; ?>
+			</div>
 		</div>
 		<?php
 	}

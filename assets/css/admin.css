@@ -1,121 +1,323 @@
 /* ==========================================================================
-   Hooshyar Commerce Kit — Admin settings
+   Hooshyar Commerce Kit — Admin (modern settings UI)
    ========================================================================== */
 
 .hck-settings-wrap {
-  max-width: 1060px;
-  margin-inline: 20px 20px;
+  max-width: 1320px;
+  margin-inline: 10px 0;
+  font-family: Tahoma, "Vazirmatn", "Segoe UI", sans-serif;
+  color: #1f2937;
 }
 
-.hck-settings-title {
+/* ---- Hero ---- */
+.hck-settings-hero {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-block: 22px 20px;
-  font-family: -apple-system, "Segoe UI", Tahoma, sans-serif;
+  justify-content: space-between;
+  gap: 20px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.18), transparent 45%),
+    linear-gradient(120deg, #4f46e5, #0ea5e9);
+  color: #fff;
+  border-radius: 22px;
+  padding: 28px 32px;
+  margin: 18px 0 26px;
+  box-shadow: 0 18px 44px -18px rgba(79, 70, 229, 0.55);
+}
+
+.hck-settings-hero h1 {
+  margin: 0 0 8px;
   font-size: 24px;
-  color: #1e1b32;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
 }
 
-.hck-logo-mark {
-  display: inline-flex;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #6c5ce7, #00cec9);
-  box-shadow: 0 10px 24px rgba(108, 92, 231, 0.35);
+.hck-settings-hero p {
+  margin: 0;
+  font-size: 13.5px;
+  opacity: 0.92;
 }
 
-.hck-tabs {
-  margin-block-end: 0 !important;
-}
-
-.hck-tabs .nav-tab {
-  margin-inline-end: 4px !important;
-  border-radius: 8px 8px 0 0;
-  font-size: 13px;
-}
-
-.hck-tabs .nav-tab-active {
-  background: #fff;
-  border-bottom-color: #fff;
-  color: #6c5ce7;
+.hck-version-chip {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 12px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
-.hck-settings-form {
+/* ---- Layout: sidebar + main ---- */
+.hck-settings-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.hck-settings-nav {
+  position: sticky;
+  top: 46px;
   background: #fff;
-  border: 1px solid #e2e0ee;
-  border-top: none;
-  border-radius: 0 0 12px 12px;
-  padding: 8px 24px 20px;
-  box-shadow: 0 10px 30px rgba(30, 27, 50, 0.05);
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 10px;
+  display: grid;
+  gap: 3px;
+  box-shadow: 0 10px 30px -22px rgba(15, 23, 42, 0.35);
 }
 
-.hck-settings-form .form-table th {
-  width: 260px;
-  padding-block: 18px;
-  color: #2d2a45;
-  font-weight: 600;
+.hck-settings-nav__item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 13px;
+  border-radius: 12px;
+  color: #374151;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
-.hck-settings-form .form-table td {
-  padding-block: 18px;
+.hck-settings-nav__item .dashicons {
+  font-size: 19px;
+  width: 19px;
+  height: 19px;
+  color: #9ca3af;
+  transition: color 0.18s ease;
 }
 
-.hck-settings-form input.regular-text,
-.hck-settings-form textarea.large-text,
-.hck-settings-form select {
-  border-radius: 8px;
-  border-color: #d9d6ea;
+.hck-settings-nav__item:hover {
+  background: #f3f4f6;
+  color: #111827;
+  text-decoration: none;
 }
 
-.hck-settings-form input.regular-text:focus,
-.hck-settings-form textarea.large-text:focus,
-.hck-settings-form select:focus {
-  border-color: #6c5ce7;
-  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.18);
+.hck-settings-nav__item.is-active {
+  background: linear-gradient(120deg, #4f46e5, #0ea5e9);
+  color: #fff;
+  box-shadow: 0 10px 22px -10px rgba(79, 70, 229, 0.55);
+}
+
+.hck-settings-nav__item.is-active .dashicons { color: #fff; }
+
+.hck-settings-main {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* ---- Cards / groups ---- */
+.hck-settings-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 34px -24px rgba(15, 23, 42, 0.32);
+}
+
+.hck-settings-card__head {
+  padding: 18px 24px 14px;
+  border-bottom: 1px solid #f1f2f6;
+  background: linear-gradient(180deg, #fafbff, #fff);
+}
+
+.hck-settings-card__head h2 {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.hck-settings-card__body {
+  padding: 8px 24px 22px;
+}
+
+/* ---- Field rows ---- */
+.hck-field-row {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding-block: 15px;
+  border-bottom: 1px dashed #eef0f4;
+}
+
+.hck-field-row:last-child { border-bottom: none; }
+
+.hck-field-row__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+  padding-top: 7px;
+  line-height: 1.9;
+}
+
+.hck-field-row__control { min-width: 0; }
+
+.hck-field-row--textarea .hck-field-row__control,
+.hck-field-row--css .hck-field-row__control,
+.hck-field-row--font_repeater .hck-field-row__control {
+  grid-column: 2;
 }
 
 .hck-field .description {
-  margin-top: 8px;
-  color: #7c7a92;
-  font-size: 12.5px;
+  margin: 8px 2px 0;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #6b7280;
 }
 
-.hck-color-picker {
-  max-width: 110px;
+/* ---- Controls ---- */
+.hck-settings-wrap input.regular-text,
+.hck-settings-wrap input.small-text,
+.hck-settings-wrap input[type="number"],
+.hck-settings-wrap textarea.large-text,
+.hck-settings-wrap select {
+  border: 1.5px solid #e5e7eb;
+  border-radius: 11px;
+  background: #fafbfe;
+  padding: 9px 13px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #111827;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  max-width: 100%;
 }
 
-.hck-test-panel {
+.hck-settings-wrap input.regular-text:focus,
+.hck-settings-wrap input.small-text:focus,
+.hck-settings-wrap input[type="number"]:focus,
+.hck-settings-wrap textarea.large-text:focus,
+.hck-settings-wrap select:focus {
+  outline: none;
+  border-color: #4f46e5;
   background: #fff;
-  border: 1px solid #e2e0ee;
-  border-radius: 12px;
-  padding: 20px 24px;
-  margin-top: 22px;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.14);
 }
 
-.hck-test-panel h2 {
-  margin-top: 0;
-  font-size: 16px;
+.hck-settings-wrap textarea.large-text {
+  width: 100%;
+  line-height: 1.9;
+  resize: vertical;
+}
+
+.hck-settings-wrap .hck-css-editor {
+  direction: ltr;
+  text-align: left;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 12.5px;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-color: #0f172a;
+}
+
+.hck-settings-wrap .hck-css-editor:focus {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-color: #4f46e5;
+}
+
+/* wp-color-picker wrapper */
+.hck-field .wp-picker-container {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hck-field .wp-picker-input-wrap input[type="text"] {
+  width: 110px !important;
+}
+
+/* ---- Save bar ---- */
+.hck-save-bar {
+  position: sticky;
+  bottom: 12px;
+  display: flex;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow: 0 18px 40px -18px rgba(15, 23, 42, 0.3);
+}
+
+.hck-save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(120deg, #4f46e5, #0ea5e9) !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  padding: 11px 26px !important;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #fff !important;
+  box-shadow: 0 12px 26px -12px rgba(79, 70, 229, 0.65);
+  cursor: pointer;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.hck-save-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.hck-save-btn .dashicons {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  color: #fff;
+}
+
+/* ---- Test panels ---- */
+.hck-test-panel .hck-settings-card__body p { margin: 10px 0; }
+
+.hck-test-panel .button-secondary {
+  border-radius: 11px !important;
+  border-color: #d9dce3 !important;
+  font-weight: 700;
+  padding: 9px 18px !important;
 }
 
 .hck-test-result {
   display: none;
-  margin-top: 14px;
+  margin: 12px 0 0;
   padding: 14px 16px;
-  border-radius: 8px;
-  background: #f6f5fb;
-  color: #2d2a45;
-  font-size: 12.5px;
-  white-space: pre-wrap;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  font-size: 12px;
   direction: ltr;
   text-align: left;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .hck-test-result.is-visible { display: block; }
-.hck-test-result.is-success { background: #e9f9ef; color: #157347; }
-.hck-test-result.is-error { background: #fdecec; color: #b02a37; }
+.hck-test-result.is-success { background: #e9f9ef; color: #157347; border-color: #bfe8cd; }
+.hck-test-result.is-error { background: #fdecec; color: #b02a37; border-color: #f3c2c6; }
+
+/* ---- Responsive ---- */
+@media (max-width: 1100px) {
+  .hck-settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hck-settings-nav {
+    position: static;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .hck-field-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
 
 /* ==========================================================================
    9. Custom fonts repeater

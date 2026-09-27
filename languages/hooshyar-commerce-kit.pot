@@ -247,6 +247,10 @@ msgid "Boxed"
 msgstr ""
 
 #. generated
+msgid "Boxed (inside container)"
+msgstr ""
+
+#. generated
 msgid "Button"
 msgstr ""
 
@@ -447,6 +451,10 @@ msgid "Color"
 msgstr ""
 
 #. generated
+msgid "Colors"
+msgstr ""
+
+#. generated
 msgid "Columns"
 msgstr ""
 
@@ -495,6 +503,10 @@ msgid "Content right"
 msgstr ""
 
 #. generated
+msgid "Content width: full (edge to edge) or boxed (container width)."
+msgstr ""
+
+#. generated
 msgid "Continue shopping"
 msgstr ""
 
@@ -539,7 +551,19 @@ msgid "Creative masonry"
 msgstr ""
 
 #. generated
+msgid "Custom CSS"
+msgstr ""
+
+#. generated
+msgid "Custom CSS printed on the storefront."
+msgstr ""
+
+#. generated
 msgid "Custom Fonts"
+msgstr ""
+
+#. generated
+msgid "Custom code"
 msgstr ""
 
 #. generated
@@ -735,6 +759,10 @@ msgid "Elementor header template ID"
 msgstr ""
 
 #. generated
+msgid "Elements"
+msgstr ""
+
+#. generated
 msgid "Enable DigiPay gateway"
 msgstr ""
 
@@ -759,7 +787,15 @@ msgid "Environment"
 msgstr ""
 
 #. generated
+msgid "Environment & credentials"
+msgstr ""
+
+#. generated
 msgid "Everything about your orders and profile in one place."
+msgstr ""
+
+#. generated
+msgid "Everything for your store design: templates, styles and integrations in one place."
 msgstr ""
 
 #. generated
@@ -815,11 +851,23 @@ msgid "Font name"
 msgstr ""
 
 #. generated
+msgid "Footer"
+msgstr ""
+
+#. generated
+msgid "Footer bar spans the browser width or sits inside the container."
+msgstr ""
+
+#. generated
 msgid "Footer columns"
 msgstr ""
 
 #. generated
 msgid "Footer template"
+msgstr ""
+
+#. generated
+msgid "Footer width"
 msgstr ""
 
 #. generated
@@ -840,6 +888,10 @@ msgstr ""
 
 #. generated
 msgid "Front page only"
+msgstr ""
+
+#. generated
+msgid "Full width"
 msgstr ""
 
 #. generated
@@ -939,11 +991,23 @@ msgid "Header & Footer"
 msgstr ""
 
 #. generated
+msgid "Header bar"
+msgstr ""
+
+#. generated
+msgid "Header bar spans the browser width or floats inside the container."
+msgstr ""
+
+#. generated
 msgid "Header layout"
 msgstr ""
 
 #. generated
 msgid "Header template"
+msgstr ""
+
+#. generated
+msgid "Header width"
 msgstr ""
 
 #. generated
@@ -1215,6 +1279,14 @@ msgid "Menu typography"
 msgstr ""
 
 #. generated
+msgid "Menus & categories"
+msgstr ""
+
+#. generated
+msgid "Message"
+msgstr ""
+
+#. generated
 msgid "Message template"
 msgstr ""
 
@@ -1224,6 +1296,10 @@ msgstr ""
 
 #. generated
 msgid "Mobile Nav"
+msgstr ""
+
+#. generated
+msgid "Mobile nav"
 msgstr ""
 
 #. generated
@@ -1423,6 +1499,10 @@ msgid "Payment method title shown on checkout."
 msgstr ""
 
 #. generated
+msgid "Payment options"
+msgstr ""
+
+#. generated
 msgid "Permission denied."
 msgstr ""
 
@@ -1516,6 +1596,10 @@ msgstr ""
 
 #. generated
 msgid "Product not found."
+msgstr ""
+
+#. generated
+msgid "Product page"
 msgstr ""
 
 #. generated
@@ -1663,6 +1747,10 @@ msgid "Send test to %s"
 msgstr ""
 
 #. generated
+msgid "Sending"
+msgstr ""
+
+#. generated
 msgid "Sending failed. Check the log below."
 msgstr ""
 
@@ -1676,6 +1764,10 @@ msgstr ""
 
 #. generated
 msgid "Shadow"
+msgstr ""
+
+#. generated
+msgid "Shape & size"
 msgstr ""
 
 #. generated
@@ -1700,6 +1792,10 @@ msgstr ""
 
 #. generated
 msgid "Shop now"
+msgstr ""
+
+#. generated
+msgid "Shop page"
 msgstr ""
 
 #. generated
@@ -1780,6 +1876,10 @@ msgstr ""
 
 #. generated
 msgid "Sidebar right"
+msgstr ""
+
+#. generated
+msgid "Site content width"
 msgstr ""
 
 #. generated
@@ -1963,6 +2063,10 @@ msgid "Template"
 msgstr ""
 
 #. generated
+msgid "Template & layout"
+msgstr ""
+
+#. generated
 msgid "Test DigiPay connection"
 msgstr ""
 
@@ -2067,6 +2171,10 @@ msgid "Used with the \"Specific page IDs\" scope."
 msgstr ""
 
 #. generated
+msgid "User & search"
+msgstr ""
+
+#. generated
 msgid "User Area"
 msgstr ""
 
@@ -2080,6 +2188,10 @@ msgstr ""
 
 #. generated
 msgid "Username"
+msgstr ""
+
+#. generated
+msgid "Version"
 msgstr ""
 
 #. generated
@@ -2124,6 +2236,10 @@ msgstr ""
 
 #. generated
 msgid "Widgets shown on shop / product archive pages."
+msgstr ""
+
+#. generated
+msgid "Width & layout"
 msgstr ""
 
 #. generated

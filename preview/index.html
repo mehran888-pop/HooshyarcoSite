@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پیش‌نمایش هدر/فوتر — سبک فروشگاهی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/frontend.css">
+<link rel="stylesheet" href="assets/css/templates.css">
+<link rel="stylesheet" href="assets/css/rtl.css">
+<style>
+  :root { --hck-font-body: Vazirmatn, Tahoma, sans-serif; --hck-font-heading: Vazirmatn, Tahoma, sans-serif; }
+  body { margin: 0; background: #eef0f6; font-family: Vazirmatn, Tahoma, sans-serif; }
+  .demo-bar { position: sticky; top: 0; z-index: 999; background: #1e1b32; color: #fff; padding: 12px 20px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .demo-bar a { color: #fff; text-decoration: none; background: rgba(255,255,255,.12); padding: 7px 14px; border-radius: 999px; font-size: 13px; }
+  .demo-bar a:hover { background: #6c5ce7; }
+  .demo-title { font-size: 13px; opacity: .8; margin-inline-end: auto; }
+  section { margin-bottom: 34px; background: #fff; padding-bottom: 10px; }
+  .demo-label { max-width: 1280px; margin: 0 auto; padding: 18px 20px 6px; font-size: 14px; font-weight: 800; color: #4b4b62; }
+  .demo-label span { background: #f1f1f5; border-radius: 999px; padding: 4px 12px; font-size: 11.5px; font-weight: 600; color: #8f8fa8; margin-inline-start: 8px; }
+  .demo-content { max-width: 1280px; margin: 0 auto; padding: 22px 20px 6px; }
+  .demo-hero { background: linear-gradient(120deg,#6c5ce7,#00cec9); color: #fff; border-radius: 18px; padding: 44px 28px; text-align: center; }
+  .demo-hero h2 { margin: 0 0 8px; font-size: 26px; }
+  .demo-hero p { margin: 0; opacity: .92; font-size: 14px; }
+  .demo-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px; }
+  .demo-card { background: #fff; border: 1px solid #e6e4f2; border-radius: 14px; padding: 20px; text-align: center; color: #4b4b62; font-size: 12.5px; }
+  .demo-card b { display: block; margin-bottom: 6px; color: #1e1b32; font-size: 13.5px; }
+  @media (max-width: 900px) { .demo-cards { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 8h16l-1.2 12.2a1.5 1.5 0 0 1-1.5 1.3H6.7a1.5 1.5 0 0 1-1.5-1.3L4 8Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 10V6.5a3.5 3.5 0 1 1 7 0V10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2.5 3h2.6l2.3 12.1a1.6 1.6 0 0 0 1.6 1.3h8.9a1.6 1.6 0 0 0 1.6-1.3L21.5 7H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="10" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 20.5c1.4-3.6 4-5.4 7.5-5.4s6.1 1.8 7.5 5.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 24 24"><path d="m21 4.5-3 15-5.2-3.8-2.6 2.5.3-4.7L19 6.5 8.6 13.2 4 11.7 21 4.5Z" fill="currentColor"/></symbol>
+  <symbol id="i-bale" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 13.5c1.2 1.6 2.7 2.4 4 2.4s2.8-.8 4-2.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="9.8" r="1" fill="currentColor"/><circle cx="15" cy="9.8" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 12.5h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M3 9h13" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 7h10v9H3zM13 10h4.5l2.5 3v3H13z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5S3.5 15 3.5 9.3A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 8.5 1.7c0 5.7-8.5 11.2-8.5 11.2Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-order" viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="demo-bar">
+  <div class="demo-title">پیش‌نمایش زنده — بازطراحی به سبک فروشگاهی ایرانی (خروجی واقعی CSS افزونه)</div>
+  <a href="#sec-classic">کلاسیک (پیشنهادی)</a>
+  <a href="#sec-modern">مدرن</a>
+  <a href="#sec-minimal">مینیمال</a>
+  <a href="#sec-creative">خلاق</a>
+</div>
+
+<template id="tpl-cats">
+  <div class="hck-cats hck-cats--mega" data-hck-cats>
+    <button type="button" class="hck-cats__btn" data-hck-cats-toggle aria-expanded="false">
+      <svg width="20" height="20"><use href="#i-menu"/></svg>
+      <span class="hck-cats__label">دسته‌بندی کالاها</span>
+      <svg class="hck-cats__caret" width="13" height="13"><use href="#i-chev"/></svg>
+    </button>
+    <div class="hck-cats__panel">
+      <ul class="hck-cats__list">
+        <li class="hck-cats__item hck-cats__item--has-children">
+          <div class="hck-cats__row">
+            <a class="hck-cats__link" href="#">
+              <span class="hck-cats__thumb"><svg width="18" height="18"><use href="#i-wallet"/></svg></span>
+              <span class="hck-cats__name">موبایل و تبلت</span>
+              <span class="hck-cats__count">۲۴ کالا</span>
+            </a>
+            <button type="button" class="hck-cats__more" data-hck-cats-more aria-expanded="false"><svg class="hck-cats__more-icon" width="13" height="13"><use href="#i-chev"/></svg></button>
+          </div>
+          <div class="hck-cats__children">
+            <a class="hck-cats__children-title" href="#"><span>موبایل و تبلت</span><em>مشاهده همه</em></a>
+            <div class="hck-cats__children-grid hck-cats__children-grid--4">
+              <a class="hck-cats__child" href="#">گوشی سامسونگ</a>
+              <a class="hck-cats__child" href="#">گوشی شیائومی</a>
+              <a class="hck-cats__child" href="#">گوشی اپل</a>
+              <a class="hck-cats__child" href="#">تبلت</a>
+              <a class="hck-cats__child" href="#">لوازم جانبی موبایل</a>
+              <a class="hck-cats__child" href="#">شارژر و پاوربانک</a>
+              <a class="hck-cats__child" href="#">کاور و قاب</a>
+              <a class="hck-cats__child" href="#">هدفون بی‌سیم</a>
+            </div>
+          </div>
+        </li>
+        <li class="hck-cats__item">
+          <div class="hck-cats__row">
+            <a class="hck-cats__link" href="#">
+              <span class="hck-cats__thumb"><svg width="18" height="18"><use href="#i-order"/></svg></span>
+              <span class="hck-cats__name">لپ‌تاپ و کامپیوتر</span>
+              <span class="hck-cats__count">۱۸ کالا</span>
+            </a>
+          </div>
+        </li>
+        <li class="hck-cats__item hck-cats__item--has-children">
+          <div class="hck-cats__row">
+            <a class="hck-cats__link" href="#">
+              <span class="hck-cats__thumb"><svg width="18" height="18"><use href="#i-truck"/></svg></span>
+              <span class="hck-cats__name">لوازم خانگی</span>
+              <span class="hck-cats__count">۳۲ کالا</span>
+            </a>
+            <button type="button" class="hck-cats__more" data-hck-cats-more aria-expanded="false"><svg class="hck-cats__more-icon" width="13" height="13"><use href="#i-chev"/></svg></button>
+          </div>
+          <div class="hck-cats__children">
+            <a class="hck-cats__children-title" href="#"><span>لوازم خانگی</span><em>مشاهده همه</em></a>
+            <div class="hck-cats__children-grid hck-cats__children-grid--4">
+              <a class="hck-cats__child" href="#">یخچال و فریزر</a>
+              <a class="hck-cats__child" href="#">ماشین لباسشویی</a>
+              <a class="hck-cats__child" href="#">جاروبرقی</a>
+              <a class="hck-cats__child" href="#">مایکروویو</a>
+            </div>
+          </div>
+        </li>
+        <li class="hck-cats__item">
+          <div class="hck-cats__row">
+            <a class="hck-cats__link" href="#">
+              <span class="hck-cats__thumb"><svg width="18" height="18"><use href="#i-heart"/></svg></span>
+              <span class="hck-cats__name">مد و پوشاک</span>
+              <span class="hck-cats__count">۵۶ کالا</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <a class="hck-cats__all" href="#"><span>مشاهده همه محصولات</span><svg class="hck-cats__all-icon" width="15" height="15"><use href="#i-chev"/></svg></a>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-nav">
+  <nav class="hck-nav hck-nav--align-right" aria-label="منوی اصلی">
+    <ul class="hck-nav__list">
+      <li class="hck-nav__item"><a class="hck-nav__link" href="#">خانه</a></li>
+      <li class="hck-nav__item"><a class="hck-nav__link" href="#">فروشگاه</a></li>
+      <li class="hck-nav__item"><a class="hck-nav__link" href="#">تخفیف‌های ویژه</a></li>
+      <li class="hck-nav__item"><a class="hck-nav__link" href="#">بلاگ</a></li>
+      <li class="hck-nav__item"><a class="hck-nav__link" href="#">تماس با ما</a></li>
+    </ul>
+  </nav>
+</template>
+
+<template id="tpl-search">
+  <form class="hck-header-search" action="#">
+    <input type="search" class="hck-header-search__input" placeholder="جستجو در میان هزاران کالا…">
+    <button class="hck-header-search__btn" aria-label="جستجو"><svg width="19" height="19"><use href="#i-search"/></svg></button>
+  </form>
+</template>
+
+<template id="tpl-actions">
+  <div class="hck-header-actions">
+    <div class="hck-user-area" data-hck-user-area>
+      <a class="hck-user-area__btn hck-user-area__btn--login" href="#">
+        <svg width="20" height="20"><use href="#i-user"/></svg>
+        <span class="hck-user-area__label">ورود | ثبت‌نام</span>
+      </a>
+    </div>
+    <a class="hck-user-area__cart" href="#" aria-label="سبد خرید">
+      <svg width="21" height="21"><use href="#i-cart"/></svg>
+      <span class="hck-cart-count">3</span>
+    </a>
+  </div>
+</template>
+
+<template id="tpl-footer-cols">
+  <div class="hck-footer__grid hck-footer__grid--3">
+    <div class="hck-footer__col">
+      <a class="hck-logo hck-logo--footer" href="#">
+        <span class="hck-logo__mark"><svg width="22" height="22"><use href="#i-shop"/></svg></span>
+        <span class="hck-logo__text">فروشگاه هوشیار</span>
+      </a>
+      <p class="hck-footer__about">فروشگاه اینترنتی هوشیار؛ ارائه بهترین محصولات با بهترین قیمت و ارسال سریع به سراسر کشور.</p>
+      <div class="hck-footer__social">
+        <a href="#" class="hck-footer__social-link" aria-label="Telegram"><svg width="18" height="18"><use href="#i-tg"/></svg></a>
+        <a href="#" class="hck-footer__social-link" aria-label="Bale"><svg width="18" height="18"><use href="#i-bale"/></svg></a>
+      </div>
+    </div>
+    <div class="hck-footer__col">
+      <h4 class="hck-footer__title">دسترسی سریع</h4>
+      <ul class="hck-footer__links">
+        <li><a href="#">خانه</a></li>
+        <li><a href="#">فروشگاه</a></li>
+        <li><a href="#">سبد خرید</a></li>
+        <li><a href="#">حساب کاربری</a></li>
+        <li><a href="#">پیگیری سفارش</a></li>
+      </ul>
+    </div>
+    <div class="hck-footer__col">
+      <h4 class="hck-footer__title">تماس با ما</h4>
+      <p class="hck-footer__contact">۰۲۱-۱۲۳۴۵۶۷۸</p>
+      <p class="hck-footer__contact">پشتیبانی: ۲۴ ساعته، ۷ روز هفته</p>
+      <p class="hck-footer__contact">تهران، خیابان ولیعصر، پلاک ۱۰۰</p>
+    </div>
+  </div>
+  <div class="hck-footer__bottom">
+    <p>© ۱۴۰۵ فروشگاه هوشیار. تمامی حقوق محفوظ است.</p>
+    <p class="hck-footer__brand">ساخته‌شده با Hooshyar Commerce Kit</p>
+  </div>
+</template>
+
+<!-- ================= Classic (recommended) ================= -->
+<section id="sec-classic">
+  <div class="demo-label">کلاسیک — سبک فروشگاهی ایرانی (پیشنهادی) <span>layout=inline: لوگو | جستجو | اکشن‌ها — ردیف دوم: دسته‌بندی + منو</span></div>
+
+  <header class="hck-header hck-header--default hck-header--layout-inline hck-header--sticky">
+    <div class="hck-header__main">
+      <div class="hck-container hck-header__inner">
+        <div class="hck-header__row hck-header__row--top">
+          <a class="hck-logo" href="#">
+            <span class="hck-logo__mark"><svg width="22" height="22"><use href="#i-shop"/></svg></span>
+            <span class="hck-logo__text">فروشگاه هوشیار</span>
+          </a>
+          <div class="hck-header__search-wrap" data-slot="search"></div>
+          <div data-slot="actions"></div>
+        </div>
+        <div class="hck-header__row hck-header__row--bottom">
+          <div data-slot="cats"></div>
+          <div data-slot="nav"></div>
+          <button type="button" class="hck-burger" style="display:inline-flex" aria-label="منو"><svg width="22" height="22"><use href="#i-menu"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="demo-content">
+    <div class="demo-hero">
+      <h2>فروشگاه اینترنتی هوشیار</h2>
+      <p>جست‌وجوی بزرگ وسط هدر، دکمه‌های قاب‌دار، منوی ساده متنی — دقیقاً مثل فروشگاه‌های بزرگ ایران</p>
+    </div>
+    <div class="demo-cards">
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+    </div>
+  </div>
+
+  <footer class="hck-footer hck-footer--default" data-slot="footer"></footer>
+</section>
+
+<!-- ================= Modern ================= -->
+<section id="sec-modern">
+  <div class="demo-label">مدرن <span>لبه‌های نرم‌تر، جست‌وجوی قاب‌دار، سایه ملایم</span></div>
+
+  <header class="hck-header hck-header--modern hck-header--layout-inline hck-header--sticky">
+    <div class="hck-header__main">
+      <div class="hck-container hck-header__inner">
+        <div class="hck-header__row hck-header__row--top">
+          <a class="hck-logo" href="#">
+            <span class="hck-logo__mark"><svg width="22" height="22"><use href="#i-shop"/></svg></span>
+            <span class="hck-logo__text">فروشگاه هوشیار</span>
+          </a>
+          <div class="hck-header__search-wrap" data-slot="search"></div>
+          <div data-slot="actions"></div>
+        </div>
+        <div class="hck-header__row hck-header__row--bottom">
+          <div data-slot="cats"></div>
+          <div data-slot="nav"></div>
+          <button type="button" class="hck-burger" style="display:inline-flex" aria-label="منو"><svg width="22" height="22"><use href="#i-menu"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="demo-content">
+    <div class="demo-hero">
+      <h2>قالب مدرن</h2>
+      <p>همان چیدمان فروشگاهی با جزئیات نرم‌تر</p>
+    </div>
+    <div class="demo-cards">
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+    </div>
+  </div>
+
+  <footer class="hck-footer hck-footer--modern" data-slot="footer"></footer>
+</section>
+
+<!-- ================= Minimal ================= -->
+<section id="sec-minimal">
+  <div class="demo-label">مینیمال <span>بی‌حاشیه و سبک</span></div>
+
+  <header class="hck-header hck-header--minimal hck-header--layout-inline">
+    <div class="hck-header__main">
+      <div class="hck-container hck-header__inner">
+        <div class="hck-header__row hck-header__row--top">
+          <a class="hck-logo" href="#">
+            <span class="hck-logo__text">فروشگاه هوشیار</span>
+          </a>
+          <div class="hck-header__search-wrap" data-slot="search"></div>
+          <div data-slot="actions"></div>
+        </div>
+        <div class="hck-header__row hck-header__row--bottom">
+          <div data-slot="cats"></div>
+          <div data-slot="nav"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="demo-content">
+    <div class="demo-hero">
+      <h2>قالب مینیمال</h2>
+      <p>بدون حاشیه، تایپوگرافی ظریف</p>
+    </div>
+    <div class="demo-cards">
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+    </div>
+  </div>
+
+  <footer class="hck-footer hck-footer--minimal" data-slot="footer"></footer>
+</section>
+
+<!-- ================= Creative ================= -->
+<section id="sec-creative">
+  <div class="demo-label">خلاق <span>هدر تیره + فوتر تیره گرادیانی</span></div>
+
+  <header class="hck-header hck-header--creative hck-header--layout-inline hck-header--sticky">
+    <div class="hck-topbar">
+      <div class="hck-container hck-topbar__inner">
+        <span class="hck-topbar__item">۰۲۱-۱۲۳۴۵۶۷۸</span>
+        <span class="hck-topbar__item">ارسال رایگان برای سفارش‌های بالای ۵۰۰ هزار تومان</span>
+      </div>
+    </div>
+    <div class="hck-header__main">
+      <div class="hck-container hck-header__inner">
+        <div class="hck-header__row hck-header__row--top">
+          <a class="hck-logo" href="#">
+            <span class="hck-logo__mark"><svg width="22" height="22"><use href="#i-shop"/></svg></span>
+            <span class="hck-logo__text">فروشگاه هوشیار</span>
+          </a>
+          <div class="hck-header__search-wrap" data-slot="search"></div>
+          <div data-slot="actions"></div>
+        </div>
+        <div class="hck-header__row hck-header__row--bottom">
+          <div data-slot="cats"></div>
+          <div data-slot="nav"></div>
+          <button type="button" class="hck-burger" style="display:inline-flex" aria-label="منو"><svg width="22" height="22"><use href="#i-menu"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="demo-content">
+    <div class="demo-hero">
+      <h2>قالب خلاق</h2>
+      <p>هدر و فوتر تیره برای برندهای خاص</p>
+    </div>
+    <div class="demo-cards">
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+      <div class="demo-card"><b>کارت محصول</b>محل نمایش محصولات</div>
+    </div>
+  </div>
+
+  <footer class="hck-footer hck-footer--creative" data-slot="footer"></footer>
+</section>
+
+<script>
+// Fill shared slots
+function fill(root) {
+  root.querySelectorAll('[data-slot]').forEach(function (slot) {
+    var name = slot.getAttribute('data-slot');
+    if (name === 'search') slot.appendChild(tplSearch.content.cloneNode(true));
+    if (name === 'actions') slot.appendChild(tplActions.content.cloneNode(true));
+    if (name === 'cats') slot.appendChild(tplCats.content.cloneNode(true));
+    if (name === 'nav') slot.appendChild(tplNav.content.cloneNode(true));
+    if (name === 'footer') slot.appendChild(tplFooter.content.cloneNode(true));
+  });
+}
+var tplSearch = document.getElementById('tpl-search');
+var tplActions = document.getElementById('tpl-actions');
+var tplCats = document.getElementById('tpl-cats');
+var tplNav = document.getElementById('tpl-nav');
+var tplFooter = document.getElementById('tpl-footer-cols');
+document.querySelectorAll('section').forEach(function (s) { fill(s); });
+
+// Category menu toggle
+document.addEventListener('click', function (e) {
+  var toggle = e.target.closest && e.target.closest('[data-hck-cats-toggle]');
+  if (toggle) {
+    e.preventDefault();
+    var wrap = toggle.closest('.hck-cats');
+    var open = wrap.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    return;
+  }
+  var more = e.target.closest && e.target.closest('[data-hck-cats-more]');
+  if (more) {
+    e.preventDefault();
+    e.stopPropagation();
+    var item = more.closest('.hck-cats__item');
+    var isOpen = item.classList.toggle('is-open');
+    more.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    return;
+  }
+  if (!e.target.closest || !e.target.closest('.hck-cats')) {
+    document.querySelectorAll('.hck-cats.is-open').forEach(function (w) { w.classList.remove('is-open'); });
+  }
+});
+document.addEventListener('mouseover', function (e) {
+  var item = e.target.closest && e.target.closest('.hck-cats__item');
+  if (item && item.parentElement) {
+    item.parentElement.querySelectorAll('.hck-cats__item').forEach(function (el) {
+      el.classList.toggle('is-hover', el === item);
+    });
+  }
+});
+</script>
+</body>
+</html>

@@ -2615,3 +2615,78 @@
   .hck-nav--align-center .hck-nav__list,
   .hck-nav--align-left .hck-nav__list { justify-content: flex-start; }
 }
+
+/* ==========================================================================
+   15. Boxed / full-width header & footer + content width
+   ========================================================================== */
+
+/* ---- Boxed header: floating bar inside the container ---- */
+.hck-header--width-boxed {
+  max-width: var(--hck-container);
+  margin-inline: auto;
+  margin-block-start: 16px;
+  border: 1px solid var(--hck-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px -20px rgba(15, 23, 42, 0.18);
+}
+
+.hck-header--width-boxed.hck-header--sticky {
+  top: 12px;
+}
+
+.hck-header--width-boxed .hck-header__row--bottom {
+  border-top-color: var(--hck-border);
+}
+
+/* ---- Boxed footer ---- */
+.hck-footer--width-boxed {
+  max-width: var(--hck-container);
+  margin-inline: auto;
+  margin-block-start: 48px;
+  border: 1px solid var(--hck-border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hck-footer--width-boxed.hck-footer--creative {
+  border: none;
+}
+
+/* ---- Site content width ---- */
+body.hck-content-full .hck-site-main {
+  width: 100%;
+  max-width: none;
+  padding-inline: clamp(16px, 4vw, 48px);
+}
+
+body.hck-content-full .hck-site-main .hck-container {
+  max-width: none;
+  width: 100%;
+  padding-inline: 0;
+}
+
+body.hck-content-full .hck-site-main .content-area,
+body.hck-content-full .hck-site-main .site-content,
+body.hck-content-full .hck-site-main .woocommerce,
+body.hck-content-full .hck-site-main .entry-content {
+  max-width: none;
+  width: 100%;
+}
+
+body.hck-content-full .wp-site-blocks .entry-content {
+  max-width: none !important;
+}
+
+body.hck-content-boxed .hck-site-main {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .hck-header--width-boxed {
+    margin-block-start: 10px;
+    border-radius: 16px;
+  }
+
+  .hck-header--width-boxed.hck-header--sticky { top: 8px; }
+}

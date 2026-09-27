@@ -247,6 +247,10 @@ msgid "Boxed"
 msgstr "جعبه‌ای"
 
 #. generated
+msgid "Boxed (inside container)"
+msgstr "جعبه‌ای (درون کادر)"
+
+#. generated
 msgid "Button"
 msgstr "دکمه"
 
@@ -447,6 +451,10 @@ msgid "Color"
 msgstr "رنگ"
 
 #. generated
+msgid "Colors"
+msgstr "رنگ‌ها"
+
+#. generated
 msgid "Columns"
 msgstr "ستون‌ها"
 
@@ -495,6 +503,10 @@ msgid "Content right"
 msgstr "محتوا راست"
 
 #. generated
+msgid "Content width: full (edge to edge) or boxed (container width)."
+msgstr "عرض محتوای سایت: تمام‌عرض (لبه‌به‌لبه) یا جعبه‌ای (محدود به کادر)."
+
+#. generated
 msgid "Continue shopping"
 msgstr "ادامه خرید"
 
@@ -539,8 +551,20 @@ msgid "Creative masonry"
 msgstr "ماسونری خلاقانه"
 
 #. generated
+msgid "Custom CSS"
+msgstr "CSS سفارشی"
+
+#. generated
+msgid "Custom CSS printed on the storefront."
+msgstr "کد CSS سفارشی که در فروشگاه چاپ می‌شود."
+
+#. generated
 msgid "Custom Fonts"
 msgstr "فونت‌های سفارشی"
+
+#. generated
+msgid "Custom code"
+msgstr "کد سفارشی"
 
 #. generated
 msgid "Custom text"
@@ -692,7 +716,7 @@ msgstr "حالت نمایش"
 
 #. generated
 msgid "Display scope"
-msgstr "محدوده نمایش"
+msgstr "حوزه نمایش"
 
 #. generated
 msgid "Documentation"
@@ -735,6 +759,10 @@ msgid "Elementor header template ID"
 msgstr "شناسه قالب هدر المنتور"
 
 #. generated
+msgid "Elements"
+msgstr "المان‌ها"
+
+#. generated
 msgid "Enable DigiPay gateway"
 msgstr "فعال‌سازی درگاه دیجی‌پی"
 
@@ -759,8 +787,16 @@ msgid "Environment"
 msgstr "محیط"
 
 #. generated
+msgid "Environment & credentials"
+msgstr "محیط و احراز هویت"
+
+#. generated
 msgid "Everything about your orders and profile in one place."
 msgstr "همه چیز درباره سفارش‌ها و پروفایل شما در یک مکان."
+
+#. generated
+msgid "Everything for your store design: templates, styles and integrations in one place."
+msgstr "همه‌چیز برای طراحی فروشگاه شما: قالب‌ها، استایل‌ها و یکپارچه‌سازی‌ها در یک‌جا."
 
 #. generated
 msgid "Extra confetti with any effect"
@@ -815,12 +851,24 @@ msgid "Font name"
 msgstr "نام فونت"
 
 #. generated
+msgid "Footer"
+msgstr "فوتر"
+
+#. generated
+msgid "Footer bar spans the browser width or sits inside the container."
+msgstr "نوار فوتر کل عرض مرورگر را بگیرد یا درون کادر وسط صفحه قرار بگیرد."
+
+#. generated
 msgid "Footer columns"
 msgstr "ستون‌های فوتر"
 
 #. generated
 msgid "Footer template"
 msgstr "قالب فوتر"
+
+#. generated
+msgid "Footer width"
+msgstr "عرض فوتر"
 
 #. generated
 msgid "Fourth column of the built-in footer."
@@ -841,6 +889,10 @@ msgstr "از اینجا می‌توانید سفارش‌ها، نشانی‌ه�
 #. generated
 msgid "Front page only"
 msgstr "فقط صفحه اصلی"
+
+#. generated
+msgid "Full width"
+msgstr "تمام‌عرض"
 
 #. generated
 msgid "Gallery left"
@@ -939,12 +991,24 @@ msgid "Header & Footer"
 msgstr "هدر و فوتر"
 
 #. generated
+msgid "Header bar"
+msgstr "نوار هدر"
+
+#. generated
+msgid "Header bar spans the browser width or floats inside the container."
+msgstr "نوار هدر کل عرض مرورگر را بگیرد یا درون کادر وسط صفحه شناور باشد."
+
+#. generated
 msgid "Header layout"
 msgstr "چیدمان هدر"
 
 #. generated
 msgid "Header template"
 msgstr "قالب هدر"
+
+#. generated
+msgid "Header width"
+msgstr "عرض هدر"
 
 #. generated
 msgid "Heading color"
@@ -988,11 +1052,11 @@ msgstr "کیت فروشگاهی هوشیار با المنتور بهترین ع
 
 #. generated
 msgid "Hooshyar Commerce Kit — Settings"
-msgstr "کیت فروشگاهی هوشیار — تنظیمات"
+msgstr "کیت تجارت هوشیار — تنظیمات"
 
 #. generated
 msgid "Hooshyar Kit"
-msgstr "هوشیار کیت"
+msgstr "کیت هوشیار"
 
 #. generated
 msgid "Horizontal tabs"
@@ -1215,6 +1279,14 @@ msgid "Menu typography"
 msgstr "تایپوگرافی منو"
 
 #. generated
+msgid "Menus & categories"
+msgstr "منوها و دسته‌بندی"
+
+#. generated
+msgid "Message"
+msgstr "پیام"
+
+#. generated
 msgid "Message template"
 msgstr "قالب پیام"
 
@@ -1225,6 +1297,10 @@ msgstr "مینیمال"
 #. generated
 msgid "Mobile Nav"
 msgstr "ناوبری موبایل"
+
+#. generated
+msgid "Mobile nav"
+msgstr "منوی موبایل"
 
 #. generated
 msgid "Mobile navigation"
@@ -1423,6 +1499,10 @@ msgid "Payment method title shown on checkout."
 msgstr "عنوان روش پرداخت در صفحه صورتحساب."
 
 #. generated
+msgid "Payment options"
+msgstr "گزینه‌های پرداخت"
+
+#. generated
 msgid "Permission denied."
 msgstr "دسترسی غیرمجاز."
 
@@ -1517,6 +1597,10 @@ msgstr "تصاویر محصول در خلاصه"
 #. generated
 msgid "Product not found."
 msgstr "محصول یافت نشد."
+
+#. generated
+msgid "Product page"
+msgstr "صفحه محصول"
 
 #. generated
 msgid "Product page layout"
@@ -1663,6 +1747,10 @@ msgid "Send test to %s"
 msgstr "ارسال تست به %s"
 
 #. generated
+msgid "Sending"
+msgstr "ارسال"
+
+#. generated
 msgid "Sending failed. Check the log below."
 msgstr "ارسال ناموفق بود. گزارش زیر را بررسی کنید."
 
@@ -1677,6 +1765,10 @@ msgstr "تنظیمات"
 #. generated
 msgid "Shadow"
 msgstr "سایه"
+
+#. generated
+msgid "Shape & size"
+msgstr "شکل و اندازه"
 
 #. generated
 msgid "Shipping"
@@ -1701,6 +1793,10 @@ msgstr "چیدمان فروشگاه"
 #. generated
 msgid "Shop now"
 msgstr "خرید کنید"
+
+#. generated
+msgid "Shop page"
+msgstr "صفحه فروشگاه"
 
 #. generated
 msgid "Shop pages only"
@@ -1781,6 +1877,10 @@ msgstr "سایدبار چپ"
 #. generated
 msgid "Sidebar right"
 msgstr "سایدبار راست"
+
+#. generated
+msgid "Site content width"
+msgstr "عرض محتوای سایت"
 
 #. generated
 msgid "Skip to content"
@@ -1963,6 +2063,10 @@ msgid "Template"
 msgstr "قالب"
 
 #. generated
+msgid "Template & layout"
+msgstr "قالب و چیدمان"
+
+#. generated
 msgid "Test DigiPay connection"
 msgstr "تست اتصال دیجی‌پی"
 
@@ -2067,6 +2171,10 @@ msgid "Used with the \"Specific page IDs\" scope."
 msgstr "همراه با محدوده «شناسه صفحات مشخص» استفاده می‌شود."
 
 #. generated
+msgid "User & search"
+msgstr "کاربر و جستجو"
+
+#. generated
 msgid "User Area"
 msgstr "ناحیه کاربری"
 
@@ -2081,6 +2189,10 @@ msgstr "دکمه ناحیه کاربری در هدر"
 #. generated
 msgid "Username"
 msgstr "نام کاربری"
+
+#. generated
+msgid "Version"
+msgstr "نسخه"
 
 #. generated
 msgid "View"
@@ -2125,6 +2237,10 @@ msgstr "پس‌زمینه کارت خوش‌آمد"
 #. generated
 msgid "Widgets shown on shop / product archive pages."
 msgstr "ابزارک‌های نمایش‌داده‌شده در صفحات فروشگاه و آرشیو محصولات."
+
+#. generated
+msgid "Width & layout"
+msgstr "عرض و چیدمان"
 
 #. generated
 msgid "Wishlist"

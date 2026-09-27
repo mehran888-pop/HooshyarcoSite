@@ -145,6 +145,16 @@ class HCK_Helpers {
 	}
 
 	/**
+	 * Print the admin-provided custom CSS.
+	 */
+	public static function print_custom_css() {
+		$css = (string) self::get( 'custom_css', '' );
+		if ( '' !== trim( $css ) ) {
+			echo '<style id="hck-custom-css">' . $css . '</style>' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput -- CSS sanitized on save.
+		}
+	}
+
+	/**
 	 * Names of uploaded custom fonts.
 	 *
 	 * @return array

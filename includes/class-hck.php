@@ -51,6 +51,9 @@ final class HCK {
 	private function init_hooks() {
 		add_action( 'init', array( $this, 'load_textdomain' ), 0 );
 
+		// Always-Persian UI regardless of the site locale.
+		HCK_Lang_Fa::init();
+
 		// Core services.
 		HCK_Settings::instance();
 		HCK_Assets::instance();

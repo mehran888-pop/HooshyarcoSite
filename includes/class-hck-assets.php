@@ -38,6 +38,7 @@ class HCK_Assets {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ), 20 );
 		add_action( 'wp_head', array( 'HCK_Helpers', 'print_custom_fonts_css' ), 4 );
 		add_action( 'wp_head', array( 'HCK_Helpers', 'print_css_variables' ), 5 );
+		add_action( 'wp_head', array( 'HCK_Helpers', 'print_custom_css' ), 6 );
 	}
 
 	/**

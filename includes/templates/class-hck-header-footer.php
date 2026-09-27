@@ -228,6 +228,9 @@ class HCK_Header_Footer {
 			$classes[] = 'hck-custom-header-footer';
 			$classes[] = 'hck-header-' . sanitize_html_class( HCK_Helpers::get( 'header_template', 'modern' ) );
 			$classes[] = 'hck-header-layout-' . sanitize_html_class( HCK_Helpers::get( 'header_layout', 'inline' ) );
+
+			$content_width = HCK_Helpers::get( 'content_width', 'container' );
+			$classes[]     = 'full' === $content_width ? 'hck-content-full' : 'hck-content-boxed';
 		}
 
 		if ( is_product() ) {
@@ -565,8 +568,9 @@ class HCK_Header_Footer {
 		$layout = HCK_Helpers::get( 'header_layout', 'inline' );
 		$sticky = 'yes' === HCK_Helpers::get( 'header_sticky', 'yes' );
 		$topbar = 'yes' === HCK_Helpers::get( 'header_topbar', 'no' );
+		$width  = 'boxed' === HCK_Helpers::get( 'header_width', 'full' ) ? 'boxed' : 'full';
 
-		$html = '<header class="hck-header hck-header--' . esc_attr( $template ) . ' hck-header--layout-' . esc_attr( $layout ) . ( $sticky ? ' hck-header--sticky' : '' ) . '">';
+		$html = '<header class="hck-header hck-header--' . esc_attr( $template ) . ' hck-header--layout-' . esc_attr( $layout ) . ' hck-header--width-' . esc_attr( $width ) . ( $sticky ? ' hck-header--sticky' : '' ) . '">';
 
 		if ( $topbar ) {
 			$html .= '<div class="hck-topbar">';
@@ -635,8 +639,9 @@ class HCK_Header_Footer {
 		$columns   = (int) HCK_Helpers::get( 'footer_columns', 3 );
 		$about     = HCK_Helpers::get( 'footer_about', get_bloginfo( 'description' ) );
 		$copyright = HCK_Helpers::get( 'footer_copyright', '© ' . gmdate( 'Y' ) . ' ' . get_bloginfo( 'name' ) );
+		$width     = 'boxed' === HCK_Helpers::get( 'footer_width', 'full' ) ? 'boxed' : 'full';
 
-		$html  = '<footer class="hck-footer hck-footer--' . esc_attr( $template ) . '">';
+		$html  = '<footer class="hck-footer hck-footer--' . esc_attr( $template ) . ' hck-footer--width-' . esc_attr( $width ) . '">';
 		$html .= '<div class="hck-container">';
 		$html .= '<div class="hck-footer__grid hck-footer__grid--' . esc_attr( $columns ) . '">';
 
