@@ -1,1648 +1,2195 @@
-# Translation template for Hooshyar Commerce Kit.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hooshyar Commerce Kit 1.0.0\n"
+"Project-Id-Version: hooshyar-commerce-kit\n"
+"Language: fa_IR\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Domain: hooshyar-commerce-kit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#. generated
 msgid "24/7 support"
 msgstr ""
 
+#. generated
 msgid "3D tilt on hover"
 msgstr ""
 
+#. generated
 msgid "A phone number is required to pay with DigiPay."
 msgstr ""
 
+#. generated
 msgid "AJAX add to cart"
 msgstr ""
 
+#. generated
 msgid "About text (footer)"
 msgstr ""
 
+#. generated
 msgid "Accent / hover color"
 msgstr ""
 
+#. generated
 msgid "Accent color"
 msgstr ""
 
+#. generated
 msgid "Access your orders, downloads and account details."
 msgstr ""
 
+#. generated
 msgid "Accordion"
 msgstr ""
 
+#. generated
 msgid "Account"
 msgstr ""
 
+#. generated
 msgid "Account details"
 msgstr ""
 
+#. generated
 msgid "Account menu"
 msgstr ""
 
+#. generated
 msgid "Account settings"
 msgstr ""
 
+#. generated
 msgid "Active / accent color"
 msgstr ""
 
+#. generated
 msgid "Active menu color"
 msgstr ""
 
+#. generated
 msgid "Add %s more to get free shipping"
 msgstr ""
 
+#. generated
 msgid "Add font"
 msgstr ""
 
+#. generated
 msgid "Add to cart effect"
 msgstr ""
 
+#. generated
 msgid "Additional information"
 msgstr ""
 
+#. generated
 msgid "Addresses"
 msgstr ""
 
+#. generated
 msgid "Almost there — review your bag and proceed to payment."
 msgstr ""
 
+#. generated
 msgid "Almost there!"
 msgstr ""
 
+#. generated
 msgid "Animated gradient overlay"
 msgstr ""
 
+#. generated
 msgid "Any CSS font family, e.g. Tahoma, Vazirmatn, Roboto. Google fonts load automatically."
 msgstr ""
 
+#. generated
 msgid "Apply coupon"
 msgstr ""
 
+#. generated
 msgid "Arc to cart"
 msgstr ""
 
+#. generated
 msgid "Are you sure?"
 msgstr ""
 
+#. generated
 msgid "Arrow background"
 msgstr ""
 
+#. generated
 msgid "Arrow color"
 msgstr ""
 
+#. generated
 msgid "Arrows & dots"
 msgstr ""
 
+#. generated
 msgid "Arrows only"
 msgstr ""
 
+#. generated
 msgid "Ascending"
 msgstr ""
 
+#. generated
 msgid "Auto (primary location / first menu)"
 msgstr ""
 
+#. generated
 msgid "Autoplay"
 msgstr ""
 
+#. generated
 msgid "Autoplay speed (ms)"
 msgstr ""
 
+#. generated
 msgid "Available: home, shop, cart, account, search, categories, wishlist"
 msgstr ""
 
+#. generated
 msgid "Awaiting DigiPay payment."
 msgstr ""
 
+#. generated
 msgid "Background"
 msgstr ""
 
+#. generated
 msgid "Background color"
 msgstr ""
 
+#. generated
 msgid "Background image"
 msgstr ""
 
+#. generated
 msgid "Badge"
 msgstr ""
 
+#. generated
 msgid "Badge background"
 msgstr ""
 
+#. generated
 msgid "Badge color"
 msgstr ""
 
+#. generated
 msgid "Bale"
 msgstr ""
 
+#. generated
 msgid "Bale bot token"
 msgstr ""
 
+#. generated
 msgid "Bale bot token is not set."
 msgstr ""
 
+#. generated
 msgid "Banner"
 msgstr ""
 
+#. generated
 msgid "Banner height"
 msgstr ""
 
+#. generated
 msgid "Bar background"
 msgstr ""
 
+#. generated
 msgid "Best selling"
 msgstr ""
 
+#. generated
 msgid "Big summer sale"
 msgstr ""
 
+#. generated
 msgid "Billing details"
 msgstr ""
 
+#. generated
 msgid "Body font family"
 msgstr ""
 
+#. generated
 msgid "Border"
 msgstr ""
 
+#. generated
 msgid "Border color"
 msgstr ""
 
+#. generated
 msgid "Border radius"
 msgstr ""
 
+#. generated
 msgid "Border radius (px)"
 msgstr ""
 
+#. generated
 msgid "Bordered"
 msgstr ""
 
+#. generated
 msgid "Bot token"
 msgstr ""
 
+#. generated
 msgid "Boxed"
 msgstr ""
 
+#. generated
 msgid "Button"
 msgstr ""
 
+#. generated
 msgid "Button Style"
 msgstr ""
 
+#. generated
 msgid "Button background"
 msgstr ""
 
+#. generated
 msgid "Button color"
 msgstr ""
 
+#. generated
 msgid "Button label"
 msgstr ""
 
+#. generated
 msgid "Button link"
 msgstr ""
 
+#. generated
 msgid "Button radius"
 msgstr ""
 
+#. generated
 msgid "Button text"
 msgstr ""
 
+#. generated
 msgid "Buttons"
 msgstr ""
 
+#. generated
 msgid "Card Style"
 msgstr ""
 
+#. generated
 msgid "Card hover effect"
 msgstr ""
 
+#. generated
 msgid "Card lift"
 msgstr ""
 
+#. generated
 msgid "Card radius"
 msgstr ""
 
+#. generated
 msgid "Card template"
 msgstr ""
 
+#. generated
 msgid "Carousel"
 msgstr ""
 
+#. generated
 msgid "Carousel Navigation"
 msgstr ""
 
+#. generated
 msgid "Carousel Settings"
 msgstr ""
 
+#. generated
 msgid "Cart"
 msgstr ""
 
+#. generated
 msgid "Cart badge"
 msgstr ""
 
+#. generated
 msgid "Cart badge color"
 msgstr ""
 
+#. generated
 msgid "Cart button"
 msgstr ""
 
+#. generated
 msgid "Cart icon bump"
 msgstr ""
 
+#. generated
 msgid "Cart layout"
 msgstr ""
 
+#. generated
 msgid "Cart template"
 msgstr ""
 
+#. generated
 msgid "Cart totals"
 msgstr ""
 
+#. generated
 msgid "Catalog grid"
 msgstr ""
 
+#. generated
 msgid "Categories"
 msgstr ""
 
+#. generated
 msgid "Category"
 msgstr ""
 
+#. generated
 msgid "Category Menu"
 msgstr ""
 
+#. generated
 msgid "Category images"
 msgstr ""
 
+#. generated
 msgid "Category menu (mega menu)"
 msgstr ""
 
+#. generated
 msgid "Category menu label"
 msgstr ""
 
+#. generated
 msgid "Category menu style"
 msgstr ""
 
+#. generated
 msgid "Category slugs (comma separated)"
 msgstr ""
 
+#. generated
 msgid "Center"
 msgstr ""
 
+#. generated
 msgid "Centered"
 msgstr ""
 
+#. generated
 msgid "Centered (logo on top)"
 msgstr ""
 
+#. generated
 msgid "Centered hero"
 msgstr ""
 
+#. generated
 msgid "Channel"
 msgstr ""
 
+#. generated
 msgid "Channel / chat ID"
 msgstr ""
 
+#. generated
 msgid "Checkout"
 msgstr ""
 
+#. generated
 msgid "Checkout layout"
 msgstr ""
 
+#. generated
 msgid "Checkout template"
 msgstr ""
 
+#. generated
 msgid "Choose which WordPress menu is the main navigation."
 msgstr ""
 
+#. generated
 msgid "Classic"
 msgstr ""
 
+#. generated
 msgid "Click here to log in"
 msgstr ""
 
+#. generated
 msgid "Client ID"
 msgstr ""
 
+#. generated
 msgid "Client secret"
 msgstr ""
 
+#. generated
 msgid "Close"
 msgstr ""
 
+#. generated
 msgid "Color"
 msgstr ""
 
+#. generated
 msgid "Columns"
 msgstr ""
 
+#. generated
 msgid "Complete your order in a few simple steps"
 msgstr ""
 
+#. generated
 msgid "Confetti burst"
 msgstr ""
 
+#. generated
 msgid "Confirmation"
 msgstr ""
 
+#. generated
 msgid "Connected to DigiPay successfully."
 msgstr ""
 
+#. generated
 msgid "Connection test"
 msgstr ""
 
+#. generated
 msgid "Contact us"
 msgstr ""
 
+#. generated
 msgid "Container width (px)"
 msgstr ""
 
+#. generated
 msgid "Content"
 msgstr ""
 
+#. generated
 msgid "Content alignment"
 msgstr ""
 
+#. generated
 msgid "Content left"
 msgstr ""
 
+#. generated
 msgid "Content right"
 msgstr ""
 
+#. generated
 msgid "Continue shopping"
 msgstr ""
 
+#. generated
 msgid "Copied!"
 msgstr ""
 
+#. generated
 msgid "Copyright text"
 msgstr ""
 
+#. generated
 msgid "Coupon code"
 msgstr ""
 
+#. generated
 msgid "Coupon form"
 msgstr ""
 
+#. generated
 msgid "Coupon: %s"
 msgstr ""
 
+#. generated
 msgid "Create a bot with @botfather in Bale."
 msgstr ""
 
+#. generated
 msgid "Creative"
 msgstr ""
 
+#. generated
 msgid "Creative effect"
 msgstr ""
 
+#. generated
 msgid "Creative hero"
 msgstr ""
 
+#. generated
 msgid "Creative masonry"
 msgstr ""
 
+#. generated
 msgid "Custom Fonts"
 msgstr ""
 
+#. generated
 msgid "Custom text"
 msgstr ""
 
+#. generated
 msgid "Custom title"
 msgstr ""
 
+#. generated
 msgid "Danger color"
 msgstr ""
 
+#. generated
 msgid "Dashboard"
 msgstr ""
 
+#. generated
 msgid "Dashboard layout"
 msgstr ""
 
+#. generated
 msgid "Dashboard template"
 msgstr ""
 
+#. generated
 msgid "Date"
 msgstr ""
 
+#. generated
 msgid "Debug logging"
 msgstr ""
 
+#. generated
 msgid "Decrease quantity"
 msgstr ""
 
+#. generated
 msgid "Default"
 msgstr ""
 
+#. generated
 msgid "Default (from settings)"
 msgstr ""
 
+#. generated
 msgid "Descending"
 msgstr ""
 
+#. generated
 msgid "Description"
 msgstr ""
 
+#. generated
 msgid "Description color"
 msgstr ""
 
+#. generated
 msgid "Description typography"
 msgstr ""
 
+#. generated
 msgid "Design"
 msgstr ""
 
+#. generated
 msgid "DigiPay"
 msgstr ""
 
+#. generated
 msgid "DigiPay (UPG)"
 msgstr ""
 
+#. generated
 msgid "DigiPay Gateway"
 msgstr ""
 
+#. generated
 msgid "DigiPay amount mismatch."
 msgstr ""
 
+#. generated
 msgid "DigiPay credentials are not configured."
 msgstr ""
 
+#. generated
 msgid "DigiPay error: %s"
 msgstr ""
 
+#. generated
 msgid "DigiPay is not configured. Please contact the store administrator."
 msgstr ""
 
+#. generated
 msgid "DigiPay login failed."
 msgstr ""
 
+#. generated
 msgid "DigiPay payment completed. Tracking code: %1$s %2$s"
 msgstr ""
 
+#. generated
 msgid "DigiPay payment failed or was cancelled by the user."
 msgstr ""
 
+#. generated
 msgid "DigiPay purchase reversed (refunded)."
 msgstr ""
 
+#. generated
 msgid "DigiPay reverse failed."
 msgstr ""
 
+#. generated
 msgid "DigiPay selection screen"
 msgstr ""
 
+#. generated
 msgid "DigiPay ticket creation failed."
 msgstr ""
 
+#. generated
 msgid "DigiPay unified payment gateway: card gateway, wallet and BNPL credit. Docs: mydigipay.com/developers/docs/upg"
 msgstr ""
 
+#. generated
 msgid "DigiPay verification failed."
 msgstr ""
 
+#. generated
 msgid "DigiPay verification failed: %s"
 msgstr ""
 
+#. generated
 msgid "Direct: card gateway (IPG)"
 msgstr ""
 
+#. generated
 msgid "Direct: wallet"
 msgstr ""
 
+#. generated
 msgid "Disabled"
 msgstr ""
 
+#. generated
 msgid "Display mode"
 msgstr ""
 
+#. generated
 msgid "Display scope"
 msgstr ""
 
+#. generated
 msgid "Documentation"
 msgstr ""
 
+#. generated
 msgid "Done"
 msgstr ""
 
+#. generated
 msgid "Dot color"
 msgstr ""
 
+#. generated
 msgid "Dots only"
 msgstr ""
 
+#. generated
 msgid "Downloads"
 msgstr ""
 
+#. generated
 msgid "Effect duration (ms)"
 msgstr ""
 
+#. generated
 msgid "Effects"
 msgstr ""
 
+#. generated
 msgid "Effects & Border"
 msgstr ""
 
+#. generated
 msgid "Elementor footer template ID"
 msgstr ""
 
+#. generated
 msgid "Elementor header template ID"
 msgstr ""
 
+#. generated
 msgid "Enable DigiPay gateway"
 msgstr ""
 
+#. generated
 msgid "Enable/Disable"
 msgstr ""
 
+#. generated
 msgid "Enabled"
 msgstr ""
 
+#. generated
 msgid "Entire site"
 msgstr ""
 
+#. generated
 msgid "Entrance animation"
 msgstr ""
 
+#. generated
 msgid "Environment"
 msgstr ""
 
+#. generated
 msgid "Everything about your orders and profile in one place."
 msgstr ""
 
+#. generated
 msgid "Extra confetti with any effect"
 msgstr ""
 
+#. generated
 msgid "Fade down"
 msgstr ""
 
+#. generated
 msgid "Fade up"
 msgstr ""
 
+#. generated
 msgid "Fast & insured delivery"
 msgstr ""
 
+#. generated
 msgid "Fast delivery"
 msgstr ""
 
+#. generated
 msgid "Featured"
 msgstr ""
 
+#. generated
 msgid "Fieldset background"
 msgstr ""
 
+#. generated
 msgid "Fill in your details and finish your order securely."
 msgstr ""
 
+#. generated
 msgid "Floating pill"
 msgstr ""
 
+#. generated
 msgid "Floating product"
 msgstr ""
 
+#. generated
 msgid "Fly to cart"
 msgstr ""
 
+#. generated
 msgid "Font file (woff2/woff/ttf)"
 msgstr ""
 
+#. generated
 msgid "Font name"
 msgstr ""
 
+#. generated
 msgid "Footer columns"
 msgstr ""
 
+#. generated
 msgid "Footer template"
 msgstr ""
 
+#. generated
 msgid "Fourth column of the built-in footer."
 msgstr ""
 
+#. generated
 msgid "Free shipping for orders over a certain amount"
 msgstr ""
 
+#. generated
 msgid "Free shipping progress bar"
 msgstr ""
 
+#. generated
 msgid "From here you can manage your orders, addresses and account details."
 msgstr ""
 
+#. generated
 msgid "Front page only"
 msgstr ""
 
+#. generated
 msgid "Gallery left"
 msgstr ""
 
+#. generated
 msgid "Gallery right"
 msgstr ""
 
+#. generated
 msgid "Gap between cards"
 msgstr ""
 
+#. generated
 msgid "Get Elementor"
 msgstr ""
 
+#. generated
 msgid "Get it from @BotFather."
 msgstr ""
 
+#. generated
 msgid "Gradient from"
 msgstr ""
 
+#. generated
 msgid "Gradient overlay"
 msgstr ""
 
+#. generated
 msgid "Grid"
 msgstr ""
 
+#. generated
 msgid "Grid columns"
 msgstr ""
 
+#. generated
 msgid "HCK Banner / Poster"
 msgstr ""
 
+#. generated
 msgid "HCK Banner — preview is rendered live."
 msgstr ""
 
+#. generated
 msgid "HCK Cart"
 msgstr ""
 
+#. generated
 msgid "HCK Category Menu"
 msgstr ""
 
+#. generated
 msgid "HCK Checkout"
 msgstr ""
 
+#. generated
 msgid "HCK Footer Widgets"
 msgstr ""
 
+#. generated
 msgid "HCK Mobile Nav"
 msgstr ""
 
+#. generated
 msgid "HCK Product Banner"
 msgstr ""
 
+#. generated
 msgid "HCK Product Banner — preview is rendered live."
 msgstr ""
 
+#. generated
 msgid "HCK Products"
 msgstr ""
 
+#. generated
 msgid "HCK Products — preview is rendered live."
 msgstr ""
 
+#. generated
 msgid "HCK Shop Sidebar"
 msgstr ""
 
+#. generated
 msgid "HCK User Area Button"
 msgstr ""
 
+#. generated
 msgid "HCK User Dashboard"
 msgstr ""
 
+#. generated
 msgid "Header & Footer"
 msgstr ""
 
+#. generated
 msgid "Header layout"
 msgstr ""
 
+#. generated
 msgid "Header template"
 msgstr ""
 
+#. generated
 msgid "Heading color"
 msgstr ""
 
+#. generated
 msgid "Heading font family"
 msgstr ""
 
+#. generated
 msgid "Hello"
 msgstr ""
 
+#. generated
 msgid "Hides the footer navigation on mobile in favour of the mobile nav."
 msgstr ""
 
+#. generated
 msgid "Home"
 msgstr ""
 
+#. generated
 msgid "Hooshyar Commerce Kit could not start: %s. Please re-upload the plugin files."
 msgstr ""
 
+#. generated
 msgid "Hooshyar Commerce Kit requires PHP %s or higher."
 msgstr ""
 
+#. generated
 msgid "Hooshyar Commerce Kit requires WooCommerce. Please install and activate WooCommerce first."
 msgstr ""
 
+#. generated
 msgid "Hooshyar Commerce Kit settings saved."
 msgstr ""
 
+#. generated
 msgid "Hooshyar Commerce Kit works best with Elementor. Install it to unlock the dedicated widgets."
 msgstr ""
 
+#. generated
 msgid "Hooshyar Commerce Kit — Settings"
 msgstr ""
 
+#. generated
 msgid "Hooshyar Kit"
 msgstr ""
 
+#. generated
 msgid "Horizontal tabs"
 msgstr ""
 
+#. generated
 msgid "Hover background"
 msgstr ""
 
+#. generated
 msgid "Hover color"
 msgstr ""
 
+#. generated
 msgid "Hover effect"
 msgstr ""
 
+#. generated
 msgid "Hover text color"
 msgstr ""
 
+#. generated
 msgid "ID"
 msgstr ""
 
+#. generated
 msgid "Icon + label"
 msgstr ""
 
+#. generated
 msgid "Icon / text color"
 msgstr ""
 
+#. generated
 msgid "Icon color"
 msgstr ""
 
+#. generated
 msgid "Icon only"
 msgstr ""
 
+#. generated
 msgid "Image"
 msgstr ""
 
+#. generated
 msgid "Image aspect ratio"
 msgstr ""
 
+#. generated
 msgid "Image border radius"
 msgstr ""
 
+#. generated
 msgid "Image slide"
 msgstr ""
 
+#. generated
 msgid "Image zoom"
 msgstr ""
 
+#. generated
 msgid "Increase quantity"
 msgstr ""
 
+#. generated
 msgid "Infinite loop"
 msgstr ""
 
+#. generated
 msgid "Inline (logo | menu | actions)"
 msgstr ""
 
+#. generated
 msgid "Invalid DigiPay callback."
 msgstr ""
 
+#. generated
 msgid "Italic"
 msgstr ""
 
+#. generated
 msgid "Item color"
 msgstr ""
 
+#. generated
 msgid "Item typography"
 msgstr ""
 
+#. generated
 msgid "Items (comma separated)"
 msgstr ""
 
+#. generated
 msgid "Ken Burns (slow zoom)"
 msgstr ""
 
+#. generated
 msgid "Label typography"
 msgstr ""
 
+#. generated
 msgid "Last 200 Telegram / Bale notifications."
 msgstr ""
 
+#. generated
 msgid "Latest products"
 msgstr ""
 
+#. generated
 msgid "Layout"
 msgstr ""
 
+#. generated
 msgid "Leave empty to use the current product on a single product page."
 msgstr ""
 
+#. generated
 msgid "Left"
 msgstr ""
 
+#. generated
 msgid "Limit"
 msgstr ""
 
+#. generated
 msgid "List"
 msgstr ""
 
+#. generated
 msgid "Live"
 msgstr ""
 
+#. generated
 msgid "Loading…"
 msgstr ""
 
+#. generated
 msgid "Log gateway events to WooCommerce → Status → Logs"
 msgstr ""
 
+#. generated
 msgid "Log in / Register"
 msgstr ""
 
+#. generated
 msgid "Log in to your account"
 msgstr ""
 
+#. generated
 msgid "Log out"
 msgstr ""
 
+#. generated
 msgid "Login / Register"
 msgstr ""
 
+#. generated
 msgid "Logs go to WooCommerce → Status → Logs."
 msgstr ""
 
+#. generated
 msgid "Looks like you have not added anything to your cart yet."
 msgstr ""
 
+#. generated
 msgid "Main brand colour used across all templates and elements."
 msgstr ""
 
+#. generated
 msgid "Main menu"
 msgstr ""
 
+#. generated
 msgid "Main navigation"
 msgstr ""
 
+#. generated
 msgid "Manage your orders, downloads and personal info"
 msgstr ""
 
+#. generated
 msgid "Mask reveal on scroll"
 msgstr ""
 
+#. generated
 msgid "Masonry"
 msgstr ""
 
+#. generated
 msgid "Max top categories"
 msgstr ""
 
+#. generated
 msgid "Media library is not available."
 msgstr ""
 
+#. generated
 msgid "Mega menu (side panel for sub-categories)"
 msgstr ""
 
+#. generated
 msgid "Menu"
 msgstr ""
 
+#. generated
 msgid "Menu alignment"
 msgstr ""
 
+#. generated
 msgid "Menu link color"
 msgstr ""
 
+#. generated
 msgid "Menu order"
 msgstr ""
 
+#. generated
 msgid "Menu typography"
 msgstr ""
 
+#. generated
 msgid "Message template"
 msgstr ""
 
+#. generated
 msgid "Minimal"
 msgstr ""
 
+#. generated
 msgid "Mobile Nav"
 msgstr ""
 
+#. generated
 msgid "Mobile navigation"
 msgstr ""
 
+#. generated
 msgid "Modern"
 msgstr ""
 
+#. generated
 msgid "Modern grid with sidebar"
 msgstr ""
 
+#. generated
 msgid "Modern underline"
 msgstr ""
 
+#. generated
 msgid "Modern with center action"
 msgstr ""
 
+#. generated
 msgid "Muted text color"
 msgstr ""
 
+#. generated
 msgid "My account"
 msgstr ""
 
+#. generated
 msgid "My orders"
 msgstr ""
 
+#. generated
 msgid "Navigation"
 msgstr ""
 
+#. generated
 msgid "Neon glow"
 msgstr ""
 
+#. generated
 msgid "New"
 msgstr ""
 
+#. generated
 msgid "Newsletter"
 msgstr ""
 
+#. generated
 msgid "Next"
 msgstr ""
 
+#. generated
 msgid "No DigiPay transaction found for this order."
 msgstr ""
 
+#. generated
 msgid "No notifications yet."
 msgstr ""
 
+#. generated
 msgid "No products found."
 msgstr ""
 
+#. generated
 msgid "No sidebar"
 msgstr ""
 
+#. generated
 msgid "None"
 msgstr ""
 
+#. generated
 msgid "Normal"
 msgstr ""
 
+#. generated
 msgid "Notification Log"
 msgstr ""
 
+#. generated
 msgid "Number of columns in the sub-category panel."
 msgstr ""
 
+#. generated
 msgid "Offset"
 msgstr ""
 
+#. generated
 msgid "On sale"
 msgstr ""
 
+#. generated
 msgid "One column"
 msgstr ""
 
+#. generated
 msgid "Optional. Leave 0 to use the built-in template above."
 msgstr ""
 
+#. generated
 msgid "Optionally skip the DigiPay tool-selection screen."
 msgstr ""
 
+#. generated
 msgid "Order"
 msgstr ""
 
+#. generated
 msgid "Order by"
 msgstr ""
 
+#. generated
 msgid "Order not found for this payment."
 msgstr ""
 
+#. generated
 msgid "Order not found."
 msgstr ""
 
+#. generated
 msgid "Order note (optional)"
 msgstr ""
 
+#. generated
 msgid "Order note field"
 msgstr ""
 
+#. generated
 msgid "Order summary background"
 msgstr ""
 
+#. generated
 msgid "Orders"
 msgstr ""
 
+#. generated
 msgid "Originality guarantee"
 msgstr ""
 
+#. generated
 msgid "Out of stock"
 msgstr ""
 
+#. generated
 msgid "Overlay"
 msgstr ""
 
+#. generated
 msgid "Overlay color"
 msgstr ""
 
+#. generated
 msgid "Overrides the product name."
 msgstr ""
 
+#. generated
 msgid "Padding"
 msgstr ""
 
+#. generated
 msgid "Page IDs (comma separated)"
 msgstr ""
 
+#. generated
 msgid "Panel background"
 msgstr ""
 
+#. generated
 msgid "Panel radius"
 msgstr ""
 
+#. generated
 msgid "Panel style"
 msgstr ""
 
+#. generated
 msgid "Parallax scroll"
 msgstr ""
 
+#. generated
 msgid "Password"
 msgstr ""
 
+#. generated
 msgid "Pay securely with DigiPay — card, wallet or credit."
 msgstr ""
 
+#. generated
 msgid "Payment"
 msgstr ""
 
+#. generated
 msgid "Payment method title shown on checkout."
 msgstr ""
 
+#. generated
 msgid "Permission denied."
 msgstr ""
 
+#. generated
 msgid "Phone (top bar)"
 msgstr ""
 
+#. generated
 msgid "Placeholders: {title} {price} {link} {sku} {categories} {excerpt}"
 msgstr ""
 
+#. generated
 msgid "Plugin files are incomplete (%s). Please delete the \"hooshyar-commerce-kit\" folder and upload the plugin again — all files and folders must be uploaded."
 msgstr ""
 
+#. generated
 msgid "Popularity"
 msgstr ""
 
+#. generated
 msgid "Poster"
 msgstr ""
 
+#. generated
 msgid "Poster (full-bleed image)"
 msgstr ""
 
+#. generated
 msgid "Powered by Hooshyar Commerce Kit"
 msgstr ""
 
+#. generated
 msgid "Preferred payment tool"
 msgstr ""
 
+#. generated
 msgid "Previous"
 msgstr ""
 
+#. generated
 msgid "Price color"
 msgstr ""
 
+#. generated
 msgid "Price typography"
 msgstr ""
 
+#. generated
 msgid "Primary color"
 msgstr ""
 
+#. generated
 msgid "Proceed to checkout"
 msgstr ""
 
+#. generated
 msgid "Product"
 msgstr ""
 
+#. generated
 msgid "Product ID"
 msgstr ""
 
+#. generated
 msgid "Product IDs (comma separated)"
 msgstr ""
 
+#. generated
 msgid "Product added to cart"
 msgstr ""
 
+#. generated
 msgid "Product card style"
 msgstr ""
 
+#. generated
 msgid "Product counts"
 msgstr ""
 
+#. generated
 msgid "Product image max width"
 msgstr ""
 
+#. generated
 msgid "Product images"
 msgstr ""
 
+#. generated
 msgid "Product images in summary"
 msgstr ""
 
+#. generated
 msgid "Product not found."
 msgstr ""
 
+#. generated
 msgid "Product page layout"
 msgstr ""
 
+#. generated
 msgid "Products"
 msgstr ""
 
+#. generated
 msgid "Progress bar"
 msgstr ""
 
+#. generated
 msgid "Provided by DigiPay merchant panel."
 msgstr ""
 
+#. generated
 msgid "Quick links"
 msgstr ""
 
+#. generated
 msgid "Random"
 msgstr ""
 
+#. generated
 msgid "Rating"
 msgstr ""
 
+#. generated
 msgid "Recent orders"
 msgstr ""
 
+#. generated
 msgid "Recent orders count"
 msgstr ""
 
+#. generated
 msgid "Redirecting you to DigiPay…"
 msgstr ""
 
+#. generated
 msgid "Related products"
 msgstr ""
 
+#. generated
 msgid "Remove"
 msgstr ""
 
+#. generated
 msgid "Remove this item"
 msgstr ""
 
+#. generated
 msgid "Replace footer on mobile"
 msgstr ""
 
+#. generated
 msgid "Response"
 msgstr ""
 
+#. generated
 msgid "Result count & ordering bar"
 msgstr ""
 
+#. generated
 msgid "Returning customer notice"
 msgstr ""
 
+#. generated
 msgid "Returning customer?"
 msgstr ""
 
+#. generated
 msgid "Review your items and continue to checkout"
 msgstr ""
 
+#. generated
 msgid "Rial (send as-is)"
 msgstr ""
 
+#. generated
 msgid "Right"
 msgstr ""
 
+#. generated
 msgid "Rotate in"
 msgstr ""
 
+#. generated
 msgid "SKU:"
 msgstr ""
 
+#. generated
 msgid "Sale"
 msgstr ""
 
+#. generated
 msgid "Save settings"
 msgstr ""
 
+#. generated
 msgid "Search"
 msgstr ""
 
+#. generated
 msgid "Search form"
 msgstr ""
 
+#. generated
 msgid "Search products…"
 msgstr ""
 
+#. generated
 msgid "Second button link"
 msgstr ""
 
+#. generated
 msgid "Second button text"
 msgstr ""
 
+#. generated
 msgid "Secondary color"
 msgstr ""
 
+#. generated
 msgid "Secure checkout"
 msgstr ""
 
+#. generated
 msgid "Select options"
 msgstr ""
 
+#. generated
 msgid "Send a test message"
 msgstr ""
 
+#. generated
 msgid "Send new products"
 msgstr ""
 
+#. generated
 msgid "Send test to %s"
 msgstr ""
 
+#. generated
 msgid "Sending failed. Check the log below."
 msgstr ""
 
+#. generated
 msgid "Sending test message…"
 msgstr ""
 
+#. generated
 msgid "Settings"
 msgstr ""
 
+#. generated
 msgid "Shadow"
 msgstr ""
 
+#. generated
 msgid "Shipping"
 msgstr ""
 
+#. generated
 msgid "Shipping details"
 msgstr ""
 
+#. generated
 msgid "Shop"
 msgstr ""
 
+#. generated
 msgid "Shop & Product"
 msgstr ""
 
+#. generated
 msgid "Shop layout"
 msgstr ""
 
+#. generated
 msgid "Shop now"
 msgstr ""
 
+#. generated
 msgid "Shop pages only"
 msgstr ""
 
+#. generated
 msgid "Shop sidebar"
 msgstr ""
 
+#. generated
 msgid "Shopping cart"
 msgstr ""
 
+#. generated
 msgid "Show add-to-cart button"
 msgstr ""
 
+#. generated
 msgid "Show avatar"
 msgstr ""
 
+#. generated
 msgid "Show badges"
 msgstr ""
 
+#. generated
 msgid "Show cart button"
 msgstr ""
 
+#. generated
 msgid "Show category images"
 msgstr ""
 
+#. generated
 msgid "Show image"
 msgstr ""
 
+#. generated
 msgid "Show label"
 msgstr ""
 
+#. generated
 msgid "Show price"
 msgstr ""
 
+#. generated
 msgid "Show product counts"
 msgstr ""
 
+#. generated
 msgid "Show rating"
 msgstr ""
 
+#. generated
 msgid "Show short description"
 msgstr ""
 
+#. generated
 msgid "Show sub-categories"
 msgstr ""
 
+#. generated
 msgid "Show subcategories"
 msgstr ""
 
+#. generated
 msgid "Shows a synced WooCommerce account button in the header."
 msgstr ""
 
+#. generated
 msgid "Sidebar background"
 msgstr ""
 
+#. generated
 msgid "Sidebar left"
 msgstr ""
 
+#. generated
 msgid "Sidebar right"
 msgstr ""
 
+#. generated
 msgid "Skip to content"
 msgstr ""
 
+#. generated
 msgid "Slide from left"
 msgstr ""
 
+#. generated
 msgid "Slide from right"
 msgstr ""
 
+#. generated
 msgid "Slider (one at a time)"
 msgstr ""
 
+#. generated
 msgid "Soft glow hover"
 msgstr ""
 
+#. generated
 msgid "Solid bar"
 msgstr ""
 
+#. generated
 msgid "Something went wrong. Please try again."
 msgstr ""
 
+#. generated
 msgid "Source"
 msgstr ""
 
+#. generated
 msgid "Specific IDs"
 msgstr ""
 
+#. generated
 msgid "Specific page IDs"
 msgstr ""
 
+#. generated
 msgid "Split card"
 msgstr ""
 
+#. generated
 msgid "Split menu"
 msgstr ""
 
+#. generated
 msgid "Spotlight (image + info)"
 msgstr ""
 
+#. generated
 msgid "Stacked list (inline sub-categories)"
 msgstr ""
 
+#. generated
 msgid "Staging (UAT)"
 msgstr ""
 
+#. generated
 msgid "Statistics cards"
 msgstr ""
 
+#. generated
 msgid "Status"
 msgstr ""
 
+#. generated
 msgid "Step indicator"
 msgstr ""
 
+#. generated
 msgid "Sticky header"
 msgstr ""
 
+#. generated
 msgid "Sticky order summary"
 msgstr ""
 
+#. generated
 msgid "Sticky product summary"
 msgstr ""
 
+#. generated
 msgid "Sticky summary"
 msgstr ""
 
+#. generated
 msgid "Stock hints"
 msgstr ""
 
+#. generated
 msgid "Store currency unit"
 msgstr ""
 
+#. generated
 msgid "Style"
 msgstr ""
 
+#. generated
 msgid "Sub-category columns"
 msgstr ""
 
+#. generated
 msgid "Subscribe to get the latest offers."
 msgstr ""
 
+#. generated
 msgid "Subtitle"
 msgstr ""
 
+#. generated
 msgid "Subtitle color"
 msgstr ""
 
+#. generated
 msgid "Subtitle typography"
 msgstr ""
 
+#. generated
 msgid "Subtotal"
 msgstr ""
 
+#. generated
 msgid "Success color"
 msgstr ""
 
+#. generated
 msgid "Success toast"
 msgstr ""
 
+#. generated
 msgid "Summary card background"
 msgstr ""
 
+#. generated
 msgid "Summary left"
 msgstr ""
 
+#. generated
 msgid "Summary on the left"
 msgstr ""
 
+#. generated
 msgid "Support"
 msgstr ""
 
+#. generated
 msgid "Support: 24/7"
 msgstr ""
 
+#. generated
 msgid "Supporting text"
 msgstr ""
 
+#. generated
 msgid "Surface / card color"
 msgstr ""
 
+#. generated
 msgid "Tabs"
 msgstr ""
 
+#. generated
 msgid "Tabs style"
 msgstr ""
 
+#. generated
 msgid "Telegram"
 msgstr ""
 
+#. generated
 msgid "Telegram bot token is not set."
 msgstr ""
 
+#. generated
 msgid "Template"
 msgstr ""
 
+#. generated
 msgid "Test DigiPay connection"
 msgstr ""
 
+#. generated
 msgid "Test message sent successfully."
 msgstr ""
 
+#. generated
 msgid "Test message — the connection works fine."
 msgstr ""
 
+#. generated
 msgid "Tests the OAuth login against the DigiPay UPG API using the credentials above."
 msgstr ""
 
+#. generated
 msgid "Text color"
 msgstr ""
 
+#. generated
 msgid "The bar is displayed automatically on mobile (configurable in Hooshyar Kit → Settings → Mobile Nav). This widget lets you preview it and place it manually."
 msgstr ""
 
+#. generated
 msgid "Title"
 msgstr ""
 
+#. generated
 msgid "Title color"
 msgstr ""
 
+#. generated
 msgid "Title typography"
 msgstr ""
 
+#. generated
 msgid "Toman (multiply by 10)"
 msgstr ""
 
+#. generated
 msgid "Top bar"
 msgstr ""
 
+#. generated
 msgid "Top-level categories"
 msgstr ""
 
+#. generated
 msgid "Total"
 msgstr ""
 
+#. generated
 msgid "Total orders"
 msgstr ""
 
+#. generated
 msgid "Track your latest order"
 msgstr ""
 
+#. generated
 msgid "Transition speed (ms)"
 msgstr ""
 
+#. generated
 msgid "Trust badges"
 msgstr ""
 
+#. generated
 msgid "Two column"
 msgstr ""
 
+#. generated
 msgid "Two column (form + summary)"
 msgstr ""
 
+#. generated
 msgid "Two column (items + summary)"
 msgstr ""
 
+#. generated
 msgid "Typography"
 msgstr ""
 
+#. generated
 msgid "Update cart"
 msgstr ""
 
+#. generated
 msgid "Upload"
 msgstr ""
 
+#. generated
 msgid "Upload your font files (woff2 recommended). Then enter the \"Font name\" here in the Design tab (Body / Heading font family) to use them. Add multiple rows with the same name for different weights."
 msgstr ""
 
+#. generated
 msgid "Uploaded fonts"
 msgstr ""
 
+#. generated
 msgid "Used with the \"Specific page IDs\" scope."
 msgstr ""
 
+#. generated
 msgid "User Area"
 msgstr ""
 
+#. generated
 msgid "User area button"
 msgstr ""
 
+#. generated
 msgid "User area button in header"
 msgstr ""
 
+#. generated
 msgid "Username"
 msgstr ""
 
+#. generated
 msgid "View"
 msgstr ""
 
+#. generated
 msgid "View all"
 msgstr ""
 
+#. generated
 msgid "View all products"
 msgstr ""
 
+#. generated
 msgid "View cart"
 msgstr ""
 
+#. generated
 msgid "View product"
 msgstr ""
 
+#. generated
 msgid "Warning color"
 msgstr ""
 
+#. generated
 msgid "Weight"
 msgstr ""
 
+#. generated
 msgid "Welcome back, %s 👋"
 msgstr ""
 
+#. generated
 msgid "Welcome card"
 msgstr ""
 
+#. generated
 msgid "Welcome card background"
 msgstr ""
 
+#. generated
 msgid "Widgets shown on shop / product archive pages."
 msgstr ""
 
+#. generated
 msgid "Wishlist"
 msgstr ""
 
+#. generated
 msgid "WooCommerce is not available."
 msgstr ""
 
+#. generated
 msgid "WooCommerce is required. Please install and activate WooCommerce 8.0 or newer."
 msgstr ""
 
+#. generated
 msgid "You have not placed any orders yet."
 msgstr ""
 
+#. generated
 msgid "Your cart is empty"
 msgstr ""
 
+#. generated
 msgid "Your headline"
 msgstr ""
 
+#. generated
 msgid "Your order"
 msgstr ""
 
+#. generated
 msgid "Your order qualifies for free shipping!"
 msgstr ""
 
+#. generated
 msgid "Your shopping bag"
 msgstr ""
 
+#. generated
 msgid "Zoom & fade"
 msgstr ""
 
+#. generated
 msgid "Zoom in"
 msgstr ""
 
+#. generated
 msgid "Zoom out"
 msgstr ""
 
+#. generated
 msgid "Zoom pulse"
 msgstr ""
 
+#. generated
 msgid "e.g. @your_channel or -100xxxxxxxxxx"
 msgstr ""
 
+#. generated
 msgid "e.g. Product categories"
 msgstr ""
 
+#. generated
 msgid "e.g. Special offer"
 msgstr ""
 
+#. generated
 msgid "← Continue shopping"
 msgstr ""

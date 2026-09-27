@@ -379,16 +379,12 @@ class HCK_Header_Footer {
 
 		$html  = '<div class="hck-cats hck-cats--' . esc_attr( $style ) . '" data-hck-cats>';
 		$html .= '<button type="button" class="hck-cats__btn" data-hck-cats-toggle aria-expanded="false">';
-		$html .= HCK_Helpers::icon( 'grid', array( 'size' => 20 ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+		$html .= HCK_Helpers::icon( 'menu', array( 'size' => 20 ) ); // phpcs:ignore WordPress.Security.EscapeOutput
 		$html .= '<span class="hck-cats__label">' . esc_html( $label ) . '</span>';
-		$html .= HCK_Helpers::icon( 'arrow-l', array( 'size' => 14, 'class' => 'hck-cats__caret' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+		$html .= HCK_Helpers::icon( 'arrow-l', array( 'size' => 13, 'class' => 'hck-cats__caret' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
 		$html .= '</button>';
 
 		$html .= '<div class="hck-cats__panel">';
-		$html .= '<div class="hck-cats__head">';
-		$html .= HCK_Helpers::icon( 'grid', array( 'size' => 18, 'class' => 'hck-cats__head-icon' ) ); // phpcs:ignore WordPress.Security.EscapeOutput
-		$html .= '<span>' . esc_html( $label ) . '</span>';
-		$html .= '</div>';
 
 		$html .= '<ul class="hck-cats__list">';
 
@@ -513,25 +509,37 @@ class HCK_Header_Footer {
 	}
 
 	/**
-	 * Render the header actions (search / user / cart).
+	 * Render the header search form.
+	 *
+	 * @return string
+	 */
+	public static function render_search() {
+		if ( 'yes' !== HCK_Helpers::get( 'header_search', 'yes' ) ) {
+			return '';
+		}
+
+		$html  = '<form role="search" method="get" class="hck-header-search" action="' . esc_url( home_url( '/' ) ) . '">';
+		$html .= '<input type="search" name="s" class="hck-header-search__input" placeholder="' . esc_attr__( 'Search products…', 'hooshyar-commerce-kit' ) . '" value="' . esc_attr( get_search_query() ) . '" />';
+		$html .= '<input type="hidden" name="post_type" value="product" />';
+		$html .= '<button type="submit" class="hck-header-search__btn" aria-label="' . esc_attr__( 'Search', 'hooshyar-commerce-kit' ) . '">' . HCK_Helpers::icon( 'search', array( 'size' => 19 ) ) . '</button>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		$html .= '</form>';
+
+		return $html;
+	}
+
+	/**
+	 * Render the header actions (user / cart).
 	 *
 	 * @return string
 	 */
 	public static function render_actions() {
 		$html = '<div class="hck-header-actions">';
 
-		if ( 'yes' === HCK_Helpers::get( 'header_search', 'yes' ) ) {
-			$html .= '<form role="search" method="get" class="hck-header-search" action="' . esc_url( home_url( '/' ) ) . '">';
-			$html .= '<input type="search" name="s" class="hck-header-search__input" placeholder="' . esc_attr__( 'Search products…', 'hooshyar-commerce-kit' ) . '" value="' . esc_attr( get_search_query() ) . '" />';
-			$html .= '<input type="hidden" name="post_type" value="product" />';
-			$html .= '<button type="submit" class="hck-header-search__btn" aria-label="' . esc_attr__( 'Search', 'hooshyar-commerce-kit' ) . '">' . HCK_Helpers::icon( 'search', array( 'size' => 19 ) ) . '</button>';
-			$html .= '</form>';
-		}
-
 		if ( 'yes' === HCK_Helpers::get( 'header_user_button', 'yes' ) ) {
 			$html .= HCK_Dashboard::instance()->get_user_button(
 				array(
-					'show_cart' => 'yes' === HCK_Helpers::get( 'header_cart_button', 'yes' ),
+					'show_cart'  => 'yes' === HCK_Helpers::get( 'header_cart_button', 'yes' ),
+					'show_label' => true,
 				)
 			);
 		} elseif ( 'yes' === HCK_Helpers::get( 'header_cart_button', 'yes' ) ) {
@@ -585,30 +593,29 @@ class HCK_Header_Footer {
 
 		$nav     = self::render_nav();
 		$cats    = self::render_category_menu();
+		$search  = self::render_search();
 		$actions = self::render_actions();
-		$burger  = '<button type="button" class="hck-burger" data-hck-mobile-toggle aria-label="' . esc_attr__( 'Menu', 'hooshyar-commerce-kit' ) . '">' . HCK_Helpers::icon( 'menu' ) . '</button>';
+		$burger  = '<button type="button" class="hck-burger" data-hck-mobile-toggle aria-label="' . esc_attr__( 'Menu', 'hooshyar-commerce-kit' ) . '">' . HCK_Helpers::icon( 'menu' ) . '</button>'; // phpcs:ignore WordPress.Security.EscapeOutput
 
 		switch ( $layout ) {
 			case 'centered':
 				$html .= '<div class="hck-header__row hck-header__row--top">' . $logo . $actions . '</div>';
-				$html .= '<div class="hck-header__row hck-header__row--bottom">' . $cats . $nav . $burger . '</div>';
+				$html .= '<div class="hck-header__row hck-header__row--bottom">' . $cats . $nav . '<div class="hck-header__search-wrap">' . $search . '</div>' . $burger . '</div>';
 				break;
 
 			case 'split':
 				$html .= '<div class="hck-header__row">';
 				$html .= '<div class="hck-header__side hck-header__side--start">' . $cats . $nav . '</div>';
 				$html .= '<div class="hck-header__side hck-header__side--center">' . $logo . '</div>';
-				$html .= '<div class="hck-header__side hck-header__side--end">' . $actions . $burger . '</div>';
+				$html .= '<div class="hck-header__side hck-header__side--end"><div class="hck-header__search-wrap">' . $search . '</div>' . $actions . $burger . '</div>';
 				$html .= '</div>';
 				break;
 
 			case 'inline':
 			default:
-				$html .= '<div class="hck-header__row">';
-				$html .= $logo;
-				$html .= '<div class="hck-header__nav-wrap">' . $cats . $nav . $burger . '</div>';
-				$html .= $actions;
-				$html .= '</div>';
+				// Store-front style: logo | search | actions on top, categories + menu below.
+				$html .= '<div class="hck-header__row hck-header__row--top">' . $logo . '<div class="hck-header__search-wrap">' . $search . '</div>' . $actions . '</div>';
+				$html .= '<div class="hck-header__row hck-header__row--bottom">' . $cats . $nav . $burger . '</div>';
 				break;
 		}
 

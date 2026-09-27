@@ -3,7 +3,7 @@
  * Plugin Name:       Hooshyar Commerce Kit
  * Plugin URI:        https://hooshyarco.com/
  * Description:       کیت حرفه‌ای فروشگاهی ووکامرس — سبد خرید، صورتحساب، داشبورد کاربری، المان‌های اختصاصی المنتور، هدر/فوتر، افکت‌های خلاقانه، اتصال تلگرام و بله و درگاه دیجی‌پی.
- * Version:           1.0.5
+ * Version:           1.0.6
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Hooshyarco
@@ -20,7 +20,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'HCK_VERSION', '1.0.5' );
+define( 'HCK_VERSION', '1.0.6' );
 define( 'HCK_PLUGIN_FILE', __FILE__ );
 define( 'HCK_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HCK_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

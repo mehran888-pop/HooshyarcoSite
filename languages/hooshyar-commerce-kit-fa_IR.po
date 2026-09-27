@@ -1,1656 +1,2195 @@
-# Persian translation for Hooshyar Commerce Kit.
-# Copyright (C) 2026 Hooshyarco
-# This file is distributed under the GPL-2.0-or-later license.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hooshyar Commerce Kit 1.0.0\n"
-"Report-Msgid-Bugs-To: https://hooshyarco.com/support\n"
-"POT-Creation-Date: 2026-09-26 12:00+0000\n"
-"PO-Revision-Date: 2026-09-26 12:00+0000\n"
+"Project-Id-Version: hooshyar-commerce-kit\n"
 "Language: fa_IR\n"
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: hck-build\n"
-"X-Domain: hooshyar-commerce-kit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#. generated
 msgid "24/7 support"
 msgstr "پشتیبانی ۲۴/۷"
 
+#. generated
 msgid "3D tilt on hover"
 msgstr "شیب سه‌بعدی با هاور"
 
+#. generated
 msgid "A phone number is required to pay with DigiPay."
 msgstr "برای پرداخت با دیجی‌پی شماره موبایل الزامی است."
 
+#. generated
 msgid "AJAX add to cart"
 msgstr "افزودن به سبد با ایجکس"
 
+#. generated
 msgid "About text (footer)"
 msgstr "متن درباره ما (فوتر)"
 
+#. generated
 msgid "Accent / hover color"
 msgstr "رنگ اکسنت / هاور"
 
+#. generated
 msgid "Accent color"
 msgstr "رنگ لهجه‌ای (اکسنت)"
 
+#. generated
 msgid "Access your orders, downloads and account details."
 msgstr "به سفارش‌ها، دانلودها و اطلاعات حساب خود دسترسی داشته باشید."
 
+#. generated
 msgid "Accordion"
 msgstr "آکاردئونی"
 
+#. generated
 msgid "Account"
 msgstr "حساب کاربری"
 
+#. generated
 msgid "Account details"
 msgstr "جزئیات حساب"
 
+#. generated
 msgid "Account menu"
 msgstr "منوی حساب کاربری"
 
+#. generated
 msgid "Account settings"
 msgstr "تنظیمات حساب"
 
+#. generated
 msgid "Active / accent color"
 msgstr "رنگ فعال / اکسنت"
 
+#. generated
 msgid "Active menu color"
 msgstr "رنگ آیتم فعال منو"
 
+#. generated
 msgid "Add %s more to get free shipping"
 msgstr "برای ارسال رایگان %s دیگر اضافه کنید"
 
+#. generated
 msgid "Add font"
 msgstr "افزودن فونت"
 
+#. generated
 msgid "Add to cart effect"
 msgstr "افکت افزودن به سبد خرید"
 
+#. generated
 msgid "Additional information"
 msgstr "اطلاعات تکمیلی"
 
+#. generated
 msgid "Addresses"
 msgstr "نشانی‌ها"
 
+#. generated
 msgid "Almost there — review your bag and proceed to payment."
 msgstr "تقریباً تمام است — سبد خود را بررسی و به مرحله پرداخت بروید."
 
+#. generated
 msgid "Almost there!"
 msgstr "تقریباً تمام است!"
 
+#. generated
 msgid "Animated gradient overlay"
 msgstr "اورلی گرادیان متحرک"
 
+#. generated
 msgid "Any CSS font family, e.g. Tahoma, Vazirmatn, Roboto. Google fonts load automatically."
 msgstr "هر فونت CSS، مثلاً Tahoma، وزیرمتن، Roboto. فونت‌های گوگل خودکار بارگذاری می‌شوند."
 
+#. generated
 msgid "Apply coupon"
 msgstr "اعمال کد تخفیف"
 
+#. generated
 msgid "Arc to cart"
 msgstr "پرتاب قوسی به سبد"
 
+#. generated
 msgid "Are you sure?"
 msgstr "آیا مطمئن هستید؟"
 
+#. generated
 msgid "Arrow background"
 msgstr "پس‌زمینه فلش‌ها"
 
+#. generated
 msgid "Arrow color"
 msgstr "رنگ فلش‌ها"
 
+#. generated
 msgid "Arrows & dots"
 msgstr "فلش و نقطه"
 
+#. generated
 msgid "Arrows only"
 msgstr "فقط فلش"
 
+#. generated
 msgid "Ascending"
 msgstr "صعودی"
 
+#. generated
 msgid "Auto (primary location / first menu)"
 msgstr "خودکار (لوکیشن اصلی / اولین منو)"
 
+#. generated
 msgid "Autoplay"
 msgstr "پخش خودکار"
 
+#. generated
 msgid "Autoplay speed (ms)"
 msgstr "سرعت پخش خودکار (میلی‌ثانیه)"
 
+#. generated
 msgid "Available: home, shop, cart, account, search, categories, wishlist"
 msgstr "موجود: home, shop, cart, account, search, categories, wishlist"
 
+#. generated
 msgid "Awaiting DigiPay payment."
 msgstr "در انتظار پرداخت دیجی‌پی."
 
+#. generated
 msgid "Background"
 msgstr "پس‌زمینه"
 
+#. generated
 msgid "Background color"
 msgstr "رنگ پس‌زمینه"
 
+#. generated
 msgid "Background image"
 msgstr "تصویر پس‌زمینه"
 
+#. generated
 msgid "Badge"
 msgstr "نشان"
 
+#. generated
 msgid "Badge background"
 msgstr "پس‌زمینه نشان"
 
+#. generated
 msgid "Badge color"
 msgstr "رنگ نشان"
 
+#. generated
 msgid "Bale"
 msgstr "بله"
 
+#. generated
 msgid "Bale bot token"
 msgstr "توکن ربات بله"
 
+#. generated
 msgid "Bale bot token is not set."
 msgstr "توکن ربات بله تنظیم نشده است."
 
+#. generated
 msgid "Banner"
 msgstr "بنر"
 
+#. generated
 msgid "Banner height"
 msgstr "ارتفاع بنر"
 
+#. generated
 msgid "Bar background"
 msgstr "پس‌زمینه نوار"
 
+#. generated
 msgid "Best selling"
 msgstr "پرفروش‌ترین"
 
+#. generated
 msgid "Big summer sale"
 msgstr "حراج بزرگ تابستانه"
 
+#. generated
 msgid "Billing details"
 msgstr "اطلاعات صورتحساب"
 
+#. generated
 msgid "Body font family"
 msgstr "فونت متن"
 
+#. generated
 msgid "Border"
 msgstr "کادر"
 
+#. generated
 msgid "Border color"
 msgstr "رنگ کادر"
 
+#. generated
 msgid "Border radius"
 msgstr "گردی گوشه‌ها"
 
+#. generated
 msgid "Border radius (px)"
 msgstr "گردی گوشه‌ها (پیکسل)"
 
+#. generated
 msgid "Bordered"
 msgstr "کاردار"
 
+#. generated
 msgid "Bot token"
 msgstr "توکن ربات"
 
+#. generated
 msgid "Boxed"
 msgstr "جعبه‌ای"
 
+#. generated
 msgid "Button"
 msgstr "دکمه"
 
+#. generated
 msgid "Button Style"
 msgstr "استایل دکمه"
 
+#. generated
 msgid "Button background"
 msgstr "پس‌زمینه دکمه"
 
+#. generated
 msgid "Button color"
 msgstr "رنگ دکمه"
 
+#. generated
 msgid "Button label"
 msgstr "برچسب دکمه"
 
+#. generated
 msgid "Button link"
 msgstr "لینک دکمه"
 
+#. generated
 msgid "Button radius"
 msgstr "گردی گوشه دکمه"
 
+#. generated
 msgid "Button text"
 msgstr "متن دکمه"
 
+#. generated
 msgid "Buttons"
 msgstr "دکمه‌ها"
 
+#. generated
 msgid "Card Style"
 msgstr "استایل کارت"
 
+#. generated
 msgid "Card hover effect"
 msgstr "افکت هاور کارت"
 
+#. generated
 msgid "Card lift"
 msgstr "بالا آمدن کارت"
 
+#. generated
 msgid "Card radius"
 msgstr "گردی گوشه کارت"
 
+#. generated
 msgid "Card template"
 msgstr "قالب کارت"
 
+#. generated
 msgid "Carousel"
 msgstr "کاروسل"
 
+#. generated
 msgid "Carousel Navigation"
 msgstr "ناوبری کاروسل"
 
+#. generated
 msgid "Carousel Settings"
 msgstr "تنظیمات کاروسل"
 
+#. generated
 msgid "Cart"
 msgstr "سبد خرید"
 
+#. generated
 msgid "Cart badge"
 msgstr "نشان سبد"
 
+#. generated
 msgid "Cart badge color"
 msgstr "رنگ نشان سبد"
 
+#. generated
 msgid "Cart button"
 msgstr "دکمه سبد خرید"
 
+#. generated
 msgid "Cart icon bump"
 msgstr "پرش آیکون سبد"
 
+#. generated
 msgid "Cart layout"
 msgstr "چیدمان سبد خرید"
 
+#. generated
 msgid "Cart template"
 msgstr "قالب سبد خرید"
 
+#. generated
 msgid "Cart totals"
 msgstr "جمع سبد خرید"
 
+#. generated
 msgid "Catalog grid"
 msgstr "گرید کاتالوگی"
 
+#. generated
 msgid "Categories"
 msgstr "دسته‌بندی‌ها"
 
+#. generated
 msgid "Category"
 msgstr "دسته‌بندی"
 
+#. generated
 msgid "Category Menu"
 msgstr "منوی دسته‌بندی"
 
+#. generated
 msgid "Category images"
 msgstr "تصاویر دسته‌بندی"
 
+#. generated
 msgid "Category menu (mega menu)"
 msgstr "منوی دسته‌بندی (مگامنو)"
 
+#. generated
 msgid "Category menu label"
 msgstr "برچسب منوی دسته‌بندی"
 
+#. generated
 msgid "Category menu style"
 msgstr "استایل منوی دسته‌بندی"
 
+#. generated
 msgid "Category slugs (comma separated)"
 msgstr "اسلاگ دسته‌ها (جدا شده با کاما)"
 
+#. generated
 msgid "Center"
 msgstr "وسط"
 
+#. generated
 msgid "Centered"
 msgstr "وسط‌چین"
 
+#. generated
 msgid "Centered (logo on top)"
 msgstr "وسط‌چین (لوگو بالا)"
 
+#. generated
 msgid "Centered hero"
 msgstr "هیرو وسط‌چین"
 
+#. generated
 msgid "Channel"
 msgstr "کانال"
 
+#. generated
 msgid "Channel / chat ID"
 msgstr "شناسه کانال / چت"
 
+#. generated
 msgid "Checkout"
 msgstr "صورتحساب"
 
+#. generated
 msgid "Checkout layout"
 msgstr "چیدمان صورتحساب"
 
+#. generated
 msgid "Checkout template"
 msgstr "قالب صورتحساب"
 
+#. generated
 msgid "Choose which WordPress menu is the main navigation."
 msgstr "انتخاب کنید کدام منوی وردپرس به‌عنوان منوی اصلی باشد."
 
+#. generated
 msgid "Classic"
 msgstr "کلاسیک"
 
+#. generated
 msgid "Click here to log in"
 msgstr "برای ورود اینجا کلیک کنید"
 
+#. generated
 msgid "Client ID"
 msgstr "شناسه کلاینت"
 
+#. generated
 msgid "Client secret"
 msgstr "رمز کلاینت"
 
+#. generated
 msgid "Close"
 msgstr "بستن"
 
+#. generated
 msgid "Color"
 msgstr "رنگ"
 
+#. generated
 msgid "Columns"
 msgstr "ستون‌ها"
 
+#. generated
 msgid "Complete your order in a few simple steps"
 msgstr "سفارش خود را در چند مرحله ساده تکمیل کنید"
 
+#. generated
 msgid "Confetti burst"
 msgstr "انفجار کاغذ رنگی"
 
+#. generated
 msgid "Confirmation"
 msgstr "تأیید نهایی"
 
+#. generated
 msgid "Connected to DigiPay successfully."
 msgstr "اتصال به دیجی‌پی با موفقیت برقرار شد."
 
+#. generated
 msgid "Connection test"
 msgstr "تست اتصال"
 
+#. generated
 msgid "Contact us"
 msgstr "تماس با ما"
 
+#. generated
 msgid "Container width (px)"
 msgstr "عرض کانتینر (پیکسل)"
 
+#. generated
 msgid "Content"
 msgstr "محتوا"
 
+#. generated
 msgid "Content alignment"
 msgstr "چینش محتوا"
 
+#. generated
 msgid "Content left"
 msgstr "محتوا چپ"
 
+#. generated
 msgid "Content right"
 msgstr "محتوا راست"
 
+#. generated
 msgid "Continue shopping"
 msgstr "ادامه خرید"
 
+#. generated
 msgid "Copied!"
 msgstr "کپی شد!"
 
+#. generated
 msgid "Copyright text"
 msgstr "متن کپی‌رایت"
 
+#. generated
 msgid "Coupon code"
 msgstr "کد تخفیف"
 
+#. generated
 msgid "Coupon form"
 msgstr "فرم کد تخفیف"
 
+#. generated
 msgid "Coupon: %s"
 msgstr "کد تخفیف: %s"
 
+#. generated
 msgid "Create a bot with @botfather in Bale."
 msgstr "با @botfather در بله یک ربات بسازید."
 
+#. generated
 msgid "Creative"
 msgstr "خلاقانه"
 
+#. generated
 msgid "Creative effect"
 msgstr "افکت خلاقانه"
 
+#. generated
 msgid "Creative hero"
 msgstr "هیرو خلاقانه"
 
+#. generated
 msgid "Creative masonry"
 msgstr "ماسونری خلاقانه"
 
+#. generated
 msgid "Custom Fonts"
 msgstr "فونت‌های سفارشی"
 
+#. generated
 msgid "Custom text"
 msgstr "متن سفارشی"
 
+#. generated
 msgid "Custom title"
 msgstr "عنوان سفارشی"
 
+#. generated
 msgid "Danger color"
 msgstr "رنگ خطا"
 
+#. generated
 msgid "Dashboard"
 msgstr "داشبورد"
 
+#. generated
 msgid "Dashboard layout"
 msgstr "چیدمان داشبورد"
 
+#. generated
 msgid "Dashboard template"
 msgstr "قالب داشبورد"
 
+#. generated
 msgid "Date"
 msgstr "تاریخ"
 
+#. generated
 msgid "Debug logging"
 msgstr "ثبت گزارش اشکال‌زدایی"
 
+#. generated
 msgid "Decrease quantity"
 msgstr "کاهش تعداد"
 
+#. generated
 msgid "Default"
 msgstr "پیش‌فرض"
 
+#. generated
 msgid "Default (from settings)"
 msgstr "پیش‌فرض (از تنظیمات)"
 
+#. generated
 msgid "Descending"
 msgstr "نزولی"
 
+#. generated
 msgid "Description"
 msgstr "توضیحات"
 
+#. generated
 msgid "Description color"
 msgstr "رنگ توضیحات"
 
+#. generated
 msgid "Description typography"
 msgstr "تایپوگرافی توضیحات"
 
+#. generated
 msgid "Design"
 msgstr "طراحی"
 
+#. generated
 msgid "DigiPay"
 msgstr "دیجی‌پی"
 
+#. generated
 msgid "DigiPay (UPG)"
 msgstr "دیجی‌پی (UPG)"
 
+#. generated
 msgid "DigiPay Gateway"
 msgstr "درگاه دیجی‌پی"
 
+#. generated
 msgid "DigiPay amount mismatch."
 msgstr "مبلغ دیجی‌پی مطابقت ندارد."
 
+#. generated
 msgid "DigiPay credentials are not configured."
 msgstr "اطلاعات ورود دیجی‌پی تنظیم نشده است."
 
+#. generated
 msgid "DigiPay error: %s"
 msgstr "خطای دیجی‌پی: %s"
 
+#. generated
 msgid "DigiPay is not configured. Please contact the store administrator."
 msgstr "درگاه دیجی‌پی تنظیم نشده است. لطفاً با مدیر فروشگاه تماس بگیرید."
 
+#. generated
 msgid "DigiPay login failed."
 msgstr "ورود به دیجی‌پی ناموفق بود."
 
+#. generated
 msgid "DigiPay payment completed. Tracking code: %1$s %2$s"
 msgstr "پرداخت دیجی‌پی تکمیل شد. کد پیگیری: %1$s %2$s"
 
+#. generated
 msgid "DigiPay payment failed or was cancelled by the user."
 msgstr "پرداخت دیجی‌پی ناموفق بود یا توسط کاربر لغو شد."
 
+#. generated
 msgid "DigiPay purchase reversed (refunded)."
 msgstr "خرید دیجی‌پی بازگشت داده شد (استرداد وجه)."
 
+#. generated
 msgid "DigiPay reverse failed."
 msgstr "بازگشت وجه دیجی‌پی ناموفق بود."
 
+#. generated
 msgid "DigiPay selection screen"
 msgstr "صفحه انتخاب ابزار دیجی‌پی"
 
+#. generated
 msgid "DigiPay ticket creation failed."
 msgstr "ساخت تیکت خرید دیجی‌پی ناموفق بود."
 
+#. generated
 msgid "DigiPay unified payment gateway: card gateway, wallet and BNPL credit. Docs: mydigipay.com/developers/docs/upg"
 msgstr "درگاه پرداخت یکپارچه دیجی‌پی: درگاه کارت، کیف پول و اعتبار BNPL. مستندات: mydigipay.com/developers/docs/upg"
 
+#. generated
 msgid "DigiPay verification failed."
 msgstr "تأیید پرداخت دیجی‌پی ناموفق بود."
 
+#. generated
 msgid "DigiPay verification failed: %s"
 msgstr "تأیید پرداخت دیجی‌پی ناموفق بود: %s"
 
+#. generated
 msgid "Direct: card gateway (IPG)"
 msgstr "مستقیم: درگاه کارت (IPG)"
 
+#. generated
 msgid "Direct: wallet"
 msgstr "مستقیم: کیف پول"
 
+#. generated
 msgid "Disabled"
 msgstr "غیرفعال"
 
+#. generated
 msgid "Display mode"
 msgstr "حالت نمایش"
 
+#. generated
 msgid "Display scope"
 msgstr "محدوده نمایش"
 
+#. generated
 msgid "Documentation"
 msgstr "مستندات"
 
+#. generated
 msgid "Done"
 msgstr "انجام شد"
 
+#. generated
 msgid "Dot color"
 msgstr "رنگ نقطه‌ها"
 
+#. generated
 msgid "Dots only"
 msgstr "فقط نقطه"
 
+#. generated
 msgid "Downloads"
 msgstr "دانلودها"
 
+#. generated
 msgid "Effect duration (ms)"
 msgstr "مدت افکت (میلی‌ثانیه)"
 
+#. generated
 msgid "Effects"
 msgstr "افکت‌ها"
 
+#. generated
 msgid "Effects & Border"
 msgstr "افکت‌ها و کادر"
 
+#. generated
 msgid "Elementor footer template ID"
 msgstr "شناسه قالب فوتر المنتور"
 
+#. generated
 msgid "Elementor header template ID"
 msgstr "شناسه قالب هدر المنتور"
 
+#. generated
 msgid "Enable DigiPay gateway"
 msgstr "فعال‌سازی درگاه دیجی‌پی"
 
+#. generated
 msgid "Enable/Disable"
 msgstr "فعال / غیرفعال"
 
+#. generated
 msgid "Enabled"
 msgstr "فعال"
 
+#. generated
 msgid "Entire site"
 msgstr "کل سایت"
 
+#. generated
 msgid "Entrance animation"
 msgstr "انیمیشن ورود"
 
+#. generated
 msgid "Environment"
 msgstr "محیط"
 
+#. generated
 msgid "Everything about your orders and profile in one place."
 msgstr "همه چیز درباره سفارش‌ها و پروفایل شما در یک مکان."
 
+#. generated
 msgid "Extra confetti with any effect"
 msgstr "کاغذ رنگی اضافه با هر افکت"
 
+#. generated
 msgid "Fade down"
 msgstr "ظاهر شدن از بالا"
 
+#. generated
 msgid "Fade up"
 msgstr "ظاهر شدن از پایین"
 
+#. generated
 msgid "Fast & insured delivery"
 msgstr "ارسال سریع و بیمه‌شده"
 
+#. generated
 msgid "Fast delivery"
 msgstr "ارسال سریع"
 
+#. generated
 msgid "Featured"
 msgstr "ویژه"
 
+#. generated
 msgid "Fieldset background"
 msgstr "پس‌زمینه بخش فرم"
 
+#. generated
 msgid "Fill in your details and finish your order securely."
 msgstr "اطلاعات خود را وارد کنید و سفارش را به‌صورت امن نهایی کنید."
 
+#. generated
 msgid "Floating pill"
 msgstr "شناور"
 
+#. generated
 msgid "Floating product"
 msgstr "محصول شناور"
 
+#. generated
 msgid "Fly to cart"
 msgstr "پرواز به سبد خرید"
 
+#. generated
 msgid "Font file (woff2/woff/ttf)"
 msgstr "فایل فونت (woff2/woff/ttf)"
 
+#. generated
 msgid "Font name"
 msgstr "نام فونت"
 
+#. generated
 msgid "Footer columns"
 msgstr "ستون‌های فوتر"
 
+#. generated
 msgid "Footer template"
 msgstr "قالب فوتر"
 
+#. generated
 msgid "Fourth column of the built-in footer."
 msgstr "ستون چهارم فوتر داخلی."
 
+#. generated
 msgid "Free shipping for orders over a certain amount"
 msgstr "ارسال رایگان برای سفارش‌های بالای مبلغ مشخص"
 
+#. generated
 msgid "Free shipping progress bar"
 msgstr "نوار پیشرفت ارسال رایگان"
 
+#. generated
 msgid "From here you can manage your orders, addresses and account details."
 msgstr "از اینجا می‌توانید سفارش‌ها، نشانی‌ها و اطلاعات حساب خود را مدیریت کنید."
 
+#. generated
 msgid "Front page only"
 msgstr "فقط صفحه اصلی"
 
+#. generated
 msgid "Gallery left"
 msgstr "گالری چپ"
 
+#. generated
 msgid "Gallery right"
 msgstr "گالری راست"
 
+#. generated
 msgid "Gap between cards"
 msgstr "فاصله بین کارت‌ها"
 
+#. generated
 msgid "Get Elementor"
 msgstr "دریافت المنتور"
 
+#. generated
 msgid "Get it from @BotFather."
 msgstr "از @BotFather دریافت کنید."
 
+#. generated
 msgid "Gradient from"
 msgstr "شروع گرادیان"
 
+#. generated
 msgid "Gradient overlay"
 msgstr "اورلی گرادیان"
 
+#. generated
 msgid "Grid"
 msgstr "شبکه‌ای"
 
+#. generated
 msgid "Grid columns"
 msgstr "ستون‌های گرید"
 
+#. generated
 msgid "HCK Banner / Poster"
 msgstr "بنر / پوستر هوشیار"
 
+#. generated
 msgid "HCK Banner — preview is rendered live."
 msgstr "بنر هوشیار — پیش‌نمایش زنده نمایش داده می‌شود."
 
+#. generated
 msgid "HCK Cart"
 msgstr "سبد خرید هوشیار"
 
+#. generated
 msgid "HCK Category Menu"
 msgstr "منوی دسته‌بندی HCK"
 
+#. generated
 msgid "HCK Checkout"
 msgstr "صورتحساب هوشیار"
 
+#. generated
 msgid "HCK Footer Widgets"
 msgstr "ابزارک‌های فوتر هوشیار"
 
+#. generated
 msgid "HCK Mobile Nav"
 msgstr "ناوبری موبایل هوشیار"
 
+#. generated
 msgid "HCK Product Banner"
 msgstr "بنر محصول هوشیار"
 
+#. generated
 msgid "HCK Product Banner — preview is rendered live."
 msgstr "بنر محصول هوشیار — پیش‌نمایش زنده نمایش داده می‌شود."
 
+#. generated
 msgid "HCK Products"
 msgstr "محصولات هوشیار"
 
+#. generated
 msgid "HCK Products — preview is rendered live."
 msgstr "محصولات هوشیار — پیش‌نمایش زنده نمایش داده می‌شود."
 
+#. generated
 msgid "HCK Shop Sidebar"
 msgstr "سایدبار فروشگاه هوشیار"
 
+#. generated
 msgid "HCK User Area Button"
 msgstr "دکمه ناحیه کاربری هوشیار"
 
+#. generated
 msgid "HCK User Dashboard"
 msgstr "داشبورد کاربری هوشیار"
 
+#. generated
 msgid "Header & Footer"
 msgstr "هدر و فوتر"
 
+#. generated
 msgid "Header layout"
 msgstr "چیدمان هدر"
 
+#. generated
 msgid "Header template"
 msgstr "قالب هدر"
 
+#. generated
 msgid "Heading color"
 msgstr "رنگ عنوان‌ها"
 
+#. generated
 msgid "Heading font family"
 msgstr "فونت عنوان‌ها"
 
+#. generated
 msgid "Hello"
 msgstr "سلام"
 
+#. generated
 msgid "Hides the footer navigation on mobile in favour of the mobile nav."
 msgstr "ناوبری فوتر در موبایل مخفی و از ناوبری موبایل استفاده می‌شود."
 
+#. generated
 msgid "Home"
 msgstr "خانه"
 
+#. generated
 msgid "Hooshyar Commerce Kit could not start: %s. Please re-upload the plugin files."
 msgstr "افزونه هوشیار کامرس کیت نتوانست اجرا شود: %s. لطفاً فایل‌های افزونه را دوباره آپلود کنید."
 
+#. generated
 msgid "Hooshyar Commerce Kit requires PHP %s or higher."
 msgstr "افزونه کیت فروشگاهی هوشیار به PHP %s یا بالاتر نیاز دارد."
 
+#. generated
 msgid "Hooshyar Commerce Kit requires WooCommerce. Please install and activate WooCommerce first."
 msgstr "افزونه کیت فروشگاهی هوشیار به ووکامرس نیاز دارد. لطفاً ابتدا ووکامرس را نصب و فعال کنید."
 
+#. generated
 msgid "Hooshyar Commerce Kit settings saved."
 msgstr "تنظیمات کیت فروشگاهی هوشیار ذخیره شد."
 
+#. generated
 msgid "Hooshyar Commerce Kit works best with Elementor. Install it to unlock the dedicated widgets."
 msgstr "کیت فروشگاهی هوشیار با المنتور بهترین عملکرد را دارد. برای دسترسی به المان‌های اختصاصی آن را نصب کنید."
 
+#. generated
 msgid "Hooshyar Commerce Kit — Settings"
 msgstr "کیت فروشگاهی هوشیار — تنظیمات"
 
+#. generated
 msgid "Hooshyar Kit"
 msgstr "هوشیار کیت"
 
+#. generated
 msgid "Horizontal tabs"
 msgstr "تب‌های افقی"
 
+#. generated
 msgid "Hover background"
 msgstr "پس‌زمینه هاور"
 
+#. generated
 msgid "Hover color"
 msgstr "رنگ هاور"
 
+#. generated
 msgid "Hover effect"
 msgstr "افکت هاور"
 
+#. generated
 msgid "Hover text color"
 msgstr "رنگ متن هاور"
 
+#. generated
 msgid "ID"
 msgstr "شناسه"
 
+#. generated
 msgid "Icon + label"
 msgstr "آیکون + برچسب"
 
+#. generated
 msgid "Icon / text color"
 msgstr "رنگ آیکون / متن"
 
+#. generated
 msgid "Icon color"
 msgstr "رنگ آیکون"
 
+#. generated
 msgid "Icon only"
 msgstr "فقط آیکون"
 
+#. generated
 msgid "Image"
 msgstr "تصویر"
 
+#. generated
 msgid "Image aspect ratio"
 msgstr "نسبت تصویر"
 
+#. generated
 msgid "Image border radius"
 msgstr "گردی گوشه تصویر"
 
+#. generated
 msgid "Image slide"
 msgstr "اسلاید تصویر"
 
+#. generated
 msgid "Image zoom"
 msgstr "بزرگ‌نمایی تصویر"
 
+#. generated
 msgid "Increase quantity"
 msgstr "افزایش تعداد"
 
+#. generated
 msgid "Infinite loop"
 msgstr "حلقه بی‌نهایت"
 
+#. generated
 msgid "Inline (logo | menu | actions)"
 msgstr "خطی (لوگو | منو | اکشن‌ها)"
 
+#. generated
 msgid "Invalid DigiPay callback."
 msgstr "بازگشت دیجی‌پی نامعتبر است."
 
+#. generated
 msgid "Italic"
 msgstr "ایتالیک"
 
+#. generated
 msgid "Item color"
 msgstr "رنگ آیتم"
 
+#. generated
 msgid "Item typography"
 msgstr "تایپوگرافی آیتم"
 
+#. generated
 msgid "Items (comma separated)"
 msgstr "آیتم‌ها (جدا شده با کاما)"
 
+#. generated
 msgid "Ken Burns (slow zoom)"
 msgstr "کن‌برنز (زوم آهسته)"
 
+#. generated
 msgid "Label typography"
 msgstr "تایپوگرافی برچسب"
 
+#. generated
 msgid "Last 200 Telegram / Bale notifications."
 msgstr "۲۰۰ اعلان اخیر تلگرام / بله."
 
+#. generated
 msgid "Latest products"
 msgstr "جدیدترین محصولات"
 
+#. generated
 msgid "Layout"
 msgstr "چیدمان"
 
+#. generated
 msgid "Leave empty to use the current product on a single product page."
 msgstr "برای استفاده از محصول فعلی در صفحه تک‌محصول، خالی بگذارید."
 
+#. generated
 msgid "Left"
 msgstr "چپ"
 
+#. generated
 msgid "Limit"
 msgstr "تعداد"
 
+#. generated
 msgid "List"
 msgstr "لیستی"
 
+#. generated
 msgid "Live"
 msgstr "عملیاتی"
 
+#. generated
 msgid "Loading…"
 msgstr "در حال بارگذاری…"
 
+#. generated
 msgid "Log gateway events to WooCommerce → Status → Logs"
 msgstr "ثبت رویدادهای درگاه در ووکامرس ← وضعیت ← گزارش‌ها"
 
+#. generated
 msgid "Log in / Register"
 msgstr "ورود / ثبت‌نام"
 
+#. generated
 msgid "Log in to your account"
 msgstr "به حساب خود وارد شوید"
 
+#. generated
 msgid "Log out"
 msgstr "خروج"
 
+#. generated
 msgid "Login / Register"
 msgstr "ورود / ثبت‌نام"
 
+#. generated
 msgid "Logs go to WooCommerce → Status → Logs."
 msgstr "گزارش‌ها در ووکامرس ← وضعیت ← گزارش‌ها ذخیره می‌شوند."
 
+#. generated
 msgid "Looks like you have not added anything to your cart yet."
 msgstr "به نظر می‌رسد هنوز چیزی به سبد خود اضافه نکرده‌اید."
 
+#. generated
 msgid "Main brand colour used across all templates and elements."
 msgstr "رنگ اصلی برند در تمام قالب‌ها و المان‌ها."
 
+#. generated
 msgid "Main menu"
 msgstr "منوی اصلی"
 
+#. generated
 msgid "Main navigation"
 msgstr "ناوبری اصلی"
 
+#. generated
 msgid "Manage your orders, downloads and personal info"
 msgstr "سفارش‌ها، دانلودها و اطلاعات شخصی خود را مدیریت کنید"
 
+#. generated
 msgid "Mask reveal on scroll"
 msgstr "ماسک ظاهر شدن با اسکرول"
 
+#. generated
 msgid "Masonry"
 msgstr "ماسونری"
 
+#. generated
 msgid "Max top categories"
 msgstr "حداکثر دسته‌های اصلی"
 
+#. generated
 msgid "Media library is not available."
 msgstr "کتابخانه رسانه در دسترس نیست."
 
+#. generated
 msgid "Mega menu (side panel for sub-categories)"
 msgstr "مگامنو (پنل کناری برای زیردسته‌ها)"
 
+#. generated
 msgid "Menu"
 msgstr "منو"
 
+#. generated
 msgid "Menu alignment"
 msgstr "تراز منو"
 
+#. generated
 msgid "Menu link color"
 msgstr "رنگ لینک منو"
 
+#. generated
 msgid "Menu order"
 msgstr "ترتیب منو"
 
+#. generated
 msgid "Menu typography"
 msgstr "تایپوگرافی منو"
 
+#. generated
 msgid "Message template"
 msgstr "قالب پیام"
 
+#. generated
 msgid "Minimal"
 msgstr "مینیمال"
 
+#. generated
 msgid "Mobile Nav"
 msgstr "ناوبری موبایل"
 
+#. generated
 msgid "Mobile navigation"
 msgstr "ناوبری موبایل"
 
+#. generated
 msgid "Modern"
 msgstr "مدرن"
 
+#. generated
 msgid "Modern grid with sidebar"
 msgstr "گرید مدرن با سایدبار"
 
+#. generated
 msgid "Modern underline"
 msgstr "مدرن با خط زیر"
 
+#. generated
 msgid "Modern with center action"
 msgstr "مدرن با اکشن وسط"
 
+#. generated
 msgid "Muted text color"
 msgstr "رنگ متن کم‌رنگ"
 
+#. generated
 msgid "My account"
 msgstr "حساب کاربری من"
 
+#. generated
 msgid "My orders"
 msgstr "سفارش‌های من"
 
+#. generated
 msgid "Navigation"
 msgstr "ناوبری"
 
+#. generated
 msgid "Neon glow"
 msgstr "درخشش نئونی"
 
+#. generated
 msgid "New"
 msgstr "جدید"
 
+#. generated
 msgid "Newsletter"
 msgstr "خبرنامه"
 
+#. generated
 msgid "Next"
 msgstr "بعدی"
 
+#. generated
 msgid "No DigiPay transaction found for this order."
 msgstr "تراکنش دیجی‌پی برای این سفارش یافت نشد."
 
+#. generated
 msgid "No notifications yet."
 msgstr "هنوز اعلانی ثبت نشده است."
 
+#. generated
 msgid "No products found."
 msgstr "محصولی یافت نشد."
 
+#. generated
 msgid "No sidebar"
 msgstr "بدون سایدبار"
 
+#. generated
 msgid "None"
 msgstr "هیچ‌کدام"
 
+#. generated
 msgid "Normal"
 msgstr "معمولی"
 
+#. generated
 msgid "Notification Log"
 msgstr "گزارش اعلان‌ها"
 
+#. generated
 msgid "Number of columns in the sub-category panel."
 msgstr "تعداد ستون‌های پنل زیردسته‌ها."
 
+#. generated
 msgid "Offset"
 msgstr "شروع از"
 
+#. generated
 msgid "On sale"
 msgstr "حراج"
 
+#. generated
 msgid "One column"
 msgstr "تک‌ستونه"
 
+#. generated
 msgid "Optional. Leave 0 to use the built-in template above."
 msgstr "اختصاصی. برای استفاده از قالب داخلی ۰ بگذارید."
 
+#. generated
 msgid "Optionally skip the DigiPay tool-selection screen."
 msgstr "در صورت تمایل، صفحه انتخاب ابزار دیجی‌پی را رد کنید."
 
+#. generated
 msgid "Order"
 msgstr "سفارش"
 
+#. generated
 msgid "Order by"
 msgstr "مرتب‌سازی"
 
+#. generated
 msgid "Order not found for this payment."
 msgstr "سفارشی برای این پرداخت یافت نشد."
 
+#. generated
 msgid "Order not found."
 msgstr "سفارش یافت نشد."
 
+#. generated
 msgid "Order note (optional)"
 msgstr "یادداشت سفارش (اختیاری)"
 
+#. generated
 msgid "Order note field"
 msgstr "فیلد یادداشت سفارش"
 
+#. generated
 msgid "Order summary background"
 msgstr "پس‌زمینه خلاصه سفارش"
 
+#. generated
 msgid "Orders"
 msgstr "سفارش‌ها"
 
+#. generated
 msgid "Originality guarantee"
 msgstr "تضمین اصالت کالا"
 
+#. generated
 msgid "Out of stock"
 msgstr "ناموجود"
 
+#. generated
 msgid "Overlay"
 msgstr "اورلی"
 
+#. generated
 msgid "Overlay color"
 msgstr "رنگ اورلی"
 
+#. generated
 msgid "Overrides the product name."
 msgstr "جایگزین نام محصول می‌شود."
 
+#. generated
 msgid "Padding"
 msgstr "فاصله داخلی"
 
+#. generated
 msgid "Page IDs (comma separated)"
 msgstr "شناسه صفحات (جدا شده با کاما)"
 
+#. generated
 msgid "Panel background"
 msgstr "پس‌زمینه پنل"
 
+#. generated
 msgid "Panel radius"
 msgstr "گردی گوشه‌های پنل"
 
+#. generated
 msgid "Panel style"
 msgstr "استایل پنل"
 
+#. generated
 msgid "Parallax scroll"
 msgstr "اسکرول پارالاکس"
 
+#. generated
 msgid "Password"
 msgstr "رمز عبور"
 
+#. generated
 msgid "Pay securely with DigiPay — card, wallet or credit."
 msgstr "پرداخت امن با دیجی‌پی — کارت، کیف پول یا اعتباری."
 
+#. generated
 msgid "Payment"
 msgstr "پرداخت"
 
+#. generated
 msgid "Payment method title shown on checkout."
 msgstr "عنوان روش پرداخت در صفحه صورتحساب."
 
+#. generated
 msgid "Permission denied."
 msgstr "دسترسی غیرمجاز."
 
+#. generated
 msgid "Phone (top bar)"
 msgstr "تلفن (نوار بالا)"
 
+#. generated
 msgid "Placeholders: {title} {price} {link} {sku} {categories} {excerpt}"
 msgstr "جای‌نگارها: {title} {price} {link} {sku} {categories} {excerpt}"
 
+#. generated
 msgid "Plugin files are incomplete (%s). Please delete the \"hooshyar-commerce-kit\" folder and upload the plugin again — all files and folders must be uploaded."
 msgstr "فایل‌های افزونه ناقص است (%s). لطفاً پوشه «hooshyar-commerce-kit» را حذف و افزونه را دوباره آپلود کنید — همه فایل‌ها و پوشه‌ها باید آپلود شوند."
 
+#. generated
 msgid "Popularity"
 msgstr "محبوبیت"
 
+#. generated
 msgid "Poster"
 msgstr "پوستر"
 
+#. generated
 msgid "Poster (full-bleed image)"
 msgstr "پوستر (تصویر تمام‌صفحه)"
 
+#. generated
 msgid "Powered by Hooshyar Commerce Kit"
 msgstr "قدرت‌گرفته از کیت فروشگاهی هوشیار"
 
+#. generated
 msgid "Preferred payment tool"
 msgstr "ابزار پرداخت ترجیحی"
 
+#. generated
 msgid "Previous"
 msgstr "قبلی"
 
+#. generated
 msgid "Price color"
 msgstr "رنگ قیمت"
 
+#. generated
 msgid "Price typography"
 msgstr "تایپوگرافی قیمت"
 
+#. generated
 msgid "Primary color"
 msgstr "رنگ اصلی"
 
+#. generated
 msgid "Proceed to checkout"
 msgstr "ادامه به صورتحساب"
 
+#. generated
 msgid "Product"
 msgstr "محصول"
 
+#. generated
 msgid "Product ID"
 msgstr "شناسه محصول"
 
+#. generated
 msgid "Product IDs (comma separated)"
 msgstr "شناسه محصولات (جدا شده با کاما)"
 
+#. generated
 msgid "Product added to cart"
 msgstr "محصول به سبد خرید اضافه شد"
 
+#. generated
 msgid "Product card style"
 msgstr "استایل کارت محصول"
 
+#. generated
 msgid "Product counts"
 msgstr "تعداد محصولات"
 
+#. generated
 msgid "Product image max width"
 msgstr "حداکثر عرض تصویر محصول"
 
+#. generated
 msgid "Product images"
 msgstr "تصاویر محصول"
 
+#. generated
 msgid "Product images in summary"
 msgstr "تصاویر محصول در خلاصه"
 
+#. generated
 msgid "Product not found."
 msgstr "محصول یافت نشد."
 
+#. generated
 msgid "Product page layout"
 msgstr "چیدمان صفحه محصول"
 
+#. generated
 msgid "Products"
 msgstr "محصولات"
 
+#. generated
 msgid "Progress bar"
 msgstr "نوار پیشرفت"
 
+#. generated
 msgid "Provided by DigiPay merchant panel."
 msgstr "از پنل پذیرندگان دیجی‌پی دریافت می‌شود."
 
+#. generated
 msgid "Quick links"
 msgstr "لینک‌های سریع"
 
+#. generated
 msgid "Random"
 msgstr "تصادفی"
 
+#. generated
 msgid "Rating"
 msgstr "امتیاز"
 
+#. generated
 msgid "Recent orders"
 msgstr "سفارش‌های اخیر"
 
+#. generated
 msgid "Recent orders count"
 msgstr "تعداد سفارش‌های اخیر"
 
+#. generated
 msgid "Redirecting you to DigiPay…"
 msgstr "در حال انتقال به دیجی‌پی…"
 
+#. generated
 msgid "Related products"
 msgstr "محصولات مرتبط"
 
+#. generated
 msgid "Remove"
 msgstr "حذف"
 
+#. generated
 msgid "Remove this item"
 msgstr "حذف این آیتم"
 
+#. generated
 msgid "Replace footer on mobile"
 msgstr "جایگزینی فوتر در موبایل"
 
+#. generated
 msgid "Response"
 msgstr "پاسخ"
 
+#. generated
 msgid "Result count & ordering bar"
 msgstr "نوار نتایج و مرتب‌سازی"
 
+#. generated
 msgid "Returning customer notice"
 msgstr "اعلان مشتری قبلی"
 
+#. generated
 msgid "Returning customer?"
 msgstr "قبلاً خرید کرده‌اید؟"
 
+#. generated
 msgid "Review your items and continue to checkout"
 msgstr "اقلام خود را بررسی و به صورتحساب بروید"
 
+#. generated
 msgid "Rial (send as-is)"
 msgstr "ریال (ارسال مستقیم)"
 
+#. generated
 msgid "Right"
 msgstr "راست"
 
+#. generated
 msgid "Rotate in"
 msgstr "چرخش ورود"
 
+#. generated
 msgid "SKU:"
 msgstr "کد محصول:"
 
+#. generated
 msgid "Sale"
 msgstr "حراج"
 
+#. generated
 msgid "Save settings"
 msgstr "ذخیره تنظیمات"
 
+#. generated
 msgid "Search"
 msgstr "جستجو"
 
+#. generated
 msgid "Search form"
 msgstr "فرم جستجو"
 
+#. generated
 msgid "Search products…"
 msgstr "جستجوی محصولات…"
 
+#. generated
 msgid "Second button link"
 msgstr "لینک دکمه دوم"
 
+#. generated
 msgid "Second button text"
 msgstr "متن دکمه دوم"
 
+#. generated
 msgid "Secondary color"
 msgstr "رنگ ثانویه"
 
+#. generated
 msgid "Secure checkout"
 msgstr "پرداخت امن"
 
+#. generated
 msgid "Select options"
 msgstr "انتخاب گزینه‌ها"
 
+#. generated
 msgid "Send a test message"
 msgstr "ارسال پیام آزمایشی"
 
+#. generated
 msgid "Send new products"
 msgstr "ارسال محصولات جدید"
 
+#. generated
 msgid "Send test to %s"
 msgstr "ارسال تست به %s"
 
+#. generated
 msgid "Sending failed. Check the log below."
 msgstr "ارسال ناموفق بود. گزارش زیر را بررسی کنید."
 
+#. generated
 msgid "Sending test message…"
 msgstr "در حال ارسال پیام آزمایشی…"
 
+#. generated
 msgid "Settings"
 msgstr "تنظیمات"
 
+#. generated
 msgid "Shadow"
 msgstr "سایه"
 
+#. generated
 msgid "Shipping"
 msgstr "ارسال"
 
+#. generated
 msgid "Shipping details"
 msgstr "اطلاعات ارسال"
 
+#. generated
 msgid "Shop"
 msgstr "فروشگاه"
 
+#. generated
 msgid "Shop & Product"
 msgstr "فروشگاه و محصول"
 
+#. generated
 msgid "Shop layout"
 msgstr "چیدمان فروشگاه"
 
+#. generated
 msgid "Shop now"
 msgstr "خرید کنید"
 
+#. generated
 msgid "Shop pages only"
 msgstr "فقط صفحات فروشگاه"
 
+#. generated
 msgid "Shop sidebar"
 msgstr "سایدبار فروشگاه"
 
+#. generated
 msgid "Shopping cart"
 msgstr "سبد خرید"
 
+#. generated
 msgid "Show add-to-cart button"
 msgstr "نمایش دکمه افزودن به سبد"
 
+#. generated
 msgid "Show avatar"
 msgstr "نمایش آواتار"
 
+#. generated
 msgid "Show badges"
 msgstr "نمایش نشان‌ها"
 
+#. generated
 msgid "Show cart button"
 msgstr "نمایش دکمه سبد"
 
+#. generated
 msgid "Show category images"
 msgstr "نمایش تصاویر دسته‌بندی"
 
+#. generated
 msgid "Show image"
 msgstr "نمایش تصویر"
 
+#. generated
 msgid "Show label"
 msgstr "نمایش برچسب"
 
+#. generated
 msgid "Show price"
 msgstr "نمایش قیمت"
 
+#. generated
 msgid "Show product counts"
 msgstr "نمایش تعداد محصولات"
 
+#. generated
 msgid "Show rating"
 msgstr "نمایش امتیاز"
 
+#. generated
 msgid "Show short description"
 msgstr "نمایش توضیح کوتاه"
 
+#. generated
 msgid "Show sub-categories"
 msgstr "نمایش زیردسته‌ها"
 
+#. generated
 msgid "Show subcategories"
 msgstr "نمایش زیردسته‌ها"
 
+#. generated
 msgid "Shows a synced WooCommerce account button in the header."
 msgstr "دکمه همگام‌شده حساب ووکامرس را در هدر نمایش می‌دهد."
 
+#. generated
 msgid "Sidebar background"
 msgstr "پس‌زمینه سایدبار"
 
+#. generated
 msgid "Sidebar left"
 msgstr "سایدبار چپ"
 
+#. generated
 msgid "Sidebar right"
 msgstr "سایدبار راست"
 
+#. generated
 msgid "Skip to content"
 msgstr "پرش به محتوا"
 
+#. generated
 msgid "Slide from left"
 msgstr "اسلاید از چپ"
 
+#. generated
 msgid "Slide from right"
 msgstr "اسلاید از راست"
 
+#. generated
 msgid "Slider (one at a time)"
 msgstr "اسلایدر (یکی در هر نمایش)"
 
+#. generated
 msgid "Soft glow hover"
 msgstr "درخشش نرم هاور"
 
+#. generated
 msgid "Solid bar"
 msgstr "نوار ثابت"
 
+#. generated
 msgid "Something went wrong. Please try again."
 msgstr "مشکلی پیش آمد. لطفاً دوباره تلاش کنید."
 
+#. generated
 msgid "Source"
 msgstr "منبع"
 
+#. generated
 msgid "Specific IDs"
 msgstr "شناسه‌های مشخص"
 
+#. generated
 msgid "Specific page IDs"
 msgstr "شناسه صفحات مشخص"
 
+#. generated
 msgid "Split card"
 msgstr "کارت دو تکه"
 
+#. generated
 msgid "Split menu"
 msgstr "منوی دو طرفه"
 
+#. generated
 msgid "Spotlight (image + info)"
 msgstr "اسپات‌لایت (تصویر + اطلاعات)"
 
+#. generated
 msgid "Stacked list (inline sub-categories)"
 msgstr "لیست زیرهم (زیردسته‌ها در همان ردیف)"
 
+#. generated
 msgid "Staging (UAT)"
 msgstr "آزمایشی (UAT)"
 
+#. generated
 msgid "Statistics cards"
 msgstr "کارت‌های آماری"
 
+#. generated
 msgid "Status"
 msgstr "وضعیت"
 
+#. generated
 msgid "Step indicator"
 msgstr "نشانگر مراحل"
 
+#. generated
 msgid "Sticky header"
 msgstr "هدر چسبان"
 
+#. generated
 msgid "Sticky order summary"
 msgstr "خلاصه سفارش چسبان"
 
+#. generated
 msgid "Sticky product summary"
 msgstr "خلاصه محصول چسبان"
 
+#. generated
 msgid "Sticky summary"
 msgstr "خلاصه چسبان"
 
+#. generated
 msgid "Stock hints"
 msgstr "نشانگر موجودی"
 
+#. generated
 msgid "Store currency unit"
 msgstr "واحد پول فروشگاه"
 
+#. generated
 msgid "Style"
 msgstr "استایل"
 
+#. generated
 msgid "Sub-category columns"
 msgstr "ستون‌های زیردسته‌ها"
 
+#. generated
 msgid "Subscribe to get the latest offers."
 msgstr "برای دریافت آخرین پیشنهادها مشترک شوید."
 
+#. generated
 msgid "Subtitle"
 msgstr "زیرعنوان"
 
+#. generated
 msgid "Subtitle color"
 msgstr "رنگ زیرعنوان"
 
+#. generated
 msgid "Subtitle typography"
 msgstr "تایپوگرافی زیرعنوان"
 
+#. generated
 msgid "Subtotal"
 msgstr "جمع جزء"
 
+#. generated
 msgid "Success color"
 msgstr "رنگ موفقیت"
 
+#. generated
 msgid "Success toast"
 msgstr "اعلان موفقیت"
 
+#. generated
 msgid "Summary card background"
 msgstr "پس‌زمینه کارت خلاصه"
 
+#. generated
 msgid "Summary left"
 msgstr "خلاصه چپ"
 
+#. generated
 msgid "Summary on the left"
 msgstr "خلاصه در سمت چپ"
 
+#. generated
 msgid "Support"
 msgstr "پشتیبانی"
 
+#. generated
 msgid "Support: 24/7"
 msgstr "پشتیبانی: ۲۴ ساعته"
 
+#. generated
 msgid "Supporting text"
 msgstr "متن کمکی"
 
+#. generated
 msgid "Surface / card color"
 msgstr "رنگ سطح / کارت"
 
+#. generated
 msgid "Tabs"
 msgstr "تب‌ها"
 
+#. generated
 msgid "Tabs style"
 msgstr "استایل تب‌ها"
 
+#. generated
 msgid "Telegram"
 msgstr "تلگرام"
 
+#. generated
 msgid "Telegram bot token is not set."
 msgstr "توکن ربات تلگرام تنظیم نشده است."
 
+#. generated
 msgid "Template"
 msgstr "قالب"
 
+#. generated
 msgid "Test DigiPay connection"
 msgstr "تست اتصال دیجی‌پی"
 
+#. generated
 msgid "Test message sent successfully."
 msgstr "پیام آزمایشی با موفقیت ارسال شد."
 
+#. generated
 msgid "Test message — the connection works fine."
 msgstr "پیام آزمایشی — اتصال به درستی کار می‌کند."
 
+#. generated
 msgid "Tests the OAuth login against the DigiPay UPG API using the credentials above."
 msgstr "ورود OAuth را با اطلاعات بالا در API دیجی‌پی UPG آزمایش می‌کند."
 
+#. generated
 msgid "Text color"
 msgstr "رنگ متن"
 
+#. generated
 msgid "The bar is displayed automatically on mobile (configurable in Hooshyar Kit → Settings → Mobile Nav). This widget lets you preview it and place it manually."
 msgstr "این نوار به‌صورت خودکار در موبایل نمایش داده می‌شود (قابل تنظیم در هوشیار کیت ← تنظیمات ← ناوبری موبایل). این المان امکان پیش‌نمایش و قرارگیری دستی را می‌دهد."
 
+#. generated
 msgid "Title"
 msgstr "عنوان"
 
+#. generated
 msgid "Title color"
 msgstr "رنگ عنوان"
 
+#. generated
 msgid "Title typography"
 msgstr "تایپوگرافی عنوان"
 
+#. generated
 msgid "Toman (multiply by 10)"
 msgstr "تومان (ضربدر ۱۰)"
 
+#. generated
 msgid "Top bar"
 msgstr "نوار بالا"
 
+#. generated
 msgid "Top-level categories"
 msgstr "دسته‌های سطح اول"
 
+#. generated
 msgid "Total"
 msgstr "جمع کل"
 
+#. generated
 msgid "Total orders"
 msgstr "تعداد سفارش‌ها"
 
+#. generated
 msgid "Track your latest order"
 msgstr "پیگیری آخرین سفارش"
 
+#. generated
 msgid "Transition speed (ms)"
 msgstr "سرعت انیمیشن (میلی‌ثانیه)"
 
+#. generated
 msgid "Trust badges"
 msgstr "نشان‌های اعتماد"
 
+#. generated
 msgid "Two column"
 msgstr "دو ستونه"
 
+#. generated
 msgid "Two column (form + summary)"
 msgstr "دو ستونه (فرم + خلاصه)"
 
+#. generated
 msgid "Two column (items + summary)"
 msgstr "دو ستونه (اقلام + خلاصه)"
 
+#. generated
 msgid "Typography"
 msgstr "تایپوگرافی"
 
+#. generated
 msgid "Update cart"
 msgstr "به‌روزرسانی سبد"
 
+#. generated
 msgid "Upload"
 msgstr "آپلود"
 
+#. generated
 msgid "Upload your font files (woff2 recommended). Then enter the \"Font name\" here in the Design tab (Body / Heading font family) to use them. Add multiple rows with the same name for different weights."
 msgstr "فایل‌های فونت خود را آپلود کنید (woff2 توصیه می‌شود). سپس «نام فونت» را در تب طراحی (فونت متن / تیتر) وارد کنید. برای وزن‌های مختلف چند ردیف با همان نام اضافه کنید."
 
+#. generated
 msgid "Uploaded fonts"
 msgstr "فونت‌های آپلودشده"
 
+#. generated
 msgid "Used with the \"Specific page IDs\" scope."
 msgstr "همراه با محدوده «شناسه صفحات مشخص» استفاده می‌شود."
 
+#. generated
 msgid "User Area"
 msgstr "ناحیه کاربری"
 
+#. generated
 msgid "User area button"
 msgstr "دکمه ناحیه کاربری"
 
+#. generated
 msgid "User area button in header"
 msgstr "دکمه ناحیه کاربری در هدر"
 
+#. generated
 msgid "Username"
 msgstr "نام کاربری"
 
+#. generated
 msgid "View"
 msgstr "مشاهده"
 
+#. generated
 msgid "View all"
 msgstr "مشاهده همه"
 
+#. generated
 msgid "View all products"
 msgstr "مشاهده همه محصولات"
 
+#. generated
 msgid "View cart"
 msgstr "مشاهده سبد"
 
+#. generated
 msgid "View product"
 msgstr "مشاهده محصول"
 
+#. generated
 msgid "Warning color"
 msgstr "رنگ هشدار"
 
+#. generated
 msgid "Weight"
 msgstr "وزن"
 
+#. generated
 msgid "Welcome back, %s 👋"
 msgstr "خوش آمدید، %s عزیز 👋"
 
+#. generated
 msgid "Welcome card"
 msgstr "کارت خوش‌آمد"
 
+#. generated
 msgid "Welcome card background"
 msgstr "پس‌زمینه کارت خوش‌آمد"
 
+#. generated
 msgid "Widgets shown on shop / product archive pages."
 msgstr "ابزارک‌های نمایش‌داده‌شده در صفحات فروشگاه و آرشیو محصولات."
 
+#. generated
 msgid "Wishlist"
 msgstr "علاقه‌مندی‌ها"
 
+#. generated
 msgid "WooCommerce is not available."
 msgstr "ووکامرس در دسترس نیست."
 
+#. generated
 msgid "WooCommerce is required. Please install and activate WooCommerce 8.0 or newer."
 msgstr "ووکامرس الزامی است. لطفاً ووکامرس ۸.۰ یا جدیدتر را نصب و فعال کنید."
 
+#. generated
 msgid "You have not placed any orders yet."
 msgstr "هنوز سفارشی ثبت نکرده‌اید."
 
+#. generated
 msgid "Your cart is empty"
 msgstr "سبد خرید شما خالی است"
 
+#. generated
 msgid "Your headline"
 msgstr "عنوان اصلی شما"
 
+#. generated
 msgid "Your order"
 msgstr "سفارش شما"
 
+#. generated
 msgid "Your order qualifies for free shipping!"
 msgstr "سفارش شما شامل ارسال رایگان می‌شود!"
 
+#. generated
 msgid "Your shopping bag"
 msgstr "سبد خرید شما"
 
+#. generated
 msgid "Zoom & fade"
 msgstr "زوم و محو شدن"
 
+#. generated
 msgid "Zoom in"
 msgstr "زوم ورود"
 
+#. generated
 msgid "Zoom out"
 msgstr "زوم خروج"
 
+#. generated
 msgid "Zoom pulse"
 msgstr "ضربان زوم"
 
+#. generated
 msgid "e.g. @your_channel or -100xxxxxxxxxx"
 msgstr "مثلاً @your_channel یا -100xxxxxxxxxx"
 
+#. generated
 msgid "e.g. Product categories"
 msgstr "مثلاً دسته‌بندی محصولات"
 
+#. generated
 msgid "e.g. Special offer"
 msgstr "مثلاً پیشنهاد ویژه"
 
+#. generated
 msgid "← Continue shopping"
 msgstr "← ادامه خرید"

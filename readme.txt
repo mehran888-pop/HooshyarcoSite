@@ -4,7 +4,7 @@ Tags: woocommerce, elementor, cart, checkout, digipay
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,13 @@ Card gateway (IPG), wallet, and credit/BNPL — the full UPG flow including
 purchase tickets, verification and manual reverse.
 
 == Changelog ==
+
+= 1.0.6 =
+* Redesign: header/footer restyled after top Iranian e-commerce stores — clean white bar, wide centered search, outlined login/cart buttons, plain text navigation
+* New header layout: logo | search | actions on top, category menu + main menu below
+* Category menu restyled: plain trigger button, clean stacked list, gray counts, side flyout for sub-categories
+* Footer is now light by default with subtle variants (Classic/Modern/Minimal/Creative incl. dark option)
+* i18n build tool added under tools/ (regenerates .po/.mo without msgfmt)
 
 = 1.0.5 =
 * Header/footer templates now apply on every theme: added block-theme support (header/footer template parts are replaced with the selected HCK template)
